@@ -1,0 +1,11 @@
+#input_form{
+  text-align: center;
+  background: white;
+  border: none;
+  background-color: #F4F4F4;
+  border-bottom: solid 2px red;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+}
+#input_form:focus {
+  box-shadow: none;
+}
