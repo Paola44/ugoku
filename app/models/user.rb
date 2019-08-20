@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  mount_uploader :photo, PhotoUploader
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -9,6 +11,5 @@ class User < ApplicationRecord
   has_many :events, through: :user_events
 
   validates :name, presence: true
-  validates :email, presence: true
   validates :favorite_sports, inclusion: { in: %w(Yoga Football Boxe Running Cross-fit) }
 end
