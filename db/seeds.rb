@@ -1,19 +1,9 @@
+require 'json'
 require 'open-uri'
-require 'nokogiri'
-
-puts 'Searching address...'
-
-url = 'https://hoodspot.fr/restaurant/nantes/'
-
-html_content = open('https://hoodspot.fr/restaurant/nantes/').read
-doc = Nokogiri::HTML(html_content)
-
-doc.search('uiSerpAddress uaLv3').each_with_index do |element, index|
-
-end
-
 
 puts 'Cleaning database...'
+puts 'Searching address...'
+
 
 Event.destroy_all
 User_event.destroy_all
