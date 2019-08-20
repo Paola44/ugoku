@@ -15,6 +15,8 @@ class User < ApplicationRecord
 
   validate :favorite_sports_in_list
 
+  after_create :setup_availabilitis
+
   private
 
   def favorite_sports_in_list
@@ -24,4 +26,6 @@ class User < ApplicationRecord
     errors.add(:favorite_sports, :inclusion)
   end
 
+  def setup_availabilitis
+  end
 end

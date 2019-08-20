@@ -331,24 +331,35 @@ puts '...Creating availabilities...'
 
 # julien availability - crossfit
 Availability.create!(user: julien, day_name: 'monday', slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: false)
-# julien availability - yoga
+Availability.create!(user: julien, day_name: 'tuesday')
 Availability.create!(user: julien, day_name: 'wednesday', slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
-# julien availability - running
+Availability.create!(user: julien, day_name: 'thursday')
+Availability.create!(user: julien, day_name: 'friday')
+Availability.create!(user: julien, day_name: 'saturday')
 Availability.create!(user: julien, day_name: 'sunday', slot_1: false, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: false)
+# julien availability - yoga
+# julien availability - running
 
 # nikol availability - crossfit
 Availability.create!(user: nikol, day_name: 'monday', slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: false)
-# nikol availability - yoga
+Availability.create!(user: julien, day_name: 'tuesday')
 Availability.create!(user: nikol, day_name: 'wednesday', slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
-# nikol availability - yoga
+Availability.create!(user: julien, day_name: 'thursday')
 Availability.create!(user: nikol, day_name: 'friday', slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
-
+Availability.create!(user: julien, day_name: 'saturday')
+Availability.create!(user: julien, day_name: 'sunday')
+# nikol availability - yoga
+# nikol availability - yoga
 # richard availability - crossfit
+Availability.create!(user: julien, day_name: 'monday')
+Availability.create!(user: julien, day_name: 'tuesday')
 Availability.create!(user: richard, day_name: 'wednesday', slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: false)
+Availability.create!(user: julien, day_name: 'thursday')
 # richard availability - foot
 Availability.create!(user: richard, day_name: 'friday', slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: false)
 # richard availability - running
 Availability.create!(user: richard, day_name: 'saturday', slot_1: false, slot_2: true, slot_3: false, slot_4: true, slot_5: false, slot_6: false)
+Availability.create!(user: julien, day_name: 'sunday')
 
 puts 'Availabilities created !'
 puts '...Creating events...'

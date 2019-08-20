@@ -1,0 +1,15 @@
+<div class="container-form">
+  <div class="special-form">
+    <h2 class='text-center mb-5'>Specify your disponibilities</h2>
+    <% categories = %w(yoga football boxe Running crossfit) %>
+      <div class="category-choices ">
+        <% days = %w(monday tuesday wednesday thursday friday saturday sunday) %>
+        <% days.each do |day| %>
+          <div class="input-circle">
+            <input class="hidden" aria-invalid="true" type="checkbox" value="<%= day %>" name="user[favorite_sports][]" id="user_favorite_sports_<%= day %>">
+            <label class="day-choice d-flex align-items-center justify-content-center" for="user_favorite_sports_<%= day %>"><%= day.capitalize %></label>
+          </div>
+        <% end %>
+      </div>
+  </div>
+</div>
