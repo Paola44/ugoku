@@ -9,6 +9,5 @@ class User < ApplicationRecord
   has_many :events, through: :user_events
 
   validates :name, presence: true
-  validates :email, presence: true
   validates :favorite_sports, inclusion: { in: %w(Yoga Football Boxe Running Cross-fit) }
 end
