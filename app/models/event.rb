@@ -1,7 +1,6 @@
 class Event < ApplicationRecord
+  has_many :user_events, dependent: :destroy
   SPORTS = %w(yoga football boxing running crossfit)
-
-  has_many :user_events
   has_many :users, through: :user_events
 
   validates :sport, presence: true, inclusion: { in: SPORTS }

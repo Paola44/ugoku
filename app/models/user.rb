@@ -6,11 +6,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :user_events
-  has_many :availabilities
+  has_many :user_events, dependent: :destroy
+  has_many :availabilities, dependent: :destroy
   has_many :events, through: :user_events
 
   validates :name, presence: true
+  validates :favorite_sports, presence: true
+
   validate :favorite_sports_in_list
 
   private
@@ -21,4 +23,5 @@ class User < ApplicationRecord
 
     errors.add(:favorite_sports, :inclusion)
   end
+
 end
