@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_19_161513) do
-
+ActiveRecord::Schema.define(version: 2019_08_20_122241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +25,8 @@ ActiveRecord::Schema.define(version: 2019_08_19_161513) do
     t.boolean "slot_6", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_availabilities_on_user_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -67,6 +68,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_161513) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "availabilities", "users"
   add_foreign_key "user_events", "events"
   add_foreign_key "user_events", "users"
 end
