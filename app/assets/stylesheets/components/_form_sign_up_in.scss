@@ -2,10 +2,22 @@
   text-align: center;
   background: white;
   border: none;
-  background-color: #F4F4F4;
-  border-bottom: solid 2px red;
+  background-color: black;
+  border-bottom: solid 2px #F93885;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
 }
 #input_form:focus {
   box-shadow: none;
+}
+
+.special-form{
+  height : 100%
+}
+
+.special-form{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }

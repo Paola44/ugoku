@@ -1,0 +1,23 @@
+.butn-valid{
+  padding: 8px 16px;
+  background: #9BFF00;
+  transition: padding 0.5s ease;
+  border-radius: 4px;
+}
+
+.butn-valid:hover{
+  padding: 7px 14px;
+  transition: padding color 0.5s ease;
+}
+
+.butn-refuse{
+  padding: 8px 16px;
+  background: linear-gradient(90deg, #02E2F9, #00FFA7);
+  transition: padding 0.5s ease;
+  border-radius: 4px;
+}
+
+.butn-refuse:hover{
+  padding: 7px 14px;
+  transition: padding 0.5s ease;
+}
