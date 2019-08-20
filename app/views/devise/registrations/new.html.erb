@@ -39,12 +39,12 @@
     <div class="form-inputs">
 
 
-      <% categories = %w(Yoga Football Boxe Running Crossfit) %>
+      <% categories = %w(yoga football boxe Running crossfit) %>
       <div class="category-choices ">
         <% categories.each do |category| %>
           <div class="input-circle">
             <input class="hidden" aria-invalid="true" type="checkbox" value="<%= category %>" name="user[favorite_sports][]" id="user_favorite_sports_<%= category %>">
-            <label class="category-choice d-flex align-items-center justify-content-center" for="user_favorite_sports_<%= category %>"><%= category %></label>
+            <label class="category-choice d-flex align-items-center justify-content-center" for="user_favorite_sports_<%= category %>"><%= category.capitalize %></label>
           </div>
         <% end %>
       </div>
