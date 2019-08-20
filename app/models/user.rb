@@ -11,5 +11,14 @@ class User < ApplicationRecord
   has_many :events, through: :user_events
 
   validates :name, presence: true
-  validates :favorite_sports, inclusion: { in: %w(Yoga Football Boxe Running Cross-fit) }
+  validate :favorite_sports_in_list
+
+  private
+
+  def favorite_sports_in_list
+    in_the_list = (favorite_sports - Event::SPORTS).empty?
+    return if in_the_list
+
+    errors.add(:favorite_sports, :inclusion)
+  end
 end
