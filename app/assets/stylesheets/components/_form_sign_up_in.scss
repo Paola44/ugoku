@@ -1,6 +1,13 @@
 #input_form{
   text-align: center;
-  background: white;
+  border: none;
+  color: white;
+  background-color: black;
+  border-bottom: solid 2px #F93885;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+}
+.input_form{
+  text-align: center;
   border: none;
   background-color: black;
   border-bottom: solid 2px #F93885;
@@ -9,15 +16,55 @@
 #input_form:focus {
   box-shadow: none;
 }
-
-.special-form{
-  height : 100%
+.container-form{
+  height: 90vh;
 }
 
 .special-form{
-  height: 80vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  border-radius: 0 0 60px 60px;
+  background: black;
+}
+
+.btn-form{
+  display: inline-block;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.category-choices {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  flex: auto auto auto;
+  align-items: center;
+}
+
+.category-choice {
+  background: #F93885;
+  width: 100px;
+  height: 100px;
+  color: black;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+  }
+  &.active {
+  background: #9BFF00;
+  }
+}
+
+.grid-sports{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }

@@ -4,10 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :user_events
-  has_many :availabilities
+  has_many :user_events, dependent: :destroy
+  has_many :availabilities, dependent: :destroy
   has_many :events, through: :user_events
 
   validates :name, presence: true
-  validates :favorite_sports, inclusion: { in: %w(Yoga Football Boxe Running Cross-fit) }
+  validates :favorite_sports, presence: true
 end
