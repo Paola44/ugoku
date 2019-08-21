@@ -1,0 +1,23 @@
+<div class="container-events">
+  <h1>Try new events!</h1>
+  <% @grouped_days_events.each do |day, events| %>
+    <div class="day-event">
+      <h2><%= day.strftime('%A') %></h2>
+      <% events.each do |event| %>
+      <div class="card-events">
+        <%= image_tag("boxing-gloves.png")%>
+        <div class="event">
+          <div class="sport-event">
+            <h3><strong><%= event.sport.capitalize %></strong></h3>
+              <div class="sport-info">
+                <p><i class="far fa-calendar-alt">  <%= event.start_at.to_date %></i></p>
+                <p><i class="far fa-clock">  <%= event.start_at.strftime('%l%P') %></i></p>
+              </div>
+            <button class="button-events">See more</button>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
