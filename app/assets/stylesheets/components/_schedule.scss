@@ -2,7 +2,7 @@
   background: linear-gradient(180deg, #F93885, #F91351);
   color: black;
   border-radius: 20px;
-  padding: 5px;
+  padding-top: 11px;
     position: relative;
   height: 40px;
   }
@@ -12,11 +12,16 @@
   grid-template-columns: 1fr 1fr;
   width: 90%;
   grid-gap: 20px;
+  margin: 0 auto;
 }
 
 .active-schedule{
   background: white;
   color: #F91351;
+}
+
+.even_day_margin{
+  margin-left: -122px;
 }
 
 .schedule_container{
@@ -45,4 +50,8 @@
 
 .margin-schedule{
   margin-bottom: 90px;
+}
+
+.hyper-width{
+  width: 100%;
 }

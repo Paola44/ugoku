@@ -10,6 +10,8 @@ class User < ApplicationRecord
   has_many :availabilities, dependent: :destroy
   has_many :events, through: :user_events
 
+  accepts_nested_attributes_for :availabilities
+
   validates :name, presence: true
   validates :favorite_sports, presence: true
 

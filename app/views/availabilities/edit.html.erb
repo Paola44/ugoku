@@ -1,45 +1,68 @@
 <div class="container-form">
   <div class="special-form">
     <h2 class='text-center mb-5'>Specify your disponibilities</h2>
-    <div class="category-schedule ">
-      <% Availability::DAYS.each do |day| %>
+    <div class="hyper-width">
+    <%= simple_form_for current_user, class: 'hyper-width', url: availabilities_url  do |f| %>
+      <div class="category-schedule ">
+        <% Availability::DAYS.each_with_index do |day, index| %>
+          <%= hidden_field_tag "user[availabilities_attributes][#{index}][id]", @availabilities[day].id %>
+
           <div class="schedule-day">
-            <input class="hidden" aria-invalid="true" type="checkbox" value="<%= day %>" name="user[favorite_sports][]" id="user_schedule_<%= day %>">
-            <label class="day-choice d-flex align-items-center justify-content-center mt-1" for="user_favorite_sports_<%= day %>" id='schedule_for_<%= day %>'><%= day.capitalize %></label>
+            <span class="day-choice d-flex align-items-center justify-content-center mt-1" for="user_schedule_<%= day %>" id='schedule_for_<%= day %>' value="<%= day %>"><%= day.capitalize %></span>
             <div class="hidden hide_schedule">
               <div class="schedule_container">
+
+                <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_1]", 0 %>
+                <%= check_box_tag "user[availabilities_attributes][#{index}][slot_1]", 1, @availabilities[day].slot_1, id: "availabilities_#{day}_slot_1", class: 'hidden' %>
                 <div class="time_fork text-center d-flex align-items-center justify-content-center">
                   <% @availabilities[day].slot_1 %>
-                  <p>8h-10h</p>
+                  <label for="availabilities_<%= day %>_slot_1">8h-10h</label>
                 </div>
+
+                <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_2]", 0 %>
+                <%= check_box_tag "user[availabilities_attributes][#{index}][slot_2]", 1, @availabilities[day].slot_2, id: "availabilities_#{day}_slot_2", class: 'hidden' %>
                 <div class="time_fork text-center d-flex align-items-center justify-content-center">
                   <% @availabilities[day].slot_2 %>
-                   <p>10h-12h</p>
+                   <label for="availabilities_<%= day %>_slot_2">10h-12h</label>
                 </div>
+
+                <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_3]", 0 %>
+                <%= check_box_tag "user[availabilities_attributes][#{index}][slot_3]", 1, @availabilities[day].slot_3, id: "availabilities_#{day}_slot_3", class: 'hidden' %>
                 <div class="time_fork text-center d-flex align-items-center justify-content-center">
                   <% @availabilities[day].slot_3 %>
-                   <p>12h-14h</p>
+                   <label for="availabilities_<%= day %>_slot_3">12h-14h</label>
                 </div>
+
+                <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_4]", 0 %>
+                <%= check_box_tag "user[availabilities_attributes][#{index}][slot_4]", 1, @availabilities[day].slot_4, id: "availabilities_#{day}_slot_4", class: 'hidden' %>
                 <div class="time_fork text-center d-flex align-items-center justify-content-center">
                   <% @availabilities[day].slot_4 %>
-                   <p>14h-16h</p>
+                   <label for="availabilities_<%= day %>_slot_4">14h-16h</label>
                 </div>
+
+                <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_5]", 0 %>
+                <%= check_box_tag "user[availabilities_attributes][#{index}][slot_5]", 1, @availabilities[day].slot_5, id: "availabilities_#{day}_slot_5", class: 'hidden' %>
                 <div class="time_fork text-center d-flex align-items-center justify-content-center">
                   <% @availabilities[day].slot_5 %>
-                   <p>16h-18h</p>
+                   <label for="availabilities_<%= day %>_slot_5">16h-18h</label>
                 </div>
+
+                <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_6]", 0 %>
+                <%= check_box_tag "user[availabilities_attributes][#{index}][slot_6]", 1, @availabilities[day].slot_6, id: "availabilities_#{day}_slot_6", class: 'hidden' %>
                 <div class="time_fork text-center d-flex align-items-center justify-content-center">
                   <% @availabilities[day].slot_6 %>
-                   <p>18h-20h</p>
+                   <label for="availabilities_<%= day %>_slot_6">18h-20h</label>
                 </div>
               </div>
             </div>
           </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
     <div class="form-actions d-flex justify-content-around btn-form fixed-bottom">
-      <%= link_to 'back', root_path %>
-
+      <%= f.button :submit, "Update your schedule", class: 'butn-valid mb-3 text-center' %>
+    <% end %>
+      <%= link_to 'back', root_path, class: 'butn-refuse text-center' %>
     </div>
   </div>
 </div>
