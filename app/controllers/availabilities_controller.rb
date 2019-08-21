@@ -1,13 +1,15 @@
 class AvailabilitiesController < ApplicationController
   def edit
-  end
-  def create
-    Availability::DAYS.each do |day|
-      avaibilities.create(day_name: day)
+    @availabilities = {}
+
+    current_user.availabilities.each do |availability|
+      @availabilities[availability.day_name] = availability
     end
   end
 
-
   def update
   end
+
+  private
+
 end

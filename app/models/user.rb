@@ -15,7 +15,7 @@ class User < ApplicationRecord
 
   validate :favorite_sports_in_list
 
-  after_create :setup_availabilitis
+  after_create :setup_availabilities
 
   private
 
@@ -26,6 +26,9 @@ class User < ApplicationRecord
     errors.add(:favorite_sports, :inclusion)
   end
 
-  def setup_availabilitis
+  def setup_availabilities
+    Availability::DAYS.each do |day|
+      availabilities.create(day_name: day)
+    end
   end
 end

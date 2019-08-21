@@ -1,15 +1,45 @@
 <div class="container-form">
   <div class="special-form">
     <h2 class='text-center mb-5'>Specify your disponibilities</h2>
-    <% categories = %w(yoga football boxe Running crossfit) %>
-      <div class="category-choices ">
-        <% days = %w(monday tuesday wednesday thursday friday saturday sunday) %>
-        <% days.each do |day| %>
-          <div class="input-circle">
-            <input class="hidden" aria-invalid="true" type="checkbox" value="<%= day %>" name="user[favorite_sports][]" id="user_favorite_sports_<%= day %>">
-            <label class="day-choice d-flex align-items-center justify-content-center" for="user_favorite_sports_<%= day %>"><%= day.capitalize %></label>
+    <div class="category-schedule ">
+      <% Availability::DAYS.each do |day| %>
+          <div class="schedule-day">
+            <input class="hidden" aria-invalid="true" type="checkbox" value="<%= day %>" name="user[favorite_sports][]" id="user_schedule_<%= day %>">
+            <label class="day-choice d-flex align-items-center justify-content-center mt-1" for="user_favorite_sports_<%= day %>" id='schedule_for_<%= day %>'><%= day.capitalize %></label>
+            <div class="hidden hide_schedule">
+              <div class="schedule_container">
+                <div class="time_fork text-center d-flex align-items-center justify-content-center">
+                  <% @availabilities[day].slot_1 %>
+                  <p>8h-10h</p>
+                </div>
+                <div class="time_fork text-center d-flex align-items-center justify-content-center">
+                  <% @availabilities[day].slot_2 %>
+                   <p>10h-12h</p>
+                </div>
+                <div class="time_fork text-center d-flex align-items-center justify-content-center">
+                  <% @availabilities[day].slot_3 %>
+                   <p>12h-14h</p>
+                </div>
+                <div class="time_fork text-center d-flex align-items-center justify-content-center">
+                  <% @availabilities[day].slot_4 %>
+                   <p>14h-16h</p>
+                </div>
+                <div class="time_fork text-center d-flex align-items-center justify-content-center">
+                  <% @availabilities[day].slot_5 %>
+                   <p>16h-18h</p>
+                </div>
+                <div class="time_fork text-center d-flex align-items-center justify-content-center">
+                  <% @availabilities[day].slot_6 %>
+                   <p>18h-20h</p>
+                </div>
+              </div>
+            </div>
           </div>
-        <% end %>
-      </div>
+      <% end %>
+    </div>
+    <div class="form-actions d-flex justify-content-around btn-form fixed-bottom">
+      <%= link_to 'back', root_path %>
+
+    </div>
   </div>
 </div>

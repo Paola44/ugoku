@@ -1,0 +1,48 @@
+.schedule-day{
+  background: linear-gradient(180deg, #F93885, #F91351);
+  color: black;
+  border-radius: 20px;
+  padding: 5px;
+    position: relative;
+  height: 40px;
+  }
+
+.category-schedule{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  grid-gap: 20px;
+}
+
+.active-schedule{
+  background: white;
+  color: #F91351;
+}
+
+.schedule_container{
+  background:white;
+  width: 180%;
+  border-radius: 20px;
+  height: 90px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  padding: 5px;
+}
+
+.time_fork{
+  background: black;
+  color: white;
+  border-radius: 20px;
+  height: 15px;
+  padding: 18px 6px;
+  p{
+    margin-top: 9px;
+    font-size: 15px;
+  }
+}
+
+.margin-schedule{
+  margin-bottom: 90px;
+}
