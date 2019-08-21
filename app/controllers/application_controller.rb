@@ -12,6 +12,4 @@ class ApplicationController < ActionController::Base
   def default_url_options
     { host: ENV["DOMAIN"] || "localhost:3000" }
   end
-
-  # clever env set DOMAIN www.ugoku.eu
 end
