@@ -8,4 +8,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
     devise_parameter_sanitizer.permit(:account_update, keys: [:photo, :email, :password, :favorite_sports, :name])
   end
+
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
+
+  # clever env set DOMAIN www.ugoku.eu
 end
