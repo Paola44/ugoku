@@ -1,18 +1,162 @@
-.home-container {
-  background: white;
+.home-section1 {
+  background: $black;
+  height: 75vh;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+
+  .home-container-text {
+    padding-bottom: 50px;
+  }
+  .main_title {
+    position: relative;
+    font-size: 30px;
+    font-weight: 400;
+    color: $white;
+    text-align: left;
+  }
+  .desciption {
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: $white;
+    text-align: justify;
+  }
+  .text_color_green {
+    color: $green2;
+  }
+  .logo {
+    background-image: image-url('last_logo2.png');
+    height:30vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 30px;
+    padding-top: 50px;
+  }
 }
 
-.home-section1 {
+.btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -22px;
+}
+.home-container {
+  background: $white;
+  padding-top: 30px;
 
-  h1 {
+  .home-section2 {
+    background: $black;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 
+    p {
+      color: $white;
+      padding: 0 10px;
+    }
+    .secondary_title {
+      font-size: 25px;
+      font-weight: 400;
+      color: $white;
+      padding-top: 40px;
+    }
+    .location_icon {
+      font-size: 50px;
+      color: $green2;
+      padding-top: 30px;
+    }
+    .mini_title_green {
+      color: $green2;
+      margin-bottom: 2px;
+    }
+    .group_icon {
+      font-size: 50px;
+      color: $red;
+      padding-top: 30px;
+    }
+    .mini_title_red {
+      color: $red;
+      margin-bottom: 2px;
+    }
+    .sport_icon {
+      font-size: 50px;
+      color: $blue2;
+      padding-top: 30px;
+    }
+    .mini_title_blue {
+      color: $blue2;
+      margin-bottom: 2px;
+    }
   }
+}
 
+.btn-box-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -22px;
+}
+
+.home-section3 {
+  background: $black;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+
+  .third_title {
+    font-size: 25px;
+    font-weight: 400;
+    color: $white;
+    padding-top: 40px;
+  }
   p {
-
+    color: $white;
+    padding: 0 10px;
+    margin-bottom: 0px
   }
+  .list1 {
+    color: $white;
+    padding: 30px 10px;
+    text-decoration: none;
+  }
+  .sub-title-3 {
+    padding-top: 30px;
+  }
+  .text_color_green {
+    color: $green2;
+  }
+  .last-line {
+    padding-top: 30px;
+    margin-bottom: 17px;
+  }
+}
 
-  button {
+.home-section4 {
+  background: $black;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 
+  .sport-card-home {
+    font-size: 25px;
+    font-weight: 400;
+    color: $white;
+    padding-top: 40px;
+  }
+  p {
+    color: $white;
+    padding: 30px 10px;
+    margin-bottom: 0px
+  }
+  .text_color_green {
+    color: $green2;
   }
 }
