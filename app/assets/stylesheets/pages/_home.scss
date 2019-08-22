@@ -159,13 +159,6 @@
   }
 }
 
-.btn-last-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 30px;
-}
-
 .carouselSlidesOnly {
   display: flex;
   align-items: center;
@@ -185,17 +178,38 @@
 
   .user_name {
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 500;
     color: $black;
     text-align: left;
-    padding-top: 5px;
+    padding-top: 11px;
+  }
+  .avatar-bordered {
+    width: 50px;
+    position: absolute;
+    right: 40px;
+    top: 10px;
   }
 
   .comments {
+    font-size: 15px;
     color: $black;
     margin-bottom: 0px;
-    text-align: left;
-    margin: 0px;
+    text-align: justify;
+    margin: 0;
     padding: 0px;
+
   }
+}
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
+.checked {
+color: $red;
+}
+.unchecked {
+  color: $black;
 }
