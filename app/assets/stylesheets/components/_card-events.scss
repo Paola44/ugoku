@@ -1,7 +1,7 @@
 .container-events {
   background-color: #1A1A1A;
   text-align: center;
-  padding: 10px;
+  padding: 25px;
   h1 {
     color: white;
     padding-bottom: 10px;
@@ -25,54 +25,48 @@
 
 .card-events {
   background-color: white;
-  // position: relative;
+  position: relative;
   text-align: center;
   padding: 10px;
-  margin-top: 30px;
-  margin-left: 8px;
-  margin-bottom: 30px;
+  margin: 30px 10px;
   border-radius: 10px;
-  width: 340px;
   height: 140px;
+  display: flex;
 
   .button-events {
     background-color: #E7ECED;
     color: #787373;
     border: none;
     border-radius: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 30px 0 30px;
   }
 }
 
-.all-events {
-  display: flex;
-  justify-content: space-around;
-  width: 320px;
-}
 
-.sport-event {
+.sport-event-card {
   text-align: left;
-  margin-right: 30px;
   width: 150%;
-  margin-left: 20px;
+  margin-right: 30px;
+  margin-bottom: 5px;
+  padding-left: 10px;
   h3 {
-    font-size: 16px;
+    font-size: 20px;
     color: black;
   }
 }
 
-.sport-info {
+.sport-info{
   p {
     color: #787373;
     text-align: left;
-    font-size: 12px;
-    margin: 5px;
+    font-size: 15px;
+    margin: 0px 5px 5px 5px;
   }
 }
 
 .add-button {
-  align-items: center;
+  position: absolute;
+  right: -20px;
   .add-event-btn {
     position: aboslute;
     margin-top: 40px;
@@ -82,7 +76,75 @@
   }
 }
 
+.decription-event {
+  background-color: white;
+  text-align: center;
+  position: relative;
+  padding: 20px 20px 10px 20px;
+  margin: 0 10px 30px 10px;
+  border-radius: 10px;
 
+  .address-details {
+    display: flex;
+    .event-address
+      h3 {
+        color: black;
+        font-size: 17px;
+        text-align: left;
+    }
+  }
+  .info-sport-event {
+    display: flex;
+    justify-content: space-between;
+    p {
+        color :#A9A2A2;
+        font-size: 15px;
+      }
+    .details-level {
+      display: flex;
+      justify-content: flex-end;
+      p {
+        color :#A9A2A2;
+        padding-right: 10px;
+      }
+    }
+    .details-button {
+      position: absolute;
+      right: -20px;
+      .more-details-btn{
+        position: aboslute;
+        margin-top: 70px;
+        margin-left: 20px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .text-event {
+    h3 {
+      color: black;
+      font-size: 17px;
+    }
+    p {
+      color :#787373;
+      text-align: left;
+      font-size: 13px;
+      padding: 0 20px 0 10px;
+    }
+  }
+
+  .capadity-event {
+    p {
+      color :#787373;
+      font-size: 13px;
+      padding: 0 20px 0 10px;
+    }
+  }
+
+
+
+}
 
 
 

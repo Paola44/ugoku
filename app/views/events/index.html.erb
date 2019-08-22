@@ -1,38 +1,69 @@
 <div class="container-events">
   <h1>Try new events!</h1>
   <% @grouped_days_events.each do |day, events| %>
-    <div class="day-event">
-      <h2><%= day.strftime('%A') %></h2>
-      <% events.each do |event| %>
-        <div class="card-events">
-          <div class="all-events">
-            <%= image_tag("boxing-gloves.png", class: 'sport-img')%>
-            <div class="event">
-              <div class="sport-event">
-                <h3><strong><%= event.sport.capitalize %></strong></h3>
-                <div class="sport-info">
-                  <p><i class="far fa-calendar-alt">  <%= event.start_at.to_date %></i></p>
-                  <p><i class="far fa-clock">  <%= event.start_at.strftime('%l%P') %></i></p>
-                </div>
-                <button class="button-events">See more</button>
+    <h2><%= day.strftime('%A') %></h2>
+    <% events.each do |event| %>
+      <div class="card-events">
+          <%= image_tag("boxing-gloves.png", class: 'sport-img')%>
+          <div class="event">
+            <div class="sport-event-card">
+              <h3><strong><%= event.sport.capitalize %></strong></h3>
+              <div class="sport-info">
+                <p><i class="far fa-calendar-alt">  <%= event.start_at.to_date %></i></p>
+                <p><i class="far fa-clock">  <%= event.start_at.strftime('%l%P') %></i></p>
               </div>
+              <button class="button-events">See more</button>
             </div>
-            <div class="add-button">
-              <% if current_user.user_event_for?(event) %>
-                <%= image_tag('success.png', class: 'add-event-btn') %>
-              <% else %>
-                <%= link_to image_tag("plus.png", class: 'add-event-btn'), event_user_events_path(event), method: :post %>
-              <% end %>
-            </div>
+          </div>
+          <div class="add-button">
+            <% if current_user.user_event_for?(event) %>
+              <%= image_tag('success.png', class: 'add-event-btn') %>
+            <% else %>
+              <%= link_to image_tag("plus.png", class: 'add-event-btn'), event_user_events_path(event), method: :post %>
+            <% end %>
+          </div>
+      </div>
+
+      <div class="decription-event">
+        <div class="address-details">
+          <div class="event-address">
+            <h3><strong><%= event.address.capitalize %></strong></h3>
+          </div>
+          <div class="event-map">
+            <!-- ADD MAP BUTTON TO DIPLAY IN A GOOGLE MAP -->
           </div>
         </div>
 
         <div class="info-sport-event">
-          <h3><strong><%= event.address.capitalize %></strong></h3>
-          div.
-
+          <div class="details-duration">
+            <p><i class="fas fa-stopwatch">  <%= event.duration %> min.</i></p>
+          </div>
+          <div class="details-level">
+            <% if event.level == 1 %>
+              <p><i class="fas fa-dumbbell"></i></p>
+            <% elsif %>
+              <% event.level == 2  %>
+              <p><i class="fas fa-dumbbell"></i></p>
+              <p><i class="fas fa-dumbbell"></i></p>
+            <% else  %>
+              <p><i class="fas fa-dumbbell"></i></p>
+              <p><i class="fas fa-dumbbell"></i></p>
+              <p><i class="fas fa-dumbbell"></i></p>
+            <% end %>
+            <div class="details-button">
+              <%= image_tag('error.png', class: 'more-details-btn') %>
+            </div>
+          </div>
         </div>
-      <% end %>
-    </div>
+          <div class="text-event">
+            <h3>Description</h3>
+            <p><%= event.description %></p>
+          </div>
+          <div class="capadity-event">
+            <p>Cap. <%= event.capacity %> <%= event.users.first %></p>
+          </div>
+
+      </div>
+    <% end %>
   <% end %>
 </div>
