@@ -20,19 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const event_on_day_click = (day) => {
     day.addEventListener('click', (event) => {
-        even_day(day);
-        schedule_days.forEach((da) => {
-          remove_class(da);
-        })
-        console.log(day)
-        day.classList.remove('floute_class');
-        day.classList.toggle('active-schedule');
-        hide_time.forEach((time) => {
-          time.classList.add('hidden')
-        })
-        day.childNodes[3].classList.toggle('hidden');
-        day.classList.toggle('margin-schedule');
-        })
+      even_day(day);
+      schedule_days.forEach((da) => {
+        remove_class(da);
+      })
+      day.classList.remove('floute_class');
+      day.classList.toggle('active-schedule');
+      hide_time.forEach((time) => {
+        time.classList.add('hidden')
+      })
+      day.childNodes[3].classList.toggle('hidden');
+      day.classList.toggle('margin-schedule');
+    })
   }
 
   const check_if_true = (box, slot) => {
