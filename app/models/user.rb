@@ -15,6 +15,10 @@ class User < ApplicationRecord
 
   validate :favorite_sports_in_list
 
+  def user_event_for?(event)
+    UserEvent.find_by(user: self, event: event)
+  end
+
   private
 
   def favorite_sports_in_list
