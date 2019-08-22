@@ -1,0 +1,128 @@
+.schedule-section1 {
+  background: $black;
+  height: 85vh;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+
+  .schedule-container-text {
+    padding-bottom: 50px;
+  }
+  .schedule-main_title {
+    font-size: 40px;
+    font-weight: 400;
+    color: $white;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .schedule-desciption {
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: $white;
+    text-align: center;
+  }
+}
+
+.hyper-width {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-schedule {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  grid-gap: 1.5rem 3rem;
+
+ }
+
+.schedule-day {
+  color: $white;
+  padding: 8px 24px;
+  text-align: center;
+  vertical-align: center;
+  border-radius: 20px;
+  background: linear-gradient(to right, $pink, $red);
+  height: 50px;
+  width: 120px;
+  padding-top: 11px;
+  position: relative;
+  transition: background 0.3s ease;
+}
+.day-choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active-schedule {
+  border-radius: 20px 20px 0 0;
+  background: $white;
+  color: #F91351;
+}
+
+.floute_class {
+  text-align:center;
+  color: transparent;
+  text-shadow: 0 0 2px rgba(255,255,255,0.9);
+  transition: all 0.5s;
+  filter: brightness(70%)
+}
+
+.schedule_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $white;
+  width: 242%;
+  border-radius: 0 20px 20px 20px;
+  height: 114px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding: 10px;
+  top: 50px;
+  left: 0px;
+}
+
+.hide_schedule {
+  margin-left: -171px
+}
+
+.time_fork {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $black;
+  color: $white;
+  border-radius: 15px;
+  height: 40px;
+  padding: 19px 6px;
+
+  label {
+    font-size: 15px;
+    margin-bottom: 0px;
+  }
+  p {
+    margin-top: 9px;
+    font-size: 15px;
+  }
+  &.active {
+    background: $blue2;
+    color: black;
+  }
+}
+
+.margin-schedule{
+  margin-bottom: 90px;
+}
+
+
+
+
+
+

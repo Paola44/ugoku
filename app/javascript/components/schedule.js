@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         schedule_days.forEach((da) => {
           remove_class(da);
         })
+        console.log(day)
         day.classList.remove('floute_class');
         day.classList.toggle('active-schedule');
         hide_time.forEach((time) => {
