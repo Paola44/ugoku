@@ -9,7 +9,6 @@
     padding-bottom: 50px;
   }
   .main_title {
-    position: relative;
     font-size: 30px;
     font-weight: 400;
     color: $white;
@@ -138,11 +137,10 @@
 }
 
 .home-section4 {
+  height: 640px;
   background: $black;
   text-align: center;
-  margin-right: 10px;
-  margin-left: 10px;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 
   .sport-card-home {
@@ -159,4 +157,59 @@
   .text_color_green {
     color: $green2;
   }
+}
+
+.carouselSlidesOnly {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  .carousel-item {
+    padding: 0px 30px;
+  }
+
+.card-section {
+  height: 25vh;
+  background: $white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  padding: 10px;
+
+  .user_name {
+    font-size: 25px;
+    font-weight: 500;
+    color: $black;
+    text-align: left;
+    padding-top: 11px;
+  }
+  .avatar-bordered {
+    width: 50px;
+    position: absolute;
+    right: 40px;
+    top: 10px;
+  }
+
+  .comments {
+    font-size: 15px;
+    color: $black;
+    margin-bottom: 0px;
+    text-align: justify;
+    margin: 0;
+    padding: 0px;
+
+  }
+}
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
+.checked {
+color: $red;
+}
+.unchecked {
+  color: $black;
 }

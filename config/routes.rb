@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'availabilities/edit'
+  get 'availabilities/update'
   root to: 'pages#home'
 
   devise_for :users

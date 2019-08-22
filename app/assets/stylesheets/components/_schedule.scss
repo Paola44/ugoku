@@ -1,0 +1,76 @@
+.schedule-day{
+  background: linear-gradient(180deg, #F93885, #F91351);
+  color: black;
+  border-radius: 20px;
+  padding-top: 11px;
+  position: relative;
+  height: 40px;
+  width: 120px;
+  box-shadow: 0 0 5px white;
+  }
+
+.category-schedule{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  grid-gap: 20px;
+  margin: 10px auto;
+  margin-bottom: 100px;
+  margin-left: 20px;
+}
+
+.active-schedule{
+  background: white;
+  color: #F91351;
+}
+
+.floute_class{
+  text-align:center;
+  color: transparent;
+  text-shadow: 0 0 2px rgba(0,0,0,0.9);
+  transition: all 0.5s;
+}
+
+.even_day_margin{
+  margin-left: -122px;
+}
+
+.schedule_container{
+  background:white;
+  width: 220%;
+  border-radius: 20px;
+  height: 90px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  padding: 5px;
+}
+
+.time_fork{
+  background: black;
+  color: white;
+  border-radius: 20px;
+  height: 15px;
+  padding: 19px 6px;
+  p{
+    margin-top: 9px;
+    font-size: 15px;
+  }
+  &.active {
+    background: #02E2F9;
+    color: black;
+  }
+
+}
+
+
+
+.margin-schedule{
+  margin-bottom: 90px;
+}
+
+.hyper-width{
+  width: 100%;
+  padding-top: 100px;
+}
