@@ -88,10 +88,11 @@
   top: 50px;
   left: 0px;
 }
-
-.hide_schedule {
-  margin-left: -171px
+.even_day_margin {
+  margin-left: -170px;
+  border-radius: 20px 0 20px 20px;
 }
+
 
 .time_fork {
   display: flex;

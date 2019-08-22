@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const even_day = (day) => {
     if(day.childNodes[1].innerText == 'Tuesday'){
-      day.childNodes[3].classList.add('even_day_margin')
+      day.childNodes[3].childNodes[1].classList.add('even_day_margin')
     }else if(day.childNodes[1].innerText == 'Thursday'){
-      day.childNodes[3].classList.add('even_day_margin')
+      day.childNodes[3].childNodes[1].classList.add('even_day_margin')
     }else if(day.childNodes[1].innerText == 'Saturday'){
-      day.childNodes[3].classList.add('even_day_margin')
+      day.childNodes[3].childNodes[1].classList.add('even_day_margin')
     }
   }
 
