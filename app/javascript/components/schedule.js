@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const remove_class = (day) => {
     day.classList.remove('active-schedule');
     day.classList.remove('margin-schedule');
+    day.classList.add('floute_class')
   }
 
   const even_day = (day) => {
@@ -17,27 +18,40 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  if (schedule_days.length > 0) {
-    schedule_days.forEach((day) => {
-      day.addEventListener('click', (event) => {
+  const event_on_day_click = (day) => {
+    day.addEventListener('click', (event) => {
         even_day(day);
         schedule_days.forEach((da) => {
           remove_class(da);
         })
+        day.classList.remove('floute_class');
         day.classList.toggle('active-schedule');
         hide_time.forEach((time) => {
           time.classList.add('hidden')
         })
         day.childNodes[3].classList.toggle('hidden');
         day.classList.toggle('margin-schedule');
-        slots.forEach((num) => {
-          let var_day = day.childNodes[1].attributes.value.textContent
-          const slot = document.getElementById(`availabilities_${var_day}_slot_${num + 1}`)
-          slot.addEventListener('click', (event) => {
-            slot.classList.toggle('active')
-          })
         })
-      });
+  }
+
+  const check_if_true = (box, slot) => {
+    if (box.checked) {
+      slot.classList.add('active')
+    } else {
+      slot.classList.remove('active')
+    }
+  }
+
+  if (schedule_days.length > 0) {
+    schedule_days.forEach((day) => {
+      event_on_day_click(day)
+      const div_slot = day.querySelectorAll('.time_fork')
+      const box_slot = div_slot.previousElementSibling
+      div_slot.forEach((slot) => {
+        slot.addEventListener('click', (event) => {
+          event.currentTarget.classList.toggle('active')
+        })
+      })
     });
   }
 });
