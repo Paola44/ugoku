@@ -10,10 +10,14 @@ class User < ApplicationRecord
   has_many :availabilities, dependent: :destroy
   has_many :events, through: :user_events
 
+  accepts_nested_attributes_for :availabilities
+
   validates :name, presence: true
   validates :favorite_sports, presence: true
 
   validate :favorite_sports_in_list
+
+  after_create :setup_availabilities
 
   private
 
@@ -24,4 +28,9 @@ class User < ApplicationRecord
     errors.add(:favorite_sports, :inclusion)
   end
 
+  def setup_availabilities
+    Availability::DAYS.each do |day|
+      availabilities.create(day_name: day)
+    end
+  end
 end
