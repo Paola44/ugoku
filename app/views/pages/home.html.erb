@@ -1,51 +1,62 @@
-<div class="home-container">
+<div class="home-container-header">
   <div class="home-section1">
-    <h1>Sports anytime and anywhere</h1>
-    <p>Does not matter where you are or what your schedule is!  Ugoku will always find the rigth sportive activity  for you !</p>
-    <%= link_to "I want this" %>
+    <div class="logo mb-5">
+    </div>
+    <div class="home-container-text pt-5">
+      <h1 class="main_title pl-3 pr-3">Sports anytime and anywhere</h1>
+      <p class="desciption pl-3 pr-3">Does not matter where you are or what your schedule is! <span class="text_color_green">Ugoku will always find the rigth sportive activity</span> for you !</p>
+    </div>
   </div>
+</div>
+<div class= "btn-box">
+  <%= link_to "I want this !", '#', class:"btn btn-flat" %>
+</div>
 
-  <div class="home-section2">
-    <h2>Why people use Ugoku ?</h2>
+
+<div class="home-container">
+  <div class="home-section2 pb-5">
+    <h2 class="secondary_title pb-2">Why people use Ugoku ?</h2>
     <div class="icons">
-      <i class="fas fa-map-marker-alt"></i>
-      <p>Sports near you</p>
+      <i class="fas fa-map-marker-alt location_icon"></i>
+      <p class="mini_title_green">Sports near you</p>
       <p>The algorythm will match the sportive events near you </p>
-      <i class="fas fa-users"></i>
-      <p>Meet new people</p>
+      <i class="fas fa-users group_icon"></i>
+      <p class="mini_title_red">Meet new people</p>
       <p>You will not be alone ! There are a lor of people who loves what you love</p>
-      <i class="fas fa-users"></i>
-      <p>Stay active </p>
+      <i class="fas fa-users sport_icon"></i>
+      <p class="mini_title_blue">Stay active </p>
       <p>You can practice all sports you want when you are free to do it!</p>
-      <%= link_to "Try ugoku now" %>
     </div>
   </div>
-
-  <div class="home-seciton3">
-    <h2>An intelligent platform</h2>
-    <p> What does that mean ?
-      It is simple, you only have to :
-      <li>1. Set up your sport preferences</li>
-      <li>2. Insert your disponibilities</li>
-      <li>3. eolocalize you.</li>
-      The Ugoku algorythm will match the sport event which correspond you more </p>
+  <div class="btn-box-secondary">
+    <%= link_to "Try ugoku now", '#', class:"btn btn-flat btn-flat-2" %>
   </div>
 
-  <div class="home-seciton4">
-    <p>1.2.3</p>
-  </div>
-
-  <div class="home-seciton5">
-    <div class="sport-card-home">
-      <h2>A sport event for you all the time!</h2>
-      <p>Ugoku not only suggest  sport events according to your schedule, but also you can select all event  you want and when you want.</p>
-      sport-card
+  <div class="home-section3 pb-5">
+    <h2 class="third_title pb-2">An intelligent platform</h2>
+    <div class="text-container-3">
+      <p class="sub-title-3">What does that mean ?</p>
+      <p class="sub-title-4">It is simple, you only have to :</p>
+      <p class="list1"><span class="text_color_green">1.</span> Set up your sport preferences</p>
+      <p class="list1"><span class="text_color_green">2.</span> Insert your disponibilities</p>
+      <p class="list1"><span class="text_color_green">3.</span> eolocalize you.</p>
+      <p class="last-line">The <span class="text_color_green">Ugoku</span> algorythm will match the sport event which correspond you more</p>
     </div>
+  </div>
+  <div class="btn-box-secondary">
+    <%= link_to "Try ugoku now", '#', class:"btn btn-flat btn-flat-2" %>
+  </div>
 
+  <div class="home-section4 pb-5">
+    <h2 class="sport-card-home pb-2">A sport event for you all the time!</h2>
+    <p><span class="text_color_green">Ugoku</span> not only suggest sport events according to your schedule, but also you can select <span class="text_color_green">all event
+    you want and when you want</span>.</p>
     <div class="opinions-card-home">
-      <h3>They already know Ugoku </h3>
-      opinions-carrousel
+      <h3 class="sport-card-home">They already know Ugoku </h3>
+      <p>opinions-carrousel</p>
     </div>
-    <%= link_to "I am convinced" %>
   </div>
+</div>
+<div class="btn-box-secondary">
+  <%= link_to "I'am convinced", '#', class:"btn btn-flat btn-flat-2" %>
 </div>
