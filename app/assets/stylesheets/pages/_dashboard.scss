@@ -1,0 +1,72 @@
+.dashboard-section{
+  background: $black;
+  height: 180vh;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  .h2_non_eteint{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  }
+  .h2_eteint{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+  }
+  .user_activities{
+    display: flex;
+    justify-content: space-around;
+  }
+  .event_matched_by_user{
+    background: #FFFFFF;
+    border-radius: 69px;
+    width: 90px;
+    height: 141px;
+    display: flex;
+    padding:10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+  }
+  .event_fav_sport{
+    background: $black;
+    width: 90px;
+    height: 141px;
+    display: flex;
+    padding:10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+  }
+  .event_fav_availabilities{
+    background: $black;
+    width: 90px;
+    height: 141px;
+    display: flex;
+    padding:10px;
+    flex-direction: column;
+    align-items:center;
+    .pastille{
+      background: $black;
+      width: 90px;
+
+      display: flex;
+      padding:10px;
+      flex-direction: column;
+      justify-content: center;
+      align-items:center;
+      position:static;
+      .pink-circle{
+        width:35px;
+        height:35px;
+        background:#F93885;
+        border-radius: 50%;
+      }
+    }
+    .availabities-result{
+    }
+  }
+}

@@ -1,0 +1,61 @@
+<div class="container dashboard-section pt-5">
+  <h2 class="h2_non_eteint">Your dashboard</h2>
+  <h2 class="h2_eteint pb-5">Your program</h2>
+  <div class="user_activities">
+    <% @user_events.each do |event| %>
+      <div class="event_matched_by_user">
+        <%= image_tag 'boxing-gloves.png', alt: 'box glove',height: 50, width: 50 %>
+        <span><%= event.event.start_at.day %> / <%= event.event.start_at.month %></span>
+        <span class='p-1'><%= event.event.start_at.hour %> h 00</span>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to root_path do %>
+    <p class="btn btn-flat mt-5">Search a new activity</p>
+  <% end %>
+  <h2 class="h2_eteint mt-5 pb-5">Your favorite sports</h2>
+  <div class="user_activities">
+    <% @fav_sport.each do |sport| %>
+      <div class="event_fav_sport">
+        <%= image_tag 'boxing-gloves.png', alt: 'box glove',height: 80, width: 80 %>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to root_path do %>
+    <p class="btn butn-refuse text-center mt-5">Update Sport</p>
+  <% end %>
+  <h2 class="h2_eteint mt-5 pb-5">Your availabilities</h2>
+  <div class="user_activities">
+    <% @availabilities.take(3).each do |availability| %>
+      <div class="event_fav_availabilities">
+        <div class="pastille">
+          <span class="pink-circle"></span>
+          <span><%= availability.day_name.capitalize %></span>
+        </div>
+        <div class="availabities-result">
+          <% if availability.slot_1%>
+            <p>8h - 10h</p>
+          <% end %>
+          <% if availability.slot_2%>
+            <p>10h - 12h</p>
+          <% end %>
+          <% if availability.slot_3%>
+            <p>12h - 14h</p>
+          <% end %>
+          <% if availability.slot_4%>
+            <p>14h - 16h</p>
+          <% end %>
+          <% if availability.slot_5%>
+            <p>16h - 18h</p>
+          <% end %>
+          <% if availability.slot_6%>
+            <p>18h - 20h</p>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to root_path do %>
+    <p class="btn butn-refuse text-center mt-5">Update availabilities</p>
+  <% end %>
+</div>
