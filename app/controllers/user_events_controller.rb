@@ -1,14 +1,13 @@
 class UserEventsController < ApplicationController
   def create
-    user_event = UserEvent.new(user_event_params)
-    user_event.save
+    @event = Event.find(params[:event_id])
 
-    redirect_to events_path
-  end
+    user_event = UserEvent.new(event: @event, user: current_user)
 
-  private
-
-  def user_event_params
-    params.require(:user_event).permit()
+    if user_event.save
+      redirect_to events_path, notice: "Susbcribed successfully"
+    else
+      redirect_to events_path, alert: "Error"
+    end
   end
 end
