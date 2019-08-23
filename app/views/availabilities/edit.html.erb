@@ -61,7 +61,6 @@
           <% end %>
         </div>
       </div>
-      <% end %>
     </div>
   </div>
 </div>
@@ -70,6 +69,7 @@
     <%= link_to "Back", root_path, class:"btn btn-flat-schedule-back" %>
   </div>
   <div class="btn-schedule-validate">
-    <%= link_to "Validate", availabilities_path, method: :update, class:"btn btn-flat-schedule-validate" %>
+    <%= f.button :submit, "Validate", class: 'btn btn-flat-schedule-validate' %>
+      <% end %>
   </div>
 </div>
