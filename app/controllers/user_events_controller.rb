@@ -5,15 +5,15 @@ class UserEventsController < ApplicationController
     user_event = UserEvent.new(event: @event, user: current_user)
 
     if user_event.save
-      redirect_to matching_events_path, notice: "Susbcribed successfully"
+      redirect_to params.fetch(:next_action, events_path), notice: "Susbcribed successfully"
     else
-      redirect_to matching_events_path, alert: "Error"
+      redirect_to params.fetch(:next_action, events_path), alert: "Error"
     end
   end
 
   def destroy
     @user_event = UserEvent.find(params[:id])
     @user_event.destroy
-    redirect_to matching_events_path, notice: "Unsusbcribed successfully"
+    redirect_to params.fetch(:next_action, events_path), notice: "Unsusbcribed successfully"
   end
 end
