@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/show'
   get 'availabilities/edit'
   get 'availabilities/update'
   root to: 'pages#home'

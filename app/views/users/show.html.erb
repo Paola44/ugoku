@@ -1,0 +1,27 @@
+<div class="profile">
+  <h1 class='mt-5 text-center h1-profile'>Your profile</h1>
+  <div class="card-profile">
+    <div class="profile-part">
+      <div class="profile-pict">
+        <%= cl_image_tag current_user.photo , alt: "alttext", height: 180, width: 180, class: 'profile-picture ' %>
+      </div>
+      <div class="profile-pict pt-3">
+        <%= link_to 'Modify your photo', root_path %>
+      </div>
+    </div>
+    <div class="personnal-info">
+      <h2 class='text-center pt-5 pb-5'>Your personnal info</h2>
+      <div class='personnal-fields'>
+        <div class="field d-flex">
+          <p class='label'>Name:</p> <span><%= @name %></span>
+        </div>
+        <div class="field d-flex">
+          <p class='label'>Email:</p> <span><%= @email %></span>
+        </div>
+        <div class="field d-flex">
+          <p class='label'>Address:</p> <span><%= @address %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
