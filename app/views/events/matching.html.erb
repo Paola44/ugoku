@@ -1,0 +1,72 @@
+<div class="container-events">
+  <h1>Select one or more matched events </h1>
+    <% @matching_events.each do |event| %>
+    <h2><%= event.start_at.strftime('%A') %></h2>
+      <div class="card-events">
+          <%= image_tag("boxing-gloves.png", class: 'sport-img')%>
+          <div class="event">
+            <div class="sport-event-card">
+              <h3><strong><%= event.sport.capitalize %></strong></h3>
+              <div class="sport-info">
+                <p><i class="far fa-calendar-alt">  <%= event.start_at.to_date %></i></p>
+                <p><i class="far fa-clock">  <%= event.start_at.strftime('%k') %>h</i></p>
+              </div>
+              <button class="button-events" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>" type="button" aria-expanded="false" aria-controls="description-collapse-<%= event.id %>">See more</button>
+            </div>
+          </div>
+          <div class="add-button">
+            <% if current_user.user_event_for(event) %>
+              <%= link_to image_tag('success.png', class: 'add-event-btn'), user_event_path(current_user.user_event_for(event)), method: :delete %>
+            <% else %>
+              <%= link_to image_tag("plus.png", class: 'add-event-btn'), event_user_events_path(event), method: :post %>
+            <% end %>
+          </div>
+      </div>
+
+      <div class="collapse decription-event" id="description-collapse-<%= event.id %>">
+        <div class="address-details">
+          <div class="event-address">
+            <h3><strong><%= event.address.capitalize %></strong></h3>
+          </div>
+          <div class="event-map">
+            <!-- ADD MAP BUTTON TO DIPLAY IN A GOOGLE MAP -->
+          </div>
+        </div>
+
+        <div class="info-sport-event">
+          <div class="details-duration">
+            <p><i class="fas fa-stopwatch">  <%= event.duration %> min.</i></p>
+          </div>
+          <div class="details-level">
+            <% if event.level == 1 %>
+              <p><i class="fas fa-dumbbell"></i></p>
+              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
+              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
+            <% elsif %>
+              <% event.level == 2  %>
+              <p><i class="fas fa-dumbbell"></i></p>
+              <p><i class="fas fa-dumbbell"></i></p>
+              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
+            <% else  %>
+              <p><i class="fas fa-dumbbell"></i></p>
+              <p><i class="fas fa-dumbbell"></i></p>
+              <p><i class="fas fa-dumbbell"></i></p>
+            <% end %>
+            <div class="details-button" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>" role="button" aria-expanded="false" aria-controls="description-collapse-<%= event.id %>">
+              <%= image_tag('error.png', class: 'more-details-btn') %>
+            </div>
+          </div>
+        </div>
+        <div class="text-event">
+            <h3>Description</h3>
+            <p><%= event.description %></p>
+        </div>
+        <div class="d-flex event-avatars">
+          <p>Cap. <%= event.capacity %></p>
+          <% event.users.each do |user| %>
+            <%= image_tag cl_image_path(user.photo), class: "avatar-bordered single-card rounded-circle border border-white", alt: "avatar-bordered" %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+</div>
