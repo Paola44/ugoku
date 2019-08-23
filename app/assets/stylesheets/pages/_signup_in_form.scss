@@ -1,15 +1,15 @@
 #input_form{
   text-align: center;
   border: none;
-  color: white;
-  background-color: black;
+  color: $white;
+  background-color: $black;
   border-bottom: solid 2px #F93885;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
 }
 .input_form{
   text-align: center;
   border: none;
-  background-color: black;
+  background-color: $black;
   border-bottom: solid 2px #F93885;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
 }
@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: space-around;
   border-radius: 0 0 60px 60px;
-  background: black;
+  background: $black;
 }
 
 .btn-form{
@@ -51,7 +51,7 @@
   background: #F93885;
   width: 100px;
   height: 100px;
-  color: black;
+  color: $black;
   padding: 20px;
   border-radius: 50%;
   font-size: 18px;

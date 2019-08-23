@@ -1,68 +1,75 @@
-<div class="container-form">
-  <div class="special-form">
-    <h2 class='text-center mt-5'>Specify your availibilities</h2>
-    <div class="hyper-width">
-    <%= simple_form_for current_user, class: 'hyper-width', url: availabilities_url  do |f| %>
-      <div class="category-schedule ">
-        <% Availability::DAYS.each_with_index do |day, index| %>
-          <%= hidden_field_tag "user[availabilities_attributes][#{index}][id]", @availabilities[day].id %>
+<div class="schedule-container-header">
+  <div class="schedule-section1">
+    <div class="schedule-container-text pt-5">
+      <h2 class='schedule-main_title pl-3 pr-3'>Specify your availibilities</h2>
+      <p class="schedule-desciption pl-3 pr-3 pb-4">Set your schedule up !</p>
+      <div class="hyper-width">
+      <%= simple_form_for current_user, class: 'hyper-width', url: availabilities_url  do |f| %>
+        <div class="category-schedule ">
+          <% Availability::DAYS.each_with_index do |day, index| %>
+            <%= hidden_field_tag "user[availabilities_attributes][#{index}][id]", @availabilities[day].id %>
 
-          <div class="schedule-day">
-            <span class="day-choice d-flex align-items-center justify-content-center mt-1" for="user_schedule_<%= day %>" id='schedule_for_<%= day %>' value="<%= day %>"><%= day.capitalize %></span>
-            <div class="hidden hide_schedule">
-              <div class="schedule_container">
+            <div class="schedule-day">
+              <span class="day-choice" for="user_schedule_<%= day %>" id='schedule_for_<%= day %>' value="<%= day %>"><%= day.capitalize %></span>
+              <div class="hidden hide_schedule">
+                <div class="schedule_container">
 
-                <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_1]", 0 %>
-                <%= check_box_tag "user[availabilities_attributes][#{index}][slot_1]", 1, @availabilities[day].slot_1, id: "availabilities_#{day}_slot_1_box", class: 'hidden' %>
-                <div class="time_fork text-center d-flex align-items-center justify-content-center <%= 'active' if @availabilities[day].slot_1 %>" id="availabilities_<%= day %>_slot_1">
-                  <% @availabilities[day].slot_1 %>
-                  <label for="availabilities_<%= day %>_slot_1_box">8h-10h</label>
-                </div>
+                  <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_1]", 0 %>
+                  <%= check_box_tag "user[availabilities_attributes][#{index}][slot_1]", 1, @availabilities[day].slot_1, id: "availabilities_#{day}_slot_1_box", class: 'hidden' %>
+                  <div class="time_fork <%= 'active' if @availabilities[day].slot_1 %>" id="availabilities_<%= day %>_slot_1">
+                    <% @availabilities[day].slot_1 %>
+                    <label for="availabilities_<%= day %>_slot_1_box">8h-10h</label>
+                  </div>
 
-                <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_2]", 0 %>
-                <%= check_box_tag "user[availabilities_attributes][#{index}][slot_2]", 1, @availabilities[day].slot_2, id: "availabilities_#{day}_slot_2_box", class: 'hidden' %>
-                <div class="time_fork text-center d-flex align-items-center justify-content-center <%= 'active' if @availabilities[day].slot_2 %>" id="availabilities_<%= day %>_slot_2">
-                  <% @availabilities[day].slot_2 %>
-                   <label for="availabilities_<%= day %>_slot_2_box">10h-12h</label>
-                </div>
+                  <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_2]", 0 %>
+                  <%= check_box_tag "user[availabilities_attributes][#{index}][slot_2]", 1, @availabilities[day].slot_2, id: "availabilities_#{day}_slot_2_box", class: 'hidden' %>
+                  <div class="time_fork  <%= 'active' if @availabilities[day].slot_2 %>" id="availabilities_<%= day %>_slot_2">
+                    <% @availabilities[day].slot_2 %>
+                    <label for="availabilities_<%= day %>_slot_2_box">10h-12h</label>
+                  </div>
 
-                <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_3]", 0 %>
-                <%= check_box_tag "user[availabilities_attributes][#{index}][slot_3]", 1, @availabilities[day].slot_3, id: "availabilities_#{day}_slot_3_box", class: 'hidden' %>
-                <div class="time_fork text-center d-flex align-items-center justify-content-center <%= 'active' if @availabilities[day].slot_3 %>" id="availabilities_<%= day %>_slot_3">
-                  <% @availabilities[day].slot_3 %>
-                   <label for="availabilities_<%= day %>_slot_3_box">12h-14h</label>
-                </div>
+                  <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_3]", 0 %>
+                  <%= check_box_tag "user[availabilities_attributes][#{index}][slot_3]", 1, @availabilities[day].slot_3, id: "availabilities_#{day}_slot_3_box", class: 'hidden' %>
+                  <div class="time_fork <%= 'active' if @availabilities[day].slot_3 %>" id="availabilities_<%= day %>_slot_3">
+                    <% @availabilities[day].slot_3 %>
+                    <label for="availabilities_<%= day %>_slot_3_box">12h-14h</label>
+                  </div>
 
-                <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_4]", 0 %>
-                <%= check_box_tag "user[availabilities_attributes][#{index}][slot_4]", 1, @availabilities[day].slot_4, id: "availabilities_#{day}_slot_4_box", class: 'hidden' %>
-                <div class="time_fork text-center d-flex align-items-center justify-content-center <%= 'active' if @availabilities[day].slot_4 %>" id="availabilities_<%= day %>_slot_4">
-                  <% @availabilities[day].slot_4 %>
-                   <label for="availabilities_<%= day %>_slot_4_box">14h-16h</label>
-                </div>
+                  <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_4]", 0 %>
+                  <%= check_box_tag "user[availabilities_attributes][#{index}][slot_4]", 1, @availabilities[day].slot_4, id: "availabilities_#{day}_slot_4_box", class: 'hidden' %>
+                  <div class="time_fork <%= 'active' if @availabilities[day].slot_4 %>" id="availabilities_<%= day %>_slot_4">
+                    <% @availabilities[day].slot_4 %>
+                    <label for="availabilities_<%= day %>_slot_4_box">14h-16h</label>
+                  </div>
 
-                <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_5]", 0 %>
-                <%= check_box_tag "user[availabilities_attributes][#{index}][slot_5]", 1, @availabilities[day].slot_5, id: "availabilities_#{day}_slot_5_box", class: 'hidden' %>
-                <div class="time_fork text-center d-flex align-items-center justify-content-center <%= 'active' if @availabilities[day].slot_5 %>" id="availabilities_<%= day %>_slot_5">
-                  <% @availabilities[day].slot_5 %>
-                   <label for="availabilities_<%= day %>_slot_5_box">16h-18h</label>
-                </div>
+                  <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_5]", 0 %>
+                  <%= check_box_tag "user[availabilities_attributes][#{index}][slot_5]", 1, @availabilities[day].slot_5, id: "availabilities_#{day}_slot_5_box", class: 'hidden' %>
+                  <div class="time_fork <%= 'active' if @availabilities[day].slot_5 %>" id="availabilities_<%= day %>_slot_5">
+                    <% @availabilities[day].slot_5 %>
+                    <label for="availabilities_<%= day %>_slot_5_box">16h-18h</label>
+                  </div>
 
-                <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_6]", 0 %>
-                <%= check_box_tag "user[availabilities_attributes][#{index}][slot_6]", 1, @availabilities[day].slot_6, id: "availabilities_#{day}_slot_6_box", class: 'hidden' %>
-                <div class="time_fork text-center d-flex align-items-center justify-content-center <%= 'active' if @availabilities[day].slot_6 %>" id="availabilities_<%= day %>_slot_6">
-                  <% @availabilities[day].slot_6 %>
-                   <label for="availabilities_<%= day %>_slot_6_box">18h-20h</label>
+                  <%= hidden_field_tag "user[availabilities_attributes][#{index}][slot_6]", 0 %>
+                  <%= check_box_tag "user[availabilities_attributes][#{index}][slot_6]", 1, @availabilities[day].slot_6, id: "availabilities_#{day}_slot_6_box", class: 'hidden' %>
+                  <div class="time_fork <%= 'active' if @availabilities[day].slot_6 %>" id="availabilities_<%= day %>_slot_6">
+                    <% @availabilities[day].slot_6 %>
+                    <label for="availabilities_<%= day %>_slot_6_box">18h-20h</label>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
+      <% end %>
     </div>
-    <div class="form-actions d-flex justify-content-around btn-form fixed-bottom">
-      <%= f.button :submit, "Update your schedule", class: 'butn-valid mb-3 text-center' %>
-    <% end %>
-      <%= link_to 'back', root_path, class: 'butn-refuse text-center' %>
-    </div>
+  </div>
+</div>
+<div class="btn-duo">
+  <div class="btn-schedule-back">
+    <%= link_to "Back", '#', class:"btn btn-flat-schedule-back" %>
+  </div>
+  <div class="btn-schedule-validate">
+    <%= link_to "Validate", '#', class:"btn btn-flat-schedule-validate" %>
   </div>
 </div>
