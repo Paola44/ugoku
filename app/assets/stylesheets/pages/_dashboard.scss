@@ -1,6 +1,6 @@
 .dashboard-section{
   background: $black;
-  height: 180vh;
+  height: 165vh;
   text-align: center;
   border-radius: 0 0 20px 20px;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
@@ -23,8 +23,9 @@
   .event_matched_by_user{
     background: #FFFFFF;
     border-radius: 69px;
-    width: 90px;
+    width: 11vh;
     height: 141px;
+    margin: 6px;
     display: flex;
     padding:10px;
     flex-direction: column;
@@ -43,7 +44,7 @@
   }
   .event_fav_availabilities{
     background: $black;
-    width: 90px;
+    width: 100px;
     height: 141px;
     display: flex;
     padding:10px;
@@ -68,5 +69,11 @@
     }
     .availabities-result{
     }
+  }
+  .user_activities-schedule{
+    display: flex;
+    justify-content: space-around;
+    height:220px;
+    margin: 0 auto;
   }
 }
