@@ -1,4 +1,4 @@
-.btn-duo {
+.sign-in-btn-duo {
   display:flex;
   align-items: center;
   justify-content: center;
@@ -6,7 +6,7 @@
   padding-right: 10px;
   margin-top: -22px;
 
-  .btn-flat-schedule-validate {
+  .btn-flat-sign-in-next {
     color: $black;
     padding: 8px 24px;
     align-content: space-around;
@@ -19,7 +19,7 @@
     margin-left: 10px;
     width: 120px;
   }
-  .btn-flat-schedule-back {
+  .btn-flat-sign-in-back {
   color: $black;
   padding: 8px 24px;
   align-content: space-around;
@@ -30,6 +30,6 @@
   background: linear-gradient(to right, $blue1, $blue2);
   transition: background 0.3s ease;
   margin-right: 10px;
-  width: 120px;
+   width: 120px;
   }
 }
