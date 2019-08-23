@@ -17,7 +17,7 @@
           </div>
           <div class="add-button">
             <% if current_user.user_event_for(event) %>
-              <%= image_tag('success.png', class: 'add-event-btn') %>
+              <%= link_to image_tag('success.png', class: 'add-event-btn'), user_event_path(current_user.user_event_for(event)), method: :delete %>
             <% else %>
               <%= link_to image_tag("plus.png", class: 'add-event-btn'), event_user_events_path(event), method: :post %>
             <% end %>
