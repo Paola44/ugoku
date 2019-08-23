@@ -1,5 +1,5 @@
 <div class="schedule-container-header">
-  <div class="schedule-section1">
+  <div class="schedule-section1 pt-5">
     <div class="schedule-container-text pt-5">
       <h2 class='schedule-main_title pl-3 pr-3'>Specify your availibilities</h2>
       <p class="schedule-desciption pl-3 pr-3 pb-4">Set your schedule up !</p>
@@ -61,15 +61,15 @@
           <% end %>
         </div>
       </div>
-      <% end %>
     </div>
   </div>
 </div>
 <div class="btn-duo">
   <div class="btn-schedule-back">
-    <%= link_to "Back", '#', class:"btn btn-flat-schedule-back" %>
+    <%= link_to "Back", root_path, class:"btn btn-flat-schedule-back" %>
   </div>
   <div class="btn-schedule-validate">
-    <%= link_to "Validate", '#', class:"btn btn-flat-schedule-validate" %>
+    <%= f.button :submit, "Validate", class: 'btn btn-flat-schedule-validate' %>
+      <% end %>
   </div>
 </div>
