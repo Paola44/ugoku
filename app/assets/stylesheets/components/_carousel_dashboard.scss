@@ -13,9 +13,9 @@
   justify-content: space-between;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-}
-.slide {
-  width: 100px;
-  flex-shrink: 0;
-  height: 100%;
+  .slide {
+    width: 100px;
+    flex-shrink: 0;
+    height: 100%;
+  }
 }
