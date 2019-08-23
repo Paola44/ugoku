@@ -89,7 +89,7 @@
     .event-address
       h3 {
         color: black;
-        font-size: 17px;
+        font-size: 15px;
         text-align: left;
     }
   }
@@ -106,6 +106,9 @@
       p {
         color :#A9A2A2;
         padding-right: 10px;
+        #last-child {
+          color: #C4C4C4;
+        }
       }
     }
     .details-button {

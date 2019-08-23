@@ -2,7 +2,7 @@
   <h1>Try new events!</h1>
   <% @grouped_days_events.each do |day, events| %>
     <h2><%= day.strftime('%A') %></h2>
-    <% events.each do |event| %>
+    <% events.each_with_index do |event, index| %>
       <div class="card-events">
           <%= image_tag("boxing-gloves.png", class: 'sport-img')%>
           <div class="event">
@@ -12,7 +12,7 @@
                 <p><i class="far fa-calendar-alt">  <%= event.start_at.to_date %></i></p>
                 <p><i class="far fa-clock">  <%= event.start_at.strftime('%l%P') %></i></p>
               </div>
-              <button class="button-events">See more</button>
+              <button class="button-events" data-toggle="collapse" data-target="#description-collapse-<%= index %>" type="button" aria-expanded="false" aria-controls="description-collapse-<%= index %>">See more</button>
             </div>
           </div>
           <div class="add-button">
@@ -24,7 +24,7 @@
           </div>
       </div>
 
-      <div class="decription-event">
+      <div class="collapse decription-event" id="description-collapse-<%= index %>">
         <div class="address-details">
           <div class="event-address">
             <h3><strong><%= event.address.capitalize %></strong></h3>
@@ -41,16 +41,19 @@
           <div class="details-level">
             <% if event.level == 1 %>
               <p><i class="fas fa-dumbbell"></i></p>
+              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
+              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
             <% elsif %>
               <% event.level == 2  %>
               <p><i class="fas fa-dumbbell"></i></p>
               <p><i class="fas fa-dumbbell"></i></p>
+              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
             <% else  %>
               <p><i class="fas fa-dumbbell"></i></p>
               <p><i class="fas fa-dumbbell"></i></p>
               <p><i class="fas fa-dumbbell"></i></p>
             <% end %>
-            <div class="details-button">
+            <div class="details-button" data-toggle="collapse" data-target="#description-collapse-<%= index %>" role="button" aria-expanded="false" aria-controls="description-collapse-<%= index %>">
               <%= image_tag('error.png', class: 'more-details-btn') %>
             </div>
           </div>
