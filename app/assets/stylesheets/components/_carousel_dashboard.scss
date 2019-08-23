@@ -1,0 +1,13 @@
+.slider {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.slide {
+  width: 100px;
+  flex-shrink: 0;
+  height: 100%;
+}
