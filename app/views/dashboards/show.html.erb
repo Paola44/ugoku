@@ -1,9 +1,9 @@
 <div class="container dashboard-section pt-5">
-  <h2 class="h2_non_eteint">Your dashboard</h2>
-  <h2 class="h2_eteint pb-5">Your program</h2>
+  <h2 class="h2_non_eteint pt-5">Your dashboard</h2>
+  <h2 class="h2_eteint pb-5 pt-3">Your program</h2>
   <div class="  user_activities">
     <i class="fas fa-chevron-left pt-5 text-white"></i>
-    <div class="slider">
+    <div class="slider-program">
       <% @user_events.each do |event| %>
         <div class="event_matched_by_user slide">
           <%= image_tag 'boxing-gloves.png', alt: 'box glove',height: 50, width: 50 %>

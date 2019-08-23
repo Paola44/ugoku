@@ -1,3 +1,11 @@
+.slider-program {
+  width: 420px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 .slider {
   width: 400px;
   height: 100%;
