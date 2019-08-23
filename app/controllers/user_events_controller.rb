@@ -10,4 +10,10 @@ class UserEventsController < ApplicationController
       redirect_to events_path, alert: "Error"
     end
   end
+
+  def destroy
+    @user_event = UserEvent.find(params[:id])
+    @user_event.destroy
+    redirect_to matching_events_path
+  end
 end

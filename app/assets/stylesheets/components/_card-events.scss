@@ -15,6 +15,11 @@
     font-weight: bold;
     font-size: 25px;
   }
+  p {
+      color :#787373;
+      font-size: 13px;
+      padding: 0 20px 0 10px;
+    }
   .sport-img {
     width: 120px;
     height: 120px;
@@ -81,8 +86,8 @@
   text-align: center;
   position: relative;
   padding: 20px 20px 10px 20px;
-  margin: 0 10px 30px 10px;
-  border-radius: 10px;
+  margin: -37px 10px 30px 10px;
+  border-radius: 0 0 10px 10px;
 
   .address-details {
     display: flex;
@@ -136,22 +141,17 @@
       padding: 0 20px 0 10px;
     }
   }
-
-  .capadity-event {
-    p {
-      color :#787373;
-      font-size: 13px;
-      padding: 0 20px 0 10px;
-    }
-  }
-
-
-
 }
 
+.event-avatars {
 
-
-
+  img {
+    position: relative;
+    margin-left:-10px;
+    width: 40px;
+    height:40px;
+  }
+}
 
 
 

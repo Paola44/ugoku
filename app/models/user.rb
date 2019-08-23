@@ -19,7 +19,7 @@ class User < ApplicationRecord
 
   after_create :setup_availabilities
 
-  def user_event_for?(event)
+  def user_event_for(event)
     UserEvent.find_by(user: self, event: event)
   end
 

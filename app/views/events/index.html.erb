@@ -10,13 +10,13 @@
               <h3><strong><%= event.sport.capitalize %></strong></h3>
               <div class="sport-info">
                 <p><i class="far fa-calendar-alt">  <%= event.start_at.to_date %></i></p>
-                <p><i class="far fa-clock">  <%= event.start_at.strftime('%l%P') %></i></p>
+                <p><i class="far fa-clock">  <%= event.start_at.strftime('%k') %>h</i></p>
               </div>
               <button class="button-events" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>" type="button" aria-expanded="false" aria-controls="description-collapse-<%= event.id %>">See more</button>
             </div>
           </div>
           <div class="add-button">
-            <% if current_user.user_event_for?(event) %>
+            <% if current_user.user_event_for(event) %>
               <%= image_tag('success.png', class: 'add-event-btn') %>
             <% else %>
               <%= link_to image_tag("plus.png", class: 'add-event-btn'), event_user_events_path(event), method: :post %>
@@ -62,8 +62,13 @@
             <h3>Description</h3>
             <p><%= event.description %></p>
           </div>
-          <div class="capadity-event">
+          <div class="capacity-event d-flex justify-content-end ">
             <p>Cap. <%= event.capacity %></p>
+            <div class="d-flex event-avatars">
+              <% event.users.each do |user| %>
+               <%= image_tag cl_image_path(user.photo), class: "avatar-bordered single-card rounded-circle border border-white", alt: "avatar-bordered" %>
+              <% end %>
+            </div>
           </div>
         </div>
     <% end %>
