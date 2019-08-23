@@ -4,6 +4,7 @@
 
       <div class="container-form " id="form-part2">
         <div class="special-form">
+          <%= simple_form_for @user, url: favorite_sports_url, method: :patch do |f| %>
           <h2 class='text-center mb-5'>Fill your profile</h2>
             <legend class="text-center-signup">Choose your favorite sports</legend>
           <div class="form-inputs sport-sign-up">
@@ -17,18 +18,15 @@
               <% end %>
             </div>
           </div>
-          <% if false %>
-          <div class="edit-btn-duo">
-            <div class="btn-edit-validate">
-              <%= f.submit "Validate"%>
-              </div>
-              <div class="form-actions d-flex justify-content-around btn-form fixed-bottom"></div>
-            </div>
-          </div>
-          <% end %>
         </div>
       </div>
-
     </div>
   </div>
 </div>
+
+<div class="edit-btn-duo">
+  <%= f.button :submit, "Validate", class: "btn btn-edit-validate" %>
+</div>
+<div class="form-actions d-flex justify-content-around btn-form fixed-bottom"></div>
+
+<% end %>
