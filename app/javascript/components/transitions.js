@@ -5,10 +5,10 @@ const back = document.getElementById('back-sign-up')
 
 if(next != null){
   next.addEventListener('click', (event) => {
-    if (part2.classList.contains('hidden')){
+    // if (part2.classList.contains('hidden')){
       part1.classList.add('hidden');
       part2.classList.remove('hidden');
-    }
+    // }
   });
 }
 

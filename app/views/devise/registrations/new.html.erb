@@ -1,59 +1,43 @@
-<div class="container-form" id="form-part1">
-  <div class="special-form">
-    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= f.error_notification %>
-      <h2 class='text-center mb-5'>Sign up</h2>
+<div class="signup-container-header">
+  <div class="signup-section1">
+    <div class="signup-container-text">
 
-      <div class="form-inputs">
-        <%= f.input :email,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "email",
-                    id: 'input_form' }
-                    %>
-        <%= f.input :password,
-                    required: true,
-                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                    input_html: { autocomplete: "new-password",
-                    id: 'input_form' } %>
-        <%= f.input :password_confirmation,
-                    required: true,
-                    input_html: { autocomplete: "new-password",
-                    id: 'input_form' } %>
-        <%= f.input :name,
-                    required: true,
-                    input_html: { id: 'input_form' }%>
+      <div class="container-form" id="form-part1">
+        <div class="special-form">
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
+          <h2 class='text-center mb-5'>Sign up</h2>
+          <div class="form-inputs">
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email",
+                        id: 'input_form' }
+                        %>
+            <%= f.input :password,
+                        required: true,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password",
+                        id: 'input_form' } %>
+            <%= f.input :password_confirmation,
+                        required: true,
+                        input_html: { autocomplete: "new-password",
+                        id: 'input_form' } %>
+            <%= f.input :name,
+                        required: true,
+                        input_html: { id: 'input_form' }%>
+          </div>
+        </div>
       </div>
-  </div>
-  <div class="form-actions d-flex justify-content-around btn-form fixed-bottom">
-    <span class="butn-valid mb-3 text-center" id="next-sign-up">Next</span>
-    <span class='butn-refuse text-center'>
-      <%= render "devise/shared/links" %>
-    </span>
+
+    </div>
   </div>
 </div>
-<div class="container-form hidden" id="form-part2">
-  <div class="special-form">
-    <h2 class='text-center mb-5'>Fill your profile</h2>
-      <legend class="text-center">Choose your favorite sports</legend>
-    <div class="form-inputs">
 
-
-      <% categories = %w(yoga football boxe Running crossfit) %>
-      <div class="category-choices ">
-        <% categories.each do |category| %>
-          <div class="input-circle">
-            <input class="hidden" aria-invalid="true" type="checkbox" value="<%= category %>" name="user[favorite_sports][]" id="user_favorite_sports_<%= category %>">
-            <label class="category-choice d-flex align-items-center justify-content-center" for="user_favorite_sports_<%= category %>"><%= category.capitalize %></label>
-          </div>
-        <% end %>
-      </div>
-    </div>
-    <div class="form-actions d-flex justify-content-around btn-form fixed-bottom">
-      <%= f.button :submit, "Sign up", class: 'butn-valid mb-3 text-center' %>
-      <span class="butn-refuse text-center" id="back-sign-up">Back</span>
-      </span>
-    </div>
-    <% end %>
+<div class="sign-up-btn-duo">
+  <div class="btn-flat-sign-up-next">
+     <%= f.submit 'Sign up' %>
+     <% end %>
   </div>
+  <div class="form-actions d-flex justify-content-around btn-form fixed-bottom"></div>
 </div>
