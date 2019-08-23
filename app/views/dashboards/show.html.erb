@@ -7,7 +7,7 @@
       <% @user_events.each do |event| %>
         <div class="event_matched_by_user slide">
           <%= image_tag 'boxing-gloves.png', alt: 'box glove',height: 50, width: 50 %>
-          <span><%= event.event.start_at.day %> / <%= event.event.start_at.month %></span>
+          <span><%= event.event.start_at.strftime("%-d %B") %></span>
           <span class='p-1'><%= event.event.start_at.hour %> h 00</span>
         </div>
       <% end %>
