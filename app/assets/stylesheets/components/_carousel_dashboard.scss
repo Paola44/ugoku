@@ -5,6 +5,7 @@
   justify-content: space-between;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  color: $black;
 }
 .slider {
   width: 400px;
@@ -13,6 +14,7 @@
   justify-content: space-between;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  color: $pink;
   .slide {
     width: 100px;
     flex-shrink: 0;
