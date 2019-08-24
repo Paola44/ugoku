@@ -1,38 +1,58 @@
-.dashboard-section{
-  background: $black;
-  height: 165vh;
+.h2_non_eteint {
+  font-size: 40px;
+  font-weight: 400;
+  color: $white;
   text-align: center;
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
-  .h2_non_eteint{
-  font-style: normal;
-  font-weight: bold;
-  font-size: 35px;
-  line-height: 35px;
-  }
-  .h2_eteint{
-  font-style: normal;
-  font-weight: 300;
+  padding-top: 70px;
+}
+.h2_eteint {
   font-size: 30px;
-  line-height: 35px;
-  }
-  .user_activities{
+  font-weight: 400;
+  color: $white;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+
+.sports-image {
+  position: relative;
+  bottom: 15px;
+  left: -2px;
+}
+
+.fa-chevron-right {
+  padding-top: 69px;
+  padding-left: 10px;
+}
+.fa-chevron-left {
+  padding-top: 69px;
+  padding-right: 10px;
+}
+
+.dashboard-section {
+  background: $black;
+  height: 252px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+
+  .user_activities {
     display: flex;
     justify-content: space-around;
   }
-  .event_matched_by_user{
-    background: #FFFFFF;
+  .event_matched_by_user {
+    background: $white;
     border-radius: 69px;
     width: 11vh;
     height: 141px;
     margin: 6px;
     display: flex;
-    padding:10px;
+    padding: 10px;
     flex-direction: column;
     justify-content: center;
     align-items:center;
   }
-  .event_fav_sport{
+  .event_fav_sport {
     background: $black;
     width: 90px;
     height: 141px;
@@ -42,7 +62,7 @@
     justify-content: center;
     align-items:center;
   }
-  .event_fav_availabilities{
+  .event_fav_availabilities {
     background: $black;
     width: 100px;
     height: 141px;
@@ -50,10 +70,10 @@
     padding:10px;
     flex-direction: column;
     align-items:center;
-    .pastille{
+
+    .pastille {
       background: $black;
       width: 90px;
-
       display: flex;
       padding:10px;
       flex-direction: column;
@@ -67,14 +87,49 @@
         border-radius: 50%;
       }
     }
-    .availabities-result{
+    .availabities-result {
     }
   }
-  .user_activities-schedule{
+  .user_activities-schedule {
     display: flex;
     justify-content: space-around;
-    height:220px;
+    height: 220px;
     margin: 0 auto;
     color: $pink;
   }
+}
+
+.favorites-sports {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-sports {
+  background: $white;
+  height: 180px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.h2_eteint-sport {
+  font-size: 30px;
+  font-weight: 400;
+  color: $white;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+
+.user_availability {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-availability {
+  background: $black;
+  height: 180px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 }

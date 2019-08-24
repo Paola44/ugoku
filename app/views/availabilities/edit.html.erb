@@ -1,8 +1,9 @@
-<div class="schedule-container-header">
-  <div class="schedule-section1 pt-5">
-    <div class="schedule-container-text pt-5">
-      <h2 class='schedule-main_title pl-3 pr-3'>Specify your availibilities</h2>
-      <p class="schedule-desciption pl-3 pr-3 pb-4">Set your schedule up !</p>
+<h2 class='schedule-main_title'>Specify your availabilities</h2>
+<p class="schedule-desciption">Set your schedule up !</p>
+
+<div class="schedule-container-header pl-4 pr-4">
+  <div class="schedule-section1">
+    <div class="schedule-container-text">
       <div class="hyper-width">
       <%= simple_form_for current_user, class: 'hyper-width', url: availabilities_url  do |f| %>
         <div class="category-schedule ">
@@ -64,6 +65,7 @@
     </div>
   </div>
 </div>
+
 <div class="btn-duo">
   <div class="btn-schedule-back">
     <%= link_to "Back", dashboard_path, class:"btn btn-flat-schedule-back" %>

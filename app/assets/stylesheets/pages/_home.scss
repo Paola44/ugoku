@@ -1,34 +1,21 @@
 .home-section1 {
-  background: $black;
   height: 75%;
   text-align: center;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 5px 5px;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
   padding-top: 70px;
+  margin-right: 20px;
+  margin-left: 20px;
 
   .home-container-text {
     padding-bottom: 50px;
   }
-  .main_title {
-    font-size: 30px;
-    font-weight: 400;
-    color: $white;
-    text-align: left;
-  }
-  .desciption {
-    position: relative;
-    font-size: 17px;
-    font-weight: 400;
-    color: $white;
-    text-align: justify;
-  }
-  .text_color_green {
-    color: $green2;
-  }
+
   .logo {
     background-image: image-url('last_logo2.png');
     height:30vh;
     background-size: contain;
+    justify-content: center;
     background-position: center;
     background-repeat: no-repeat;
     margin: 0 30px;
@@ -36,62 +23,118 @@
   }
 }
 
+.main_title {
+  font-size: 30px;
+  font-weight: 400;
+  color: $white;
+  text-align: left;
+}
+
+.desciption {
+  position: relative;
+  font-size: 17px;
+  font-weight: 400;
+  color: $white;
+  text-align: justify;
+}
+
+.text_color_green {
+  color: $green2;
+}
+
 .btn-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -22px;
+  padding-top: 25px;
 }
+
+.secondary_title {
+  font-size: 25px;
+  font-weight: 400;
+  color: $white;
+  padding-top: 40px;
+}
+
 .home-container {
-  background: $white;
-  padding-top: 30px;
+  background: black;
 
   .home-section2 {
-    background: $black;
     text-align: center;
-    margin-right: 10px;
-    margin-left: 10px;
-    border-radius: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
     box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 
     p {
-      color: $white;
+      color: $black;
       padding: 0 10px;
-    }
-    .secondary_title {
-      font-size: 25px;
-      font-weight: 400;
-      color: $white;
-      padding-top: 40px;
+      padding-top: 30px;
     }
     .location_icon {
       font-size: 50px;
-      color: $green2;
-      padding-top: 30px;
+      color: $black;
+      padding-top: 20px;
     }
     .mini_title_green {
-      color: $green2;
+      color: $black;
+      font-size: 20px;
+      font-weight: bold;
       margin-bottom: 2px;
-    }
-    .group_icon {
-      font-size: 50px;
-      color: $red;
       padding-top: 30px;
     }
+    .green-text {
+      color: $black;
+      text-align: justify;
+    }
+
+    .group_icon {
+      font-size: 50px;
+      color: $white;
+      padding-top: 20px;
+    }
     .mini_title_red {
-      color: $red;
+      color: $white;
+      font-size: 20px;
+      font-weight: bold;
       margin-bottom: 2px;
+      padding-top: 30px;
+    }
+    .red-text {
+      color: $white;
+      text-align: justify;
     }
     .sport_icon {
       font-size: 50px;
-      color: $blue2;
-      padding-top: 30px;
+      color: $black;
+      padding-top: 20px;
     }
     .mini_title_blue {
-      color: $blue2;
+      color: $black;
+      font-size: 20px;
+      font-weight: bold;
       margin-bottom: 2px;
+      padding-top: 30px;
+    }
+    .blue-text {
+      color: $black;
+      text-align: justify;
     }
   }
+}
+.brandcolor {
+  color: $pink;
+  font-weight: bold;
+}
+
+.green-container {
+  background: linear-gradient(to top, $green1, $green2);
+}
+.red-container {
+  background: linear-gradient(to top, $red, $pink);
+}
+.blue-container {
+  background: linear-gradient(to top, $blue1, $blue2);
 }
 
 .btn-box-secondary {
@@ -102,58 +145,86 @@
 }
 
 .home-section3 {
-  background: $black;
+  background: $white;
   text-align: center;
-  margin-right: 10px;
-  margin-left: 10px;
-  border-radius: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 
   .third_title {
     font-size: 25px;
     font-weight: 400;
-    color: $white;
-    padding-top: 40px;
+    font-weight: bold;
+    color: $red;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
   }
   p {
-    color: $white;
+    color: $black;
     padding: 0 10px;
-    margin-bottom: 0px
+    margin-bottom: 0px;
+    text-align: justify;
+  }
+  .fisrtlist1 {
+    color: $black;
+    padding: 20px 10px;
+    text-decoration: none;
+    justify-content: center;
+    padding-bottom: 30px;
   }
   .list1 {
-    color: $white;
+    color: $black;
     padding: 30px 10px;
     text-decoration: none;
+    justify-content: center;
   }
   .sub-title-3 {
-    padding-top: 30px;
+    font-weight: bold;
+    font-size: 17px;
+    padding-top: 10px;
+  }
+  .sub-title-4 {
+    font-weight: bold;
   }
   .text_color_green {
-    color: $green2;
+    color: $red;
   }
-  .last-line {
-    padding-top: 30px;
-    margin-bottom: 17px;
-  }
+}
+.last-line {
+  color: $white;
+  padding-top: 10px;
+  font-size: 17px;
+  padding-bottom: 30px;
+  text-align: justify;
 }
 
 .home-section4 {
   height: 660px;
   background: $black;
   text-align: center;
-  border-radius: 20px 20px 0 0;
+  border-radius: 5px 5px 0 0;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  margin-right: 20px;
+  margin-left: 20px;
 
   .sport-card-home {
     font-size: 25px;
     font-weight: 400;
+    font-weight: bold;
     color: $white;
-    padding-top: 40px;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
   }
   p {
     color: $white;
     padding: 30px 10px;
-    margin-bottom: 0px
+    margin-bottom: 0px;
+    text-align: justify;
   }
   .text_color_green {
     color: $green2;
@@ -173,7 +244,7 @@
   height: 30%;
   background: $white;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
   padding: 10px;
 
@@ -189,6 +260,7 @@
     position: absolute;
     right: 40px;
     top: 10px;
+    border-color: $red;
   }
 
   .comments {
@@ -200,7 +272,6 @@
     padding: 0px;
     padding-bottom: 10px;
     padding-top: 12px;
-
   }
 }
 .stars {
