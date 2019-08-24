@@ -2,48 +2,58 @@
   <div class="home-section1">
     <div class="logo mb-5">
     </div>
-    <div class="home-container-text pt-5">
-      <h1 class="main_title pl-3 pr-3">Sports anytime and anywhere</h1>
-      <p class="desciption pl-3 pr-3">Does not matter where you are or what your schedule is! <span class="text_color_green">Ugoku will always find the rigth sportive activity</span> for you !</p>
-    </div>
   </div>
+</div>
+<div class="home-container-text pt-5">
+  <h1 class="main_title pl-4 pr-4">Sports anytime and anywhere</h1>
+  <p class="desciption pl-4 pr-4">Does not matter where you are or what your schedule is! <span class="text_color_green">Ugoku will always find the rigth sportive activity</span> for you !</p>
 </div>
 <div class= "btn-box">
   <%= link_to "I want this !", dashboard_path, class:"btn btn-flat" %>
 </div>
 
-<div class="home-container">
-  <div class="home-section2 pb-5">
-    <h2 class="secondary_title pb-2">Why people use Ugoku ?</h2>
+<h2 class="secondary_title pb-3 pl-4 pr-4">Why people use <span class="brandcolor">Ugoku</span> ?</h2>
+<div class="home-container pb-4">
+  <div class="home-section2 green-container pb-2">
     <div class="icons">
-      <i class="fas fa-map-marker-alt location_icon"></i>
       <p class="mini_title_green">Sports near you</p>
-      <p>The algorythm will match the sportive events near you </p>
-      <i class="fas fa-users group_icon"></i>
-      <p class="mini_title_red">Meet new people</p>
-      <p>You will not be alone ! There are a lor of people who loves what you love</p>
-      <i class="fas fa-users sport_icon"></i>
-      <p class="mini_title_blue">Stay active </p>
-      <p>You can practice all sports you want when you are free to do it!</p>
+      <i class="fas fa-map-marker-alt location_icon"></i>
+      <p class="green-text">The algorythm will match the sportive events near you </p>
+      </div>
     </div>
+    <div class="home-container pb-4 pt-4">
+      <div class="home-section2 red-container pb-2">
+        <p class="mini_title_red">Meet new people</p>
+        <i class="fas fa-users group_icon"></i>
+        <p class="red-text">You will not be alone ! There are a lor of people who loves what you love</p>
+      </div>
+    </div>
+    <div class="home-container pb-4">
+      <div class="home-section2 blue-container pb-2">
+        <p class="mini_title_blue">Stay active </p>
+        <i class="fas fa-users sport_icon"></i>
+        <p class="blue-text">You can practice all sports you want when you are free to do it!</p>
+      </div>
+    </div>
+  </div>
   </div>
   <div class="btn-box-secondary">
     <%= link_to "Try ugoku now", dashboard_path, class:"btn btn-flat btn-flat-2" %>
   </div>
 
   <div class="home-section3 pb-5">
-    <h2 class="third_title pb-2">An intelligent platform</h2>
+    <h2 class="third_title">An intelligent platform</h2>
     <div class="text-container-3">
       <p class="sub-title-3">What does that mean ?</p>
       <p class="sub-title-4">It is simple, you only have to :</p>
-      <p class="list1"><span class="text_color_green">1.</span> Set up your sport preferences</p>
+      <p class="fisrtlist1"><span class="text_color_green">1.</span> Set up your sport preferences</p>
       <p class="list1"><span class="text_color_green">2.</span> Insert your disponibilities</p>
       <p class="list1"><span class="text_color_green">3.</span> eolocalize you.</p>
-      <p class="last-line">The <span class="text_color_green">Ugoku</span> algorythm will match the sport event which correspond you more</p>
     </div>
   </div>
+  <p class="last-line pl-4 pr-4">The <span class="text_color_green">Ugoku</span> algorythm will match the sport event which correspond you more</p>
   <div class="btn-box-secondary">
-    <%= link_to "Try ugoku now", dashboard_path, class:"btn btn-flat btn-flat-2" %>
+    <%= link_to "Try ugoku now", dashboard_path, class:"btn btn-flat btn-flat-3" %>
   </div>
 
   <div class="home-section4">
@@ -59,7 +69,7 @@
               <%= image_tag "https://res.cloudinary.com/dueo7qd0s/image/upload/v1566312193/volodia.jpg", class: "avatar-bordered", alt: "avatar-bordered" %>
               <h2 class="user_name pb-3">Volodia</h2>
               <div class="text-container-3">
-                <p class="comments">“For years i paid for GYM memberships and i never went, because i was busy or tired. Now thanks to Ugoku i can do any sport when i want to... I love it.”</p>
+                <p class="comments">“For years i paid for GYM memberships and i never went. Now thanks to Ugoku i can do any sport when i want to...”</p>
               </div>
               <div class="stars">
                 <span class="fa fa-star checked"></span>

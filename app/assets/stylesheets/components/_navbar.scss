@@ -1,20 +1,22 @@
-.back-black{
+.back-black,{
   background: $black;
 }
-.navbar-brand{
-  position: fixed;
-  top: 5px;
-  left: 5px;
+.navbar-brand,{
+  height: 48px;
+  position: absolute;
+  top: 2px;
+  left: 170px;
 }
 
 .navbar-lewagon {
-  background: black;
-  border-radius: 0 0 20px 20px;
-  display:block;
-  position:fixed;
+  background: $black;
+  display: block;
+  position: absolute;
+  background-position-x: center;
+  background-position-y: center;
   width: 100%;
-  // height: 80px;
-  z-index: 7;
+  height: 48px;
+  z-index: 2;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -22,29 +24,35 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 35px;
 }
 
-.navbar-toggler{
-  background: linear-gradient(90deg, #02E2F9, #00FFA7);
-  border-radius: 10px 10px 0 0;
-  padding: 13px;
+.navbar-toggler {
+  border-color: $black;
+  color: $white;
+  border-radius: 5px 5px 0 0;
+  padding-top: 8px;
+  border: none;
+  height: 40px;
+  box-decoration-break: none;
 }
 
-#navbarSupportedContent{
-  background: linear-gradient(90deg, #02E2F9, #00FFA7);
-  border-radius: 10px 0 10px 10px;
-    width: 140px;
-
+#navbarSupportedContent {
+  border-color: none ;
+  background: $white;
+  border-radius: 0 0 5px 5px;
+  width: 340px;
+  height: 203px;
 }
-.menu-deroulant{
+.menu-deroulant {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  z-index: 7;
+  z-index: 4;
 }
-.navbar-nav{
+.navbar-nav {
+  border-color: $white;
   padding-right: 20px;
   a{
     font-weight: bold;
@@ -52,3 +60,73 @@
   }
 }
 
+#menu-24 {
+  display: none;
+}
+
+.menu {
+left: 10px;
+top: -2px;
+transition: all 0.21s;
+position: relative;
+width: 20px;
+height: 25px;
+border-radius: 100%;
+cursor: pointer;
+
+  &_part {
+
+width: 15px;
+height: 3px;
+position: absolute;
+background: $white;
+right: 0;
+margin: auto;
+left: 0;
+border-radius: 1px;
+transition: all 0.21s cubic-bezier(0.7, 0, 0, 1.1);
+width:15;top: calc(50% - ((6.5px)) + -2px);
+    &:nth-of-type(1) {
+  top: calc(50% - ((6.5px)) + -2px);
+  width: 15px
+}
+
+
+    &:nth-of-type(2) {
+  top: calc(50% - ((6.5px)) + 3px);
+  width: 15px
+}
+
+
+    &:nth-of-type(3) {
+  top: calc(50% - ((6.5px)) + 8px);
+  width: 15px
+}
+
+
+}
+
+
+
+}
+
+input#menu-24:checked + label .menu {
+transform:scale(1.26) rotate(0deg);
+}
+
+input#menu-24:checked + label .menu .menu_part:nth-of-type(1) {
+transform: rotate(45deg);
+width: 15px !important;
+top: calc(50% - (1.5px))!important;
+}
+
+input#menu-24:checked + label .menu .menu_part:nth-of-type(2) {
+left: 0px !important;
+opacity: 0;
+}
+
+input#menu-24:checked + label .menu .menu_part:nth-of-type(3) {
+transform: rotate(-45deg);
+width: 15px!important;
+top: calc(50% - (1.5px))!important;
+}
