@@ -13,9 +13,9 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :availabilities
 
   validates :name, presence: true
-  validates :favorite_sports, presence: true
+  # validates :favorite_sports, presence: true
 
-  validate :favorite_sports_in_list
+  # validate :favorite_sports_in_list
 
   after_create :setup_availabilities
 
@@ -25,12 +25,12 @@ class User < ApplicationRecord
 
   private
 
-  def favorite_sports_in_list
-    in_the_list = (favorite_sports - Event::SPORTS).empty?
-    return if in_the_list
+  # def favorite_sports_in_list
+  #   in_the_list = (favorite_sports - Event::SPORTS).empty?
+  #   return if in_the_list
 
-    errors.add(:favorite_sports, :inclusion)
-  end
+  #   errors.add(:favorite_sports, :inclusion)
+  # end
 
   def setup_availabilities
     Availability::DAYS.each do |day|
