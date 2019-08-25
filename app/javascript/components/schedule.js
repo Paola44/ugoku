@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const schedule_days = document.querySelectorAll('.schedule-day');
   const hide_time = document.querySelectorAll('.hide_schedule')
   const slots = [...Array(6).keys()];
+
   const remove_class = (day) => {
     day.classList.remove('active-schedule');
     day.classList.remove('margin-schedule');
@@ -32,14 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
       day.childNodes[3].classList.toggle('hidden');
       day.classList.toggle('margin-schedule');
     })
-  }
-
-  const check_if_true = (box, slot) => {
-    if (box.checked) {
-      slot.classList.add('active')
-    } else {
-      slot.classList.remove('active')
-    }
   }
 
   if (schedule_days.length > 0) {
