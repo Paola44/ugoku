@@ -39,7 +39,7 @@
   <div class="user_availability pl-4 pr-4">
     <div class="container-availability">
       <div class="user_activities-schedule">
-        <i class="fas fa-chevron-left"></i>
+        <i class="fas fa-chevron-left activity-chevron-left"></i>
         <div class="slider">
           <% @availabilities.each do |availability| %>
             <div class="event_fav_availabilities slide">
@@ -70,7 +70,7 @@
             </div>
           <% end %>
         </div>
-      <i class="fas fa-chevron-right"></i>
+      <i class="fas fa-chevron-right activity-chevron-right"></i>
       </div>
       <div class= "btn-box sports-">
         <%= link_to "Update Availabilities", root_path, class:"btn btn-flat btn-flat-update-3" %>

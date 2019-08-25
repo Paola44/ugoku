@@ -8,16 +8,25 @@
   color: $black;
 }
 .slider {
-  width: 400px;
+  width: 325px;
   height: 100%;
   display: flex;
   justify-content: space-between;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  color: $pink;
+  color: $white;
+
   .slide {
     width: 100px;
     flex-shrink: 0;
     height: 100%;
   }
+}
+
+.activity-chevron-left {
+  color: $white;
+}
+
+.activity-chevron-right {
+  color: $white;
 }
