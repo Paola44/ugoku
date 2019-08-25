@@ -61,11 +61,13 @@
             <h3>Description</h3>
             <p><%= event.description %></p>
         </div>
-        <div class="d-flex event-avatars">
+        <div class="capacity-event d-flex justify-content-end ">
           <p>Cap. <%= event.capacity %></p>
-          <% event.users.each do |user| %>
-            <%= image_tag cl_image_path(user.photo), class: "avatar-bordered single-card rounded-circle border border-white", alt: "avatar-bordered" %>
-          <% end %>
+          <div class="d-flex event-avatars">
+            <% event.users.each do |user| %>
+              <%= image_tag cl_image_path(user.photo), class: "avatar-bordered single-card rounded-circle border border-white", alt: "avatar-bordered" %>
+            <% end %>
+          </div>
         </div>
       </div>
     <% end %>

@@ -8,6 +8,12 @@
   left: 170px;
 }
 
+#navbarSupportedContent{
+  background: #FFFFFF;
+border-radius: 0 0 5px 5px;
+width: 340px;
+height: 0;
+}
 .navbar-lewagon {
   background: $black;
   display: block;
@@ -17,6 +23,18 @@
   width: 100%;
   height: 48px;
   z-index: 2;
+}
+.collapse-signin{
+  height: 260px;
+  background: #FFFFFF;
+  border-radius: 0 0 5px 5px;
+  width: 340px;
+}
+.collapse-signout{
+  height:120px;
+  background: #FFFFFF;
+  border-radius: 0 0 5px 5px;
+  width: 340px;
 }
 
 .navbar-lewagon .navbar-collapse {
