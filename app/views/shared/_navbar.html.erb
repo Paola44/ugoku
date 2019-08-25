@@ -16,34 +16,45 @@
         </label>
       </button>
 
-      <div class="collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto text-right">
-          <% if user_signed_in? %>
-            <li class="nav-item active">
-              <%= link_to "Home", root_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Your schedule", edit_availabilities_path , class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Dashboard", dashboard_path , class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Profile", users_show_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-            </li>
-          <% else %>
-            <li class="nav-item">
-              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
+      <% if user_signed_in? %>
+        <div class="collapse" id="navbarSupportedContent">
+          <div class="collapse-signin">
+            <ul class="navbar-nav mr-auto text-right">
+                <li class="nav-item active">
+                  <%= link_to "Home", root_path, class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "Your schedule", edit_availabilities_path , class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "Dashboard", dashboard_path , class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "Profile", users_show_path, class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "All events", events_path, class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+                </li>
+            </ul>
+          </div>
+        </div>
+      <% else %>
+        <div class="collapse collapse-signout" id="navbarSupportedContent">
+          <div class="collapse-signout">
+            <ul class="navbar-nav mr-auto text-right">
+                <li class="nav-item">
+                  <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
+                </li>
+            </ul>
+          </div>
+        </div>
+        <% end %>
     </div>
   </div>
 </div>
