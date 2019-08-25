@@ -8,25 +8,32 @@
   color: $black;
 }
 .slider {
-  width: 325px;
   height: 100%;
   display: flex;
   justify-content: space-between;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   color: $white;
+  margin-top: 15px;
+  width: 340px;
 
   .slide {
     width: 100px;
     flex-shrink: 0;
     height: 100%;
+
   }
 }
 
-.activity-chevron-left {
-  color: $white;
+.left-activity {
+color: $white;
+padding-left: 10px;
+margin-top: -15px;
 }
 
-.activity-chevron-right {
-  color: $white;
+.right-activity {
+color: $white;
+padding-right: 10px;
+margin-top: -15px;
 }
+

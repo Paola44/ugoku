@@ -1,7 +1,7 @@
 <h2 class="h2_non_eteint">Your dashboard</h2>
 <h2 class="h2_eteint">Your program</h2>
-<div class="container dashboard-section pt-5 pb-5">
-  <div class="user_activities pl-4 pr-4">
+<div class="dashboard-section pt-5 pb-5">
+  <div class="user_activities">
     <i class="fas fa-chevron-left text-white"></i>
     <div class="slider-program">
       <% @user_events.each do |event| %>
@@ -38,8 +38,8 @@
   <h2 class="h2_eteint">Your availabilities</h2>
   <div class="user_availability pl-4 pr-4">
     <div class="container-availability">
+      <i class="fas fa-chevron-left left-activity"></i>
       <div class="user_activities-schedule">
-        <i class="fas fa-chevron-left activity-chevron-left"></i>
         <div class="slider">
           <% @availabilities.each do |availability| %>
             <div class="event_fav_availabilities slide">
@@ -70,11 +70,11 @@
             </div>
           <% end %>
         </div>
-      <i class="fas fa-chevron-right activity-chevron-right"></i>
       </div>
-      <div class= "btn-box sports-">
-        <%= link_to "Update Availabilities", root_path, class:"btn btn-flat btn-flat-update-3" %>
-      </div>
+      <i class="fas fa-chevron-right right-activity"></i>
     </div>
   </div>
+</div>
+<div class= "btn-box sports-">
+  <%= link_to "Update Availabilities", root_path, class:"btn btn-flat btn-flat-update-3" %>
 </div>
