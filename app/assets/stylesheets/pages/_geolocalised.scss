@@ -1,19 +1,23 @@
 .container-geolocalised{
-  padding: 50px 20px 0 20px;
-  color: white;
-  h3{
-    margin: 42px auto
+  color: $white;
+
+  h3 {
+    font-size: 40px;
+    font-weight: 400;
+    color: $white;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 50px;
   }
-  .geolocalised{
+  .geolocalised {
     color:white;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     margin: 0 auto;
     width: 70%;
   }
-  .separation{
-    padding-top: 50px;
+  .separation {
+    padding-top: 20px;
     border-bottom: 2px solid white;
     width: 80%;
     margin: 0 auto;
@@ -30,6 +34,36 @@
     transition: background 0.3s ease;
     margin-left: 10px;
     width: 120px;
+    margin-top: -50px;
   }
 }
 
+.user_address {
+  padding-top: 30px;
+}
+
+.fa-location-arrow {
+  color: $black;
+}
+
+.geo-box {
+  height: 25px;
+  color: $black;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, $green1, $green2);
+  border-radius: 50px;
+}
+
+.icon-box {
+ width: 25px;
+text-align: center;
+}
+
+.geo-text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
