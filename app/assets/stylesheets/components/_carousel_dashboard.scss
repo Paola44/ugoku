@@ -25,16 +25,17 @@
   }
 }
 
-.left-activity {
-color: $white;
-position: absolute;
-padding-left: 10px;
-
+.fa-left-activity {
+  position: absolute;
+  color: $white;
+  left: 10px;
+  bottom: -447px;
 }
 
-.right-activity {
-color: $white;
-padding-right: 10px;
-margin-top: -15px;
+.fa-right-activity {
+  position: absolute;
+  color: $white;
+  right: 10px;
+  bottom: -447px;
 }
 

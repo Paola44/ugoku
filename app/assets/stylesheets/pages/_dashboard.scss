@@ -20,14 +20,7 @@
   left: -2px;
 }
 
-.fa-chevron-right {
-  padding-top: 69px;
-  padding-left: 10px;
-}
-.fa-chevron-left {
-  padding-top: 69px;
-  padding-right: 10px;
-}
+
 
 .dashboard-section {
   background: $black;
@@ -37,11 +30,22 @@
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
   margin-left: 23px;
   margin-right: 23px;
+  padding: 10px;
 
   .user_activities {
     display: flex;
     justify-content: space-around;
   }
+  .fa-chevron-right {
+  position: absolute;
+  top: 450px;
+  right: 10px;
+}
+.fa-chevron-left {
+  position: absolute;
+  top: 450px;
+  left: 10px;
+}
   .event_matched_by_user {
     background: $white;
     border-radius: 69px;
