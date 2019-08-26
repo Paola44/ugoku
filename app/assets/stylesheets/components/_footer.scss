@@ -1,0 +1,54 @@
+.footer {
+  background: #1A1A1A;
+  display: block;
+  height: 120px;
+  color: rgba(0,0,0,0.3);
+  position: relative;
+  top: 94px;
+  padding-top: 30px;
+
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links-text {
+  text-align: center;
+}
+.footer-links a {
+  color: white;
+  opacity: 0.10s;
+  text-decoration: none;
+  font-size: 25px;
+  padding: 0px 10px;
+}
+
+.links-text a {
+  display: inline-block;
+  justify-content: space-around;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: lighter;
+  color: white;
+  margin: 5px;
+}
+
+.fab.fa-facebook {
+ color: #4267B2;
+}
+.fab.fa-instagram {
+ background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+ -webkit-background-clip: text;
+         /* Also define standard property for compatibility */
+         background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+.fab.fa-twitter {
+ color: #1EA1F1;
+}
+.fab.fa-linkedin {
+ color: #0077B5;
+}
