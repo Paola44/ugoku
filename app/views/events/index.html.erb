@@ -1,5 +1,8 @@
 <div class="container-events">
   <h1>Try new events!</h1>
+  <%= link_to users_localisation_path do %>
+    <button class="btn btn-primary">Change your address</button>
+  <% end %>
   <% @grouped_days_events.each do |day, events| %>
     <h2><%= day.strftime('%A') %></h2>
     <% events.each do |event| %>

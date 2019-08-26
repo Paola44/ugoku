@@ -18,6 +18,8 @@ class User < ApplicationRecord
   # validate :favorite_sports_in_list
 
   after_create :setup_availabilities
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   def user_event_for(event)
     UserEvent.find_by(user: self, event: event)
