@@ -39,7 +39,7 @@
 }
 
 .user_address {
-  padding-top: 30px;
+  // padding-top: 30px;
 }
 
 .fa-location-arrow {
@@ -47,23 +47,17 @@
 }
 
 .geo-box {
-  height: 25px;
-  color: $black;
-  background-color: $white;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, $green1, $green2);
-  border-radius: 50px;
 }
 
 .icon-box {
- width: 25px;
-text-align: center;
-}
-
-.geo-text {
+  color: $black;
+  background-color: $white;
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to right, $green1, $green2);
+  border-radius: 50px;
 }
