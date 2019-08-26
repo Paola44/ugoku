@@ -1,9 +1,14 @@
 <div class="container-events">
   <h1>Try new events!</h1>
-  <%= link_to users_localisation_path do %>
-    <button class="btn btn-primary">Change your address</button>
+  <%= link_to matching_events_path do %>
+    <button class="btn btn-event-box">Matching events</button>
   <% end %>
-  <%= link_to "Dashboard", dashboard_path, class:"btn btn-event-box" %>
+  <%= link_to users_localisation_path(listing: 'all') do %>
+    <button class="btn btn-event-box">Change your address</button>
+  <% end %>
+  <div>
+    <%= link_to "Dashboard", dashboard_path, class:"btn btn-event-box" %>
+  </div>
   <% @grouped_days_events.each do |day, events| %>
     <h2><%= day.strftime('%A') %></h2>
     <% events.each do |event| %>
