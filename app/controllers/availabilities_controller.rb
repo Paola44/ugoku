@@ -5,6 +5,11 @@ class AvailabilitiesController < ApplicationController
     current_user.availabilities.each do |availability|
       @availabilities[availability.day_name] = availability
     end
+    if params[:signup] == 'signup'
+      @availabilities_url = availabilities_url(signup: 'signup')
+    else
+      @availabilities_url = availabilities_url
+    end
   end
 
   def update
@@ -15,7 +20,11 @@ class AvailabilitiesController < ApplicationController
     end
 
     if current_user.update(availabilities_params)
-      redirect_to matching_events_path
+      if params[:signup] == 'signup'
+        redirect_to users_localisation_path
+      else
+        redirect_to matching_events_path
+      end
     else
       render :edit
     end
