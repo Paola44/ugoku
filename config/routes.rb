@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resource :profile, only: [:edit, :update] do
     collection do
-      resource :favorite_sports, only: [:edit, :update], controller: 'profile/favorite_sports'
+      resource :favorite_sports, only: [:edit, :update]#, controller: 'profile/favorite_sports'
     end
   end
 
