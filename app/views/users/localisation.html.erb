@@ -10,7 +10,7 @@
 
   <div class="geolocalised">
     <h3 class="text-center">Address</h3>
-    <%= simple_form_for @user, url: users_localisation_update_path, html: { method: :patch } do |f| %>
+    <%= simple_form_for @user, url: users_localisation_update_path(listing: params[:listing]), html: { method: :patch } do |f| %>
         <%= f.input :address %>
         <div class="W-100 d-flex justify-content-center mt-5">
           <%= f.button :submit,"Validate", class: "btn btn-flat-geoloc-validate"  %>
