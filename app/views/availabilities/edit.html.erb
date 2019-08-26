@@ -5,7 +5,7 @@
   <div class="schedule-section1">
     <div class="schedule-container-text">
       <div class="hyper-width">
-      <%= simple_form_for current_user, class: 'hyper-width', url: availabilities_url  do |f| %>
+      <%= simple_form_for current_user, class: 'hyper-width', url: @availabilities_url  do |f| %>
         <div class="category-schedule ">
           <% Availability::DAYS.each_with_index do |day, index| %>
             <%= hidden_field_tag "user[availabilities_attributes][#{index}][id]", @availabilities[day].id %>
