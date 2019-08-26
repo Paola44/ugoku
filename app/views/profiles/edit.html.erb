@@ -1,15 +1,15 @@
 <div class="profile">
-  <h1 class='mt-5 text-center h1-profile'>Edit your profile</h1>
   <div class="card-profile">
     <div class="profile-part">
       <div class="profile-pict">
         <%= cl_image_tag current_user.photo , alt: "alttext", height: 170, width: 170, class: 'profile-picture ' %>
       </div>
-      <div class="profile-pict pt-3">
-        <%= link_to 'Modify your photo', '#'%>
+      <div class="profile-pict">
+        <%= simple_form_for @user, url: profile_path do |f| %>
+          <%= f.input :photo, label: false %>
+        <% end %>
       </div>
     </div>
-
 
     <div class="personnal-info-profile">
       <h2 class='text-center'>Your personnal info</h2>
