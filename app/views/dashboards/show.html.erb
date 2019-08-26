@@ -1,4 +1,7 @@
 <h2 class="h2_non_eteint">Your dashboard</h2>
+<div class= "btn-box sports-box-activity">
+  <%= link_to "Search a new activity", events_path, class:"btn btn-flat btn-flat-activity1" %>
+</div>
 <h2 class="h2_eteint">Your program</h2>
 <div class="dashboard-section pt-5 pb-5">
   <div class="user_activities">
@@ -8,7 +11,7 @@
         <div class="event_matched_by_user slide">
           <%= image_tag 'boxing-gloves.png', class: "sports-image", alt: 'box glove',height: 30, width: 30 %>
           <span><%= event.event.start_at.strftime("%-d %b") %></span>
-          <span class='p-1'><%= event.event.start_at.hour %>h00</span>
+          <span class='p-1'><%= event.event.start_at.hour %>h</span>
         </div>
       <% end %>
     </div>
@@ -16,8 +19,8 @@
   </div>
   </div>
 </div>
-<div class= "btn-box sports-box">
-  <%= link_to "Search a new activity", matching_events_path, class:"btn btn-flat btn-flat-activity" %>
+<div class= "btn-box sports-box-events">
+  <%= link_to "Matching events", matching_events_path, class:"btn btn-flat btn-flat-activity2" %>
 </div>
 <h2 class="h2_eteint-sport">Your favorite sports</h2>
   <div class="user_activities pl-4 pr-4">
@@ -25,14 +28,14 @@
       <div class="favorites-sports pt-5">
         <% @fav_sport.each do |sport| %>
           <div class="event_fav_sport">
-            <%= image_tag 'boxing-gloves.png', alt: 'box glove',height: 80, width: 80 %>
+            <%= image_tag 'boxing-gloves.png', alt: 'box glove',height: 60, width: 60 %>
           </div>
         <% end %>
       </div>
     </div>
   </div>
   <div class= "btn-box sports-">
-    <%= link_to "Update Sport", root_path, class:"btn btn-flat btn-flat-update-2" %>
+    <%= link_to "Update Sport", edit_favorite_sports_path, class:"btn btn-flat btn-flat-update-2" %>
   </div>
 </div>
   <h2 class="h2_eteint">Your availabilities</h2>
@@ -76,5 +79,5 @@
   </div>
 </div>
 <div class= "btn-box sports-">
-  <%= link_to "Update Availabilities", root_path, class:"btn btn-flat btn-flat-update-3" %>
+  <%= link_to "Update Availabilities", edit_availabilities_path, class:"btn btn-flat btn-flat-update-3" %>
 </div>

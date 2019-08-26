@@ -15,7 +15,7 @@ class AvailabilitiesController < ApplicationController
     end
 
     if current_user.update(availabilities_params)
-      redirect_to root_path
+      redirect_to matching_events_path
     else
       render :edit
     end

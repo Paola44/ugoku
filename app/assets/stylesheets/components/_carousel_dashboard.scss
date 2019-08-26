@@ -2,7 +2,7 @@
   width: 420px;
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   color: $black;
@@ -15,7 +15,7 @@
   -webkit-overflow-scrolling: touch;
   color: $white;
   margin-top: 15px;
-  width: 340px;
+  width: 310px;
 
   .slide {
     width: 100px;
@@ -27,8 +27,9 @@
 
 .left-activity {
 color: $white;
+position: absolute;
 padding-left: 10px;
-margin-top: -15px;
+
 }
 
 .right-activity {
