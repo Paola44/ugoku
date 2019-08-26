@@ -1,11 +1,13 @@
 <div class="container-events">
   <h1>Select one or more matched events </h1>
-  <%= link_to events_path do %>
-    <button class="btn btn-event-box">See all events</button>
-  <% end %>
+  <div class="btn-double">
   <%= link_to users_localisation_path(listing: 'matching') do %>
-    <button class="btn btn-event-box">Change your address</button>
+    <button class="btn btn-event-box-adress">Change your address</button>
   <% end %>
+  <%= link_to events_path do %>
+    <button class="btn btn-event-box-events">See all events</button>
+  <% end %>
+  </div>
   <div>
     <%= link_to "Dashboard", dashboard_path, class:"btn btn-event-box" %>
   </div>
