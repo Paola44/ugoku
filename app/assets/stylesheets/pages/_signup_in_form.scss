@@ -26,7 +26,7 @@
 }
 
 .text-center {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 60px;
 }
 .text-center-signup {
@@ -72,6 +72,11 @@
   align-items: center;
 }
 
+.input-circle {
+  display: grid;
+  padding: 0 10px 0 10px;
+
+}
 .category-choice {
   background: $red;
   width: 100px;
@@ -80,13 +85,13 @@
   padding: 20px;
   border-radius: 50%;
   font-size: 18px;
-  font-weight: bold;
   &:hover {
     cursor: pointer;
   }
   &.active {
-  background: $green2;
-  color: $black;
+    background: $green2;
+    font-weight: bold;
+    color: $black;
   }
 }
 
