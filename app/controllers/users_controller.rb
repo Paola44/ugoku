@@ -10,7 +10,6 @@ class UsersController < ApplicationController
   end
 
   def localisation_update
-    raise
     loc = params["user"]["address"]
     lat_and_lon?(loc)
 
