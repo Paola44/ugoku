@@ -8,7 +8,7 @@ module Profile
       @user = current_user
       current_user.update(favorite_sport_params)
 
-      redirect_to dashboard_path
+      redirect_to availabilities_edit_path
     end
 
     private
