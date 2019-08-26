@@ -65,16 +65,16 @@
         <div class="text-event">
             <h3>Description</h3>
             <p><%= event.description %></p>
-          </div>
-          <div class="capacity-event d-flex justify-content">
-            <p>Cap. <%= event.capacity %></p>
-            <div class="d-flex event-avatars">
-              <% event.users.each do |user| %>
-               <%= image_tag cl_image_path(user.photo), class: "avatar-bordered single-card rounded-circle border border-white", alt: "avatar-bordered" %>
-              <% end %>
-            </div>
+        </div>
+        <div class="capacity-event d-flex justify-content">
+          <p>Cap. <%= event.capacity %></p>
+          <div class="d-flex event-avatars">
+            <% event.users.each do |user| %>
+             <%= image_tag cl_image_path(user.photo), class: "avatar-bordered single-card rounded-circle border border-white", alt: "avatar-bordered" %>
+            <% end %>
           </div>
         </div>
+      </div>
     <% end %>
   <% end %>
   <%= link_to "Dashboard", dashboard_path, class:"btn btn-event-box2" %>
