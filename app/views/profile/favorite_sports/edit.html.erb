@@ -1,19 +1,27 @@
+<%= simple_form_for @user, url: favorite_sports_url, method: :patch do |f| %>
+<h2 class='text-center mb-5'>Fill your profile</h2>
+<legend class="text-center-signup">Choose your favorite sports</legend>
 <div class="signup-container-header">
   <div class="signup-section1">
     <div class="signup-container-text">
 
       <div class="container-form " id="form-part2">
         <div class="special-form">
-          <%= simple_form_for @user, url: favorite_sports_url, method: :patch do |f| %>
-          <h2 class='text-center mb-5'>Fill your profile</h2>
-            <legend class="text-center-signup">Choose your favorite sports</legend>
           <div class="form-inputs sport-sign-up">
-            <% categories = %w(yoga football boxe running crossfit) %>
-            <div class="category-choices ">
-              <% categories.each do |category| %>
-                <div class="input-circle">
-                  <input class="hidden" aria-invalid="true" type="checkbox" value="<%= category %>" name="user[favorite_sports][]" id="user_favorite_sports_<%= category %>">
-                  <label class="category-choice d-flex align-items-center justify-content-center" for="user_favorite_sports_<%= category %>"><%= category.capitalize %></label>
+            <div class="category-choices">
+              <% User::SPORT_CATEGORIES.each do |category| %>
+                <div class="input-circle js-category-choice-wrapper">
+                  <input  class="hidden"
+                          aria-invalid="true"
+                          type="checkbox"
+                          value="<%= category %>"
+                          name="user[favorite_sports][]"
+                          id="user_favorite_sports_<%= category %>"
+                          <%= "checked" if @user.favorite_sports.include?(category) %>>
+                  <label  class="category-choice d-flex align-items-center justify-content-center
+                          <%= 'active' if @user.favorite_sports.include?(category) %>"
+                          for="user_favorite_sports_<%= category %>"
+                          ><%= category.capitalize %></label>
                 </div>
               <% end %>
             </div>
