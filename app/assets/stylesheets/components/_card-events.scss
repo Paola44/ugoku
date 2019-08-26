@@ -20,6 +20,8 @@
       color :#787373;
       font-size: 13px;
       padding: 0 20px 0 10px;
+      margin-top: 10px;
+      margin-bottom: 0;
     }
   .sport-img {
     width: 70px;
@@ -33,7 +35,8 @@
   position: relative;
   text-align: center;
   padding: 10px;
-  margin: 30px 20px;
+  margin: 0 20px;
+  margin-bottom: 30px;
   border-radius: 5px;
   height: 140px;
   display: flex;
@@ -51,7 +54,6 @@
 
 .sport-event-card {
   text-align: left;
-  width: 150%;
   margin-right: 30px;
   margin-bottom: 5px;
   padding-left: 30px;
@@ -63,7 +65,7 @@
 
 .sport-info{
   p {
-    color: #787373;
+    color: $black;
     text-align: left;
     font-size: 15px;
     margin: 0px 5px 5px 5px;
@@ -73,11 +75,9 @@
 
 .add-button {
   position: absolute;
-  right: -20px;
+  right: 10px;
   .add-event-btn {
     position: aboslute;
-    margin-top: 40px;
-    margin-left: 20px;
     width: 40px;
     height: 40px;
   }
@@ -98,20 +98,23 @@
         color: black;
         font-size: 15px;
         text-align: left;
+        margin-bottom: 0;
     }
   }
   .info-sport-event {
     display: flex;
     justify-content: space-between;
     p {
-        color :#A9A2A2;
+        color: $black;
         font-size: 15px;
+        margin-bottom: 10px;
+
       }
     .details-level {
       display: flex;
       justify-content: flex-end;
       p {
-        color :#A9A2A2;
+        color: $black;
         padding-right: 10px;
         #last-child {
           color: #C4C4C4;
@@ -120,11 +123,10 @@
     }
     .details-button {
       position: absolute;
-      right: -20px;
-      .more-details-btn{
-        position: aboslute;
-        margin-top: 70px;
-        margin-left: 20px;
+      right: 10px;
+      bottom: 10px;
+
+      .more-details-btn {
         width: 40px;
         height: 40px;
       }
@@ -133,7 +135,7 @@
 
   .text-event {
     h3 {
-      color: black;
+      color: $black;
       font-size: 17px;
     }
     p {
@@ -141,6 +143,7 @@
       text-align: left;
       font-size: 13px;
       padding: 0 20px 0 10px;
+      margin-bottom: 10px;
     }
   }
 }

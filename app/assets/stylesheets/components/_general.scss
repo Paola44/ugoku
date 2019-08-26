@@ -16,3 +16,8 @@ a:hover{
   text-decoration: none;
   color: $black;
 }
+
+button:focus{
+  outline: none!important;
+  box-shadow:none;
+}
