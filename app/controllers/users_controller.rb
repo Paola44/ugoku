@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   end
 
   def localisation_update
+    raise
     loc = params["user"]["address"]
     lat_and_lon?(loc)
 
@@ -33,7 +34,7 @@ class UsersController < ApplicationController
                           longitude: lon)
     else
       result = Geocoder.search(loc)
-      lat_and_lon = result.first.coordinates
+      lat_and_lon = result.coordinates
       lat = lat_and_lon.to_a[0]
       lon = lat_and_lon.to_a[1]
       current_user.update(address: result.first.display_name,

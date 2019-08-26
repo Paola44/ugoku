@@ -1,22 +1,15 @@
 <div class="container-geolocalised">
   <div class="geolocalised">
-    <h3 class="text-center">Geolocalisation</h3>
-    <div class="w-100 d-flex justify-content-center">
-      <button class="btn btn btn-flat-geoloc-validate" id="geolocalised">Find me!</button>
-    </div>
+    <h3 class="address-title">Address</h3>
   </div>
-
-  <div class="separation"></div>
-
   <div class="geolocalised">
-    <h3 class="text-center">Address</h3>
     <%= simple_form_for @user, url: users_localisation_update_path, html: { method: :patch } do |f| %>
-        <%= f.input :address %>
-        <div class="W-100 d-flex justify-content-center mt-5">
+      <%= f.input :address %>
+            <%= link_to "", class: "geo-box" do %>
+            <div class="icon-box"><i class="fas fa-location-arrow"></i></div>Or geolocate me!
+            <% end %>
+        </div>
+        <div class="d-flex justify-content-center">
           <%= f.button :submit,"Validate", class: "btn btn-flat-geoloc-validate"  %>
         </div>
     <% end %>
-
-  </div>
-
-</div>
