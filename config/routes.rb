@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   get 'users/show'
+  get 'users/localisation'
+  patch 'users/localisation_update'
   get 'availabilities/edit'
   get 'availabilities/update'
   root to: 'pages#home'
 
   devise_for :users, controllers: { registrations: "registrations" }
-
   resource :profile, only: [:edit, :update] do
     collection do
       resource :favorite_sports, only: [:edit, :update], controller: 'profile/favorite_sports'
