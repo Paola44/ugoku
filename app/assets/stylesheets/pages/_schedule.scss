@@ -1,12 +1,12 @@
 .schedule-section1 {
   background: $black;
-  height: 440px;
+
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 
   .schedule-container-text {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
 }
 
@@ -22,14 +22,14 @@
   padding-bottom: 10px;
   padding-top: 50px;
 }
+
 .schedule-desciption {
-  position: relative;
   font-size: 17px;
   font-weight: 400;
   color: $white;
   text-align: center;
-  padding-bottom: 30px;
 }
+
 .hyper-width {
   width: 100%;
   display: flex;
