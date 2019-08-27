@@ -2,6 +2,7 @@
   padding-top: 30px;
   background-color: black;
   width: 100%;
+
   .card-profile{
     overflow: hidden;
     background: white;
@@ -28,8 +29,9 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
+
   .button-update-profile {
-    position: absolute;
+    margin-bottom: 20px;
     top: 295px;
     background: linear-gradient(to right, $green1, $green2);
     padding: 5px 10px 5px 10px;

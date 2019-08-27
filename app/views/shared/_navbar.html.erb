@@ -1,60 +1,45 @@
-<div class="back-black">
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <%= link_to root_path, class: "navbar-brand text-left" do %>
-      <%= image_tag "favicon.ico" %>
-      <% end %>
-    <div class="menu-deroulant justify-content-end">
-      <button class="navbar-toggler justify-content-end" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <!-- <i class="fas fa-bars"></i> -->
-        <input id="menu-24" type="checkbox">
-        <label for="menu-24">
-          <div class="menu">
-              <div class="menu_part"></div>
-              <div class="menu_part"></div>
-              <div class="menu_part"></div>
-          </div>
-        </label>
-      </button>
 
-      <% if user_signed_in? %>
-        <div class="collapse" id="navbarSupportedContent">
-          <div class="collapse-signin">
-            <ul class="navbar-nav mr-auto text-right">
-                <li class="nav-item active">
-                  <%= link_to "Home", root_path, class: "nav-link" %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to "Your schedule", edit_availabilities_path , class: "nav-link" %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to "Dashboard", dashboard_path , class: "nav-link" %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to "Profile", users_show_path, class: "nav-link" %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to "Matching events", matching_events_path, class: "nav-link" %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-                </li>
-            </ul>
-          </div>
-        </div>
-      <% else %>
-        <div class="collapse collapse-signout" id="navbarSupportedContent">
-          <div class="collapse-signout">
-            <ul class="navbar-nav mr-auto text-right">
-                <li class="nav-item">
-                  <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
-                </li>
-            </ul>
-          </div>
-        </div>
-        <% end %>
+<div class="navbar navbar-expand-sm navbar-dark navbar-lewagon">
+  <%= link_to root_path, class: "navbar-brand text-left" do %>
+    <%= image_tag "favicon.ico" %>
+  <% end %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <% if user_signed_in? %>
+    <div class="collapse navbar-collapse collapse-wrapper" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto text-right">
+          <li class="nav-item <%= 'active' if  current_page?('/home') %>">
+            <%= link_to "Home", root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item <%= 'active' if current_page?('/availabilities/edit') %>">
+            <%= link_to "Your schedule", edit_availabilities_path , class: "nav-link" %>
+          </li>
+          <li class="nav-item <%= 'active' if current_page?('/dashboard') %>">
+            <%= link_to "Dashboard", dashboard_path , class: "nav-link" %>
+          </li>
+          <li class="nav-item <%= 'active' if current_page?('/users/show') %>">
+            <%= link_to "Profile", users_show_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item <%= 'active' if current_page?('/events/matching') %>">
+            <%= link_to "Matching events", matching_events_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          </li>
+      </ul>
     </div>
-  </div>
+  <% else %>
+    <div class="collapse navbar-collapse collapse-wrapper" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto text-right">
+        <li class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
 </div>
+
