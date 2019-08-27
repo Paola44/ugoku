@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  SPORT_CATEGORIES = %w[yoga football boxe running crossfit]
+  SPORT_CATEGORIES = %w[yoga football boxing running crossfit]
 
   mount_uploader :photo, PhotoUploader
 

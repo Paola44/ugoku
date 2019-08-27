@@ -32,11 +32,11 @@
 <h2 class="h2_eteint-sport">Your favorite sports</h2>
   <div class="user_activities pl-4 pr-4">
     <div class="container-sports">
-      <div class="favorites-sports pt-5">
+      <div class="favorites-sports">
         <% if @fav_sport.length > 0 %>
           <% @fav_sport.each do |sport| %>
             <div class="event_fav_sport">
-              <%= image_tag 'boxing-gloves.png', alt: 'box glove',height: 60, width: 60 %>
+              <%= image_tag "#{sport}.png", alt: 'box glove',height: 60, width: 60 %>
             </div>
           <% end %>
         <% else %>
