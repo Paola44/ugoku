@@ -158,6 +158,12 @@
   }
 }
 
+.close-pop-up{
+  color: $white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .event-avatars {
 
   img {
@@ -177,5 +183,9 @@
 }
 
 .mapboxgl-canvas{
-  height: 400px !important;
+  height: 90% !important;
+  width: 100vh;
+}
+.modal-header{
+  margin-bottom: 18px;
 }
