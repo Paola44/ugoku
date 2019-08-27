@@ -2,7 +2,11 @@
   <div class="card-profile">
     <div class="profile-part">
       <div class="profile-pict">
-        <%= cl_image_tag current_user.photo , alt: "alttext", height: 170, width: 170, class: 'profile-picture ' %>
+        <% if current_user.photo.present?  %>
+          <%= cl_image_tag current_user.photo , alt: "alttext", height: 170, width: 170, class: 'profile-picture ' %>
+        <% else %>
+          <%= image_tag('user.png', height: 170, width: 170, alt:'user avatar') %>
+        <% end %>
       </div>
       <div class="profile-pict">
         <%= simple_form_for @user, url: profile_path do |f| %>
