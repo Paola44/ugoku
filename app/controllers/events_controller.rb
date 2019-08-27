@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   def index
     @grouped_days_events = Event.all.order('start_at ASC').group_by { |event| event.start_at.to_date }
+    markers
   end
 
   def matching
@@ -25,6 +26,19 @@ class EventsController < ApplicationController
       when 18..20
         availability.slot_6
       end
+    end
+    markers
+  end
+
+  private
+
+  def markers
+    @events = Event.geocoded
+    @markers = @events.map do |event|
+      {
+        lat: event.latitude,
+        lng: event.longitude
+      }
     end
   end
 end
