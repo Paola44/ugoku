@@ -66,10 +66,10 @@
             <h3>Description</h3>
             <p><%= event.description %></p>
         </div>
-        <div class="capacity-event d-flex justify-content">
+        <div class="capacity-event d-flex justify-content pb-2">
           <p>Cap. <%= event.capacity %></p>
           <div class="d-flex event-avatars">
-            <% event.users.each do |user| %>
+            <% event.users.take(10).each do |user| %>
               <%= user_image_tag(user, class: "avatar-bordered single-card rounded-circle border border-white", alt: "avatar-bordered") %>
             <% end %>
           </div>
