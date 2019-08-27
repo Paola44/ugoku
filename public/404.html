@@ -1,315 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    body {
-  background: #2e76f6;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin-top: 150px;
-  color: #fff;
-}
-body .credit {
-  position: fixed;
-  bottom: 10px;
-  font-size: 0.8em;
-}
+  <head>
+    <title>The page you were looking for doesn't exist (404)</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
 
-.cat {
-  width: 300px;
-  height: 250px;
-  border-top-left-radius: 80% 100%;
-  border-top-right-radius: 80% 100%;
-  border-bottom-left-radius: 50% 50%;
-  border-bottom-right-radius: 50% 50%;
-  background: #0a1432;
-  position: relative;
-  box-shadow: 5px -12px 0 0 #3b4771;
-}
-.cat::after {
-  content: "";
-  background: #204ACE;
-  height: 80px;
-  width: 400px;
-  position: absolute;
-  bottom: -30px;
-  z-index: -1;
-  margin-left: -50px;
-  border-radius: 50%;
-}
-.cat::before {
-  content: "";
-  height: 180px;
-  width: 180px;
-  position: absolute;
-  right: -60px;
-  bottom: 50px;
-  z-index: -1;
-  transform: rotate(50deg);
-  margin-left: -50px;
-  border-radius: 50%;
-  border-right: 23px solid #0a1432;
-  border-left: 0px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-top: 10px solid transparent;
-  animation: tail 1.5s infinite;
-}
-.cat .eyes {
-  width: 180px;
-  text-align: center;
-  margin-left: 60px;
-  margin-top: 70px;
-}
-.cat .eyes::after {
-  content: "";
-  height: 15px;
-  width: 30px;
-  background: #fff;
-  display: block;
-  margin-top: 20px;
-  margin-left: 75px;
-  border-radius: 20% / 50%;
-}
-.cat .eyes .eye1 {
-  width: 60px;
-  height: 50px;
-  background: #fff;
-  border-radius: 50px / 40px;
-  display: inline-block;
-  vertical-align: center;
-  margin-right: 20px;
-  text-align: center;
-}
-.cat .eyes .eye1::after {
-  content: "";
-  display: inline-block;
-  border: 1px solid #000;
-  transform: translateY(20px) translateX(-10px);
-  width: 10px;
-  height: 20px;
-  background: #000;
-  border-radius: 50%;
-  animation: eyeanim 2s infinite;
-}
-.cat .eyes .eye2 {
-  width: 60px;
-  height: 50px;
-  background: #fff;
-  border-radius: 50px / 40px;
-  display: inline-block;
-  vertical-align: center;
-  margin-left: 20px;
-}
-.cat .eyes .eye2::after {
-  content: "";
-  display: inline-block;
-  border: 1px solid #000;
-  transform: translateY(20px) translateX(-10px);
-  width: 10px;
-  height: 20px;
-  background: #000;
-  border-radius: 50%;
-  animation: eyeanim 2s infinite;
-}
-.cat .paws {
-  margin-top: 50px;
-  position: relative;
-}
-.cat .paws::before {
-  content: "";
-  display: inline-block;
-  width: 70px;
-  height: 60px;
-  border-top-left-radius: 80% 100%;
-  border-top-right-radius: 80% 100%;
-  border-bottom-left-radius: 50% 50%;
-  border-bottom-right-radius: 50% 50%;
-  background: #0a1432;
-  position: relative;
-  box-shadow: 3px -8px 0 0 #3b4771;
-  z-index: 99;
-  transform: translateX(30px);
-}
-.cat .paws::after {
-  content: "";
-  display: inline-block;
-  width: 70px;
-  height: 60px;
-  border-top-left-radius: 80% 100%;
-  border-top-right-radius: 80% 100%;
-  border-bottom-left-radius: 50% 50%;
-  border-bottom-right-radius: 50% 50%;
-  background: #0a1432;
-  position: relative;
-  box-shadow: 3px -8px 0 0 #3b4771;
-  z-index: 99;
-  transform: translateX(120px);
-}
-.cat .ears {
-  margin-top: -300px;
-  position: relative;
-}
-.cat .ears::before {
-  content: "";
-  display: inline-block;
-  width: 85px;
-  height: 100px;
-  border-top-left-radius: 100% 200%;
-  border-top-right-radius: 100% 200%;
-  background: #0a1432;
-  position: relative;
-  box-shadow: 2px -15px 0 0 #3b4771;
-  transform: rotate(-30deg);
-  animation: ear1 6s infinite;
-  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  z-index: -1;
-}
-.cat .ears::after {
-  content: "";
-  display: inline-block;
-  width: 80px;
-  height: 90px;
-  border-top-left-radius: 100% 200%;
-  border-top-right-radius: 100% 200%;
-  background: #0a1432;
-  position: relative;
-  box-shadow: -5px -15px 0 0 #3b4771;
-  z-index: 99;
-  transform: translateX(130px) translateY(0px) rotate(30deg);
-  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  animation: ear2 6s infinite;
-}
-.cat .ball {
-  background: #204ACE;
-  height: 20px;
-  width: 60px;
-  position: relative;
-  bottom: -15px;
-  z-index: -1;
-  border-radius: 50%;
-  margin-top: 250px;
-  animation: ballanim 2s infinite;
-}
-.cat .ball::after {
-  content: "";
-  width: 60px;
-  height: 60px;
-  background: #fff;
-  border-radius: 100%;
-  position: absolute;
-  margin-top: -55px;
-}
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #1A1A1A;
+      }
 
-@keyframes ear2 {
-  0% {
-    transform: translateX(130px) rotate(30deg);
-  }
-  10% {
-    transform: translateX(130px) rotate(20deg);
-  }
-  20% {
-    transform: translateX(130px) rotate(40deg);
-  }
-  30% {
-    transform: translateX(130px) rotate(30deg);
-  }
-  100% {
-    transform: translateX(130px) rotate(30deg);
-  }
-}
-@keyframes ear1 {
-  0% {
-    transform: rotate(-30deg);
-  }
-  10% {
-    transform: rotate(-20deg);
-  }
-  20% {
-    transform: rotate(-40deg);
-  }
-  30% {
-    transform: rotate(-30deg);
-  }
-  100% {
-    transform: rotate(-30deg);
-  }
-}
-@keyframes eyeanim {
-  0% {
-    transform: translateX(-10px) translateY(20px);
-  }
-  50% {
-    transform: translateX(10px) translateY(20px);
-  }
-  100% {
-    transform: translateX(-10px) translateY(20px);
-  }
-}
-@keyframes tail {
-  0% {
-    transform: rotate(50deg);
-  }
-  50% {
-    transform: rotate(75deg);
-  }
-  100% {
-    transform: rotate(50deg);
-  }
-}
-@keyframes ballanim {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(250px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        align-items: stretch;
+        position: absolute;
+        bottom: 125px;
 
-  p {
-    position: absolute;
-    font-family: Red Hat Display;
-    bottom: -147px;
-  }
+      }
 
-.btn-event-box404 {
-  position: absolute;
-  color: white;
-  padding: 8px 24px;
-  align-content: space-around;
-  font-weight: 500;
-  text-align: center;
-  border-radius: 50px;
-  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
-  background: #0a1432;
-  transition: background 0.3s ease;
-  margin-bottom: 30px;
-  bottom: -200px;
-  border: none;
-}
+      /*.logo404 {
+        background-image: url('app/assets/images/last_logo2.png)');
+        height:30vh;
+        background-size: contain;
+        justify-content: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0 30px;
+        padding-top: 50px;
+      }*/
 
-  </style>
-</head>
+      .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Red Hat Display;
+        color: #FFFFFF;
+      }
 
-<body>
+      .btn-event-box404 {
+        padding: 8px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+        background: linear-gradient(to right, #F91351, #F93885);
+        transition: background 0.3s ease;
+        border: none;
+      }
 
-  <div class="cat">
-    <div class="eyes">
-      <div class="eye1"></div>
-      <div class="eye2"></div>
+    </style>
+  </head>
+
+  <body class="rails-default-error-page">
+    <div class="content">
+
+      <!-- <div class="logo404"></div> -->
+
+      <img src="../app/assets/images/last_logo2.png">
+
+      <p class="text">OOPS, PAGE WAS NOT FOUND.</p>
+      <button onclick="location.href='http://www.ugoku.eu'" class="btn-event-box404"type="button">Go back !</button>
     </div>
-    <div class="paws"></div>
-    <div class="ears"></div>
-    <div class="ball"></div>
-  </div>
-  <br>
-  <p>OOPS, PAGE WAS NOT FOUND.</p>
-  <button onclick="location.href='http://www.ugoku.eu'" class="btn-event-box404"type="button">
-         Go back !</button>
-</body>
+  </body>
 </html>
