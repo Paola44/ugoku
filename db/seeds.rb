@@ -329,25 +329,184 @@ thelma   = User.create!(
 puts 'Users created! Yiha!!!'
 puts '...Creating availabilities...'
 
-# julien availability - crossfit
+# julien availability
 Availability.find_by!(user: julien, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: false)
 Availability.find_by!(user: julien, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
 Availability.find_by!(user: julien, day_name: 'sunday').update!(slot_1: false, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: false)
-# julien availability - yoga
-# julien availability - running
 
-# nikol availability - crossfit
+# nikol availability
 Availability.find_by!(user: nikol, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: false)
 Availability.find_by!(user: nikol, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
 Availability.find_by!(user: nikol, day_name: 'friday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
-# nikol availability - yoga
-# nikol availability - yoga
-# richard availability - crossfit
+
+# richard availability
 Availability.find_by!(user: richard, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: false)
-# richard availability - foot
 Availability.find_by!(user: richard, day_name: 'friday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: false)
-# richard availability - running
 Availability.find_by!(user: richard, day_name: 'saturday').update!(slot_1: false, slot_2: true, slot_3: false, slot_4: true, slot_5: false, slot_6: false)
+
+
+# axel availability
+Availability.find_by!(user: axel, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: axel, day_name: 'tuesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: axel, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: false)
+
+# amelie availability
+Availability.find_by!(user: amelie, day_name: 'saturday').update!(slot_1: true, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: false)
+Availability.find_by!(user: amelie, day_name: 'sunday').update!(slot_1: false, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: false)
+
+# steven availability
+Availability.find_by!(user: steven, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: steven, day_name: 'tuesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: steven, day_name: 'friday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# yanis availability
+Availability.find_by!(user: yanis, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: yanis, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: yanis, day_name: 'thursday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# bastien availability
+Availability.find_by!(user: bastien, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: bastien, day_name: 'thursday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: bastien, day_name: 'friday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# nassim availability
+Availability.find_by!(user: nassim, day_name: 'saturday').update!(slot_1: true, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: false)
+Availability.find_by!(user: nassim, day_name: 'sunday').update!(slot_1: true, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: false)
+
+# nina availability
+Availability.find_by!(user: nina, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: true)
+Availability.find_by!(user: nina, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: true)
+
+# volodia availability
+Availability.find_by!(user: volodia, day_name: 'tuesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: volodia, day_name: 'thursday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# mariette availability
+Availability.find_by!(user: mariette, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: mariette, day_name: 'tuesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: mariette, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# martin availability
+Availability.find_by!(user: martin, day_name: 'tuesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: martin, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# pierret availability
+Availability.find_by!(user: pierret, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: pierret, day_name: 'friday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# pierref availability
+Availability.find_by!(user: pierref, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: pierref, day_name: 'tuesday').update!(slot_1: false, slot_2: false, slot_3: true, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: pierref, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# hugo availability
+Availability.find_by!(user: hugo, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: true, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: hugo, day_name: 'tuesday').update!(slot_1: false, slot_2: false, slot_3: true, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: hugo, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: true, slot_4: false, slot_5: false, slot_6: true)
+
+# nico availability
+Availability.find_by!(user: nico, day_name: 'thursday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: nico, day_name: 'friday').update!(slot_1: false, slot_2: false, slot_3: true, slot_4: false, slot_5: false, slot_6: true)
+
+# cecile availability
+Availability.find_by!(user: cecile, day_name: 'monday').update!(slot_1: true, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: cecile, day_name: 'friday').update!(slot_1: false, slot_2: false, slot_3: true, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: cecile, day_name: 'sunday').update!(slot_1: true, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: false)
+
+# romain availability
+Availability.find_by!(user: romain, day_name: 'tuesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: romain, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# charlene availability
+Availability.find_by!(user: charlene, day_name: 'monday').update!(slot_1: false, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: charlene, day_name: 'tuesday').update!(slot_1: true, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: true)
+Availability.find_by!(user: charlene, day_name: 'wednesday').update!(slot_1: false, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# clement availability
+Availability.find_by!(user: clement, day_name: 'saturday').update!(slot_1: false, slot_2: false, slot_3: true, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: clement, day_name: 'sunday').update!(slot_1: false, slot_2: true, slot_3: true, slot_4: false, slot_5: true, slot_6: false)
+
+# fabrice availability
+Availability.find_by!(user: fabrice, day_name: 'monday').update!(slot_1: true, slot_2: false, slot_3: true, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: fabrice, day_name: 'tuesday').update!(slot_1: true, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: fabrice, day_name: 'wednesday').update!(slot_1: true, slot_2: false, slot_3: true, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: fabrice, day_name: 'thursday').update!(slot_1: true, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: fabrice, day_name: 'friday').update!(slot_1: true, slot_2: false, slot_3: true, slot_4: false, slot_5: false, slot_6: true)
+
+# pierro availability
+Availability.find_by!(user: pierro, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: true)
+Availability.find_by!(user: pierro, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: true)
+
+# valentin availability
+Availability.find_by!(user: valentin, day_name: 'monday').update!(slot_1: false, slot_2: true, slot_3: false, slot_4: true, slot_5: false, slot_6: true)
+Availability.find_by!(user: valentin, day_name: 'thursday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: true)
+Availability.find_by!(user: valentin, day_name: 'saturday').update!(slot_1: true, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: false)
+
+# victoire availability
+Availability.find_by!(user: victoire, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: victoire, day_name: 'tuesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: victoire, day_name: 'sunday').update!(slot_1: true, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# solene availability
+Availability.find_by!(user: solene, day_name: 'monday').update!(slot_1: true, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: solene, day_name: 'friday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: solene, day_name: 'saturday').update!(slot_1: true, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: false)
+
+# camille availability
+Availability.find_by!(user: camille, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: camille, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# ines availability
+Availability.find_by!(user: ines, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: true)
+Availability.find_by!(user: ines, day_name: 'tuesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: true)
+Availability.find_by!(user: ines, day_name: 'thursday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: true)
+
+# antoine availability
+Availability.find_by!(user: antoine, day_name: 'monday').update!(slot_1: true, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: antoine, day_name: 'tuesday').update!(slot_1: true, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# carlotta availability
+Availability.find_by!(user: carlotta, day_name: 'saturday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: true, slot_5: false, slot_6: false)
+Availability.find_by!(user: carlotta, day_name: 'sunday').update!(slot_1: false, slot_2: true, slot_3: true, slot_4: false, slot_5: false, slot_6: false)
+
+# felix availability
+Availability.find_by!(user: felix, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: true, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: felix, day_name: 'tuesday').update!(slot_1: false, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: felix, day_name: 'friday').update!(slot_1: false, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# laura availability
+Availability.find_by!(user: laura, day_name: 'tuesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: laura, day_name: 'sunday').update!(slot_1: false, slot_2: true, slot_3: true, slot_4: false, slot_5: true, slot_6: false)
+
+# marianne availability
+Availability.find_by!(user: marianne, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: true)
+Availability.find_by!(user: marianne, day_name: 'friday').update!(slot_1: true, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# marion availability
+Availability.find_by!(user: marion, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: true)
+Availability.find_by!(user: marion, day_name: 'tuesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: true)
+Availability.find_by!(user: marion, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: true)
+Availability.find_by!(user: marion, day_name: 'thursday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: true, slot_6: true)
+
+# meryll availability
+Availability.find_by!(user: meryll, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# nicolas availability
+Availability.find_by!(user: nicolas, day_name: 'monday').update!(slot_1: true, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: false)
+Availability.find_by!(user: nicolas, day_name: 'tuesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: nicolas, day_name: 'thursday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
+# romainn availability
+Availability.find_by!(user: romainn, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: romainn, day_name: 'tuesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: romainn, day_name: 'sunday').update!(slot_1: false, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: false)
+
+# thelma availability
+Availability.find_by!(user: thelma, day_name: 'monday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: thelma, day_name: 'tuesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: thelma, day_name: 'wednesday').update!(slot_1: false, slot_2: false, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+Availability.find_by!(user: thelma, day_name: 'sunday').update!(slot_1: true, slot_2: true, slot_3: false, slot_4: false, slot_5: false, slot_6: true)
+
 
 puts 'Availabilities created !'
 puts '...Creating events...'
@@ -438,7 +597,7 @@ crossfit_thursday  = Event.create!(
   In case of cancellation / or moving of place, we do our best to
   report it 1h before minimum! Stay connected!'
   )
-crossfit_fraiday   = Event.create!(
+crossfit_friday   = Event.create!(
   sport: 'crossfit',
   start_at: '2019-08-30 19:00:00',
   duration: 60,
@@ -608,6 +767,537 @@ UserEvent.create!(
   event: running_saturday,
   matching: true,
   )
+
+
+# axel events
+UserEvent.create!(
+  user: axel,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: axel,
+  event: crossfit_wednesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: axel,
+  event: crossfit_sunday,
+  matching: true,
+  )
+
+# amelie events
+UserEvent.create!(
+  user: amelie,
+  event: running_sunday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: amelie,
+  event: running_sunday,
+  matching: true,
+  )
+
+# steven events
+UserEvent.create!(
+  user: steven,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: steven,
+  event: crossfit_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: steven,
+  event: crossfit_friday,
+  matching: true,
+  )
+
+# yanis events
+UserEvent.create!(
+  user: yanis,
+  event: yoga_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: yanis,
+  event: yoga_wednesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: yanis,
+  event: boxing_thursday,
+  matching: true,
+  )
+
+# bastien events
+UserEvent.create!(
+  user: bastien,
+  event: crossfit_wednesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: bastien,
+  event: crossfit_thursday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: bastien,
+  event: crossfit_friday,
+  matching: true,
+  )
+
+# nassim events
+UserEvent.create!(
+  user: nassim,
+  event: running_sunday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: nassim,
+  event: running_sunday,
+  matching: true,
+  )
+
+# nina events
+UserEvent.create!(
+  user: nina,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: nina,
+  event: yoga_wednesday,
+  matching: true,
+  )
+
+# volodia events
+UserEvent.create!(
+  user: volodia,
+  event: crossfit_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: volodia,
+  event: crossfit_thursday,
+  matching: true,
+  )
+# mariette events
+UserEvent.create!(
+  user: mariette,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: mariette,
+  event: boxing_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: mariette,
+  event: crossfit_wednesday,
+  matching: true,
+  )
+
+# martin events
+UserEvent.create!(
+  user: martin,
+  event: boxing_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: martin,
+  event: yoga_wednesday,
+  matching: true,
+  )
+
+# pierret events
+UserEvent.create!(
+  user: pierret,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: pierret,
+  event: football_friday,
+  matching: true,
+  )
+
+# pierref events
+UserEvent.create!(
+  user: pierref,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: pierref,
+  event: crossfit_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: pierref,
+  event: yoga_wednesday,
+  matching: true,
+  )
+
+# hugo events
+UserEvent.create!(
+  user: hugo,
+  event: yoga_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: hugo,
+  event: crossfit_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: hugo,
+  event: yoga_wednesday,
+  matching: true,
+  )
+
+# nico events
+UserEvent.create!(
+  user: nico,
+  event: boxing_thursday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: nico,
+  event: football_friday,
+  matching: true,
+  )
+
+# cecile events
+UserEvent.create!(
+  user: cecile,
+  event: yoga_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: cecile,
+  event: yoga_friday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: cecile,
+  event: running_sunday,
+  matching: true,
+  )
+
+# romain events
+UserEvent.create!(
+  user: romain,
+  event: boxing_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: romain,
+  event: crossfit_wednesday,
+  matching: true,
+  )
+
+# charlene events
+UserEvent.create!(
+  user: charlene,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: charlene,
+  event: crossfit_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: charlene,
+  event: crossfit_wednesday,
+  matching: true,
+  )
+
+# clement events
+UserEvent.create!(
+  user: clement,
+  event: football_saturday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: clement,
+  event: crossfit_sunday,
+  matching: true,
+  )
+
+# fabrice events
+UserEvent.create!(
+  user: fabrice,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: fabrice,
+  event: crossfit_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: fabrice,
+  event: crossfit_wednesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: fabrice,
+  event: crossfit_thursday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: fabrice,
+  event: crossfit_friday,
+  matching: true,
+  )
+
+# pierro events
+UserEvent.create!(
+  user: pierro,
+  event: yoga_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: pierro,
+  event: crossfit_wednesday,
+  matching: true,
+  )
+
+# valentin events
+UserEvent.create!(
+  user: valentin,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: valentin,
+  event: boxing_thursday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: valentin,
+  event: running_saturday,
+  matching: true,
+  )
+
+# victoire events
+UserEvent.create!(
+  user: victoire,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: victoire,
+  event: crossfit_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: victoire,
+  event: running_sunday,
+  matching: true,
+  )
+
+# solene events
+UserEvent.create!(
+  user: solene,
+  event: yoga_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: solene,
+  event: yoga_friday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: solene,
+  event: running_saturday,
+  matching: true,
+  )
+
+# camille events
+UserEvent.create!(
+  user: camille,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: camille,
+  event: yoga_wednesday,
+  matching: true,
+  )
+
+# ines events
+UserEvent.create!(
+  user: ines,
+  event: yoga_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: ines,
+  event: crossfit_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: ines,
+  event: boxing_thursday,
+  matching: true,
+  )
+
+# antoine events
+UserEvent.create!(
+  user: antoine,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: antoine,
+  event: boxing_tuesday,
+  matching: true,
+  )
+
+# carlotta events
+UserEvent.create!(
+  user: carlotta,
+  event: crossfit_saturday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: carlotta,
+  event: running_sunday,
+  matching: true,
+  )
+
+# felix events
+UserEvent.create!(
+  user: felix,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: felix,
+  event: boxing_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: felix,
+  event: football_friday,
+  matching: true,
+  )
+
+# laura events
+UserEvent.create!(
+  user: laura,
+  event: crossfit_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: laura,
+  event: running_sunday,
+  matching: true,
+  )
+
+# marianne events
+UserEvent.create!(
+  user: marianne,
+  event: crossfit_wednesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: marianne,
+  event: yoga_friday,
+  matching: true,
+  )
+
+# marion events
+UserEvent.create!(
+  user: marion,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: marion,
+  event: boxing_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: marion,
+  event: crossfit_wednesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: pierref,
+  event: boxing_thursday,
+  matching: true,
+  )
+
+# meryll events
+UserEvent.create!(
+  user: meryll,
+  event: yoga_monday,
+  matching: true,
+  )
+
+# nicolas events
+UserEvent.create!(
+  user: nicolas,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: nicolas,
+  event: boxing_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: nicolas,
+  event: boxing_thursday,
+  matching: true,
+  )
+
+# romainn events
+UserEvent.create!(
+  user: romainn,
+  event: yoga_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: romainn,
+  event: boxing_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: romainn,
+  event: running_sunday,
+  matching: true,
+  )
+
+# thelma events
+UserEvent.create!(
+  user: thelma,
+  event: crossfit_monday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: thelma,
+  event: crossfit_tuesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: thelma,
+  event: yoga_wednesday,
+  matching: true,
+  )
+UserEvent.create!(
+  user: thelma,
+  event: running_sunday,
+  matching: true,
+  )
+
 
 puts 'User events created!'
 puts 'Seeding terminated!'
