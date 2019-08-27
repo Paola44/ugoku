@@ -9,7 +9,7 @@
   <% if user_signed_in? %>
     <div class="collapse navbar-collapse collapse-wrapper" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto text-right">
-          <li class="nav-item <%= 'active' if  current_page?('/home') %>">
+          <li class="nav-item <%= 'active' if current_page?('/home') %>">
             <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item <%= 'active' if current_page?('/availabilities/edit') %>">
