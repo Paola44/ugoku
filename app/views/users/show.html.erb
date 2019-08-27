@@ -2,11 +2,7 @@
   <div class="card-profile">
     <div class="profile-part">
       <div class="profile-pict">
-        <% if current_user.photo.present?  %>
-          <%= cl_image_tag current_user.photo , alt: "alttext", height: 170, width: 170, class: 'profile-picture ' %>
-        <% else %>
-          <%= image_tag('user.png', height: 170, width: 170, alt:'user avatar') %>
-        <% end %>
+        <%= user_image_tag(current_user, alt: "user avatar", height: 170, width: 170, class: 'profile-picture') %>
       </div>
       <div class="profile-pict pt-3">
       </div>

@@ -3,7 +3,7 @@
     <div class="signup-container-text">
       <div class="container-form" id="form-part1">
         <div class="special-form">
-          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), signup: params[:signup]) do |f| %>
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), origin: params[:origin]) do |f| %>
           <%= f.error_notification %>
           <h2 class='text-center mb-5'>Sign up</h2>
           <div class="form-inputs">
