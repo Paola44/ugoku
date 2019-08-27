@@ -6,7 +6,7 @@
     <%= simple_form_for @user, url: users_localisation_update_path, html: { method: :patch } do |f| %>
       <%= f.input :address %>
       <div class="geo-box">
-        <button class="icon-box" id="geolocalised"><i class="fas fa-location-arrow"></i>or geolocate me</button>
+        <div class="icon-box" id="geolocalised"><i class="fas fa-location-arrow"></i>or geolocate me</div>
       </div>
       <div class="d-flex justify-content-center">
         <%= f.button :submit,"Validate", class: "btn btn-flat-geoloc-validate"  %>
