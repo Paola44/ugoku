@@ -10,21 +10,20 @@
         <% end %>
       </div>
     </div>
-
     <div class="personnal-info-profile">
-      <h2 class='text-center'>Your personnal info</h2>
+      <h2 class="title-info">Your personnal info</h2>
       <%= simple_form_for @user, url: profile_path do |f| %>
         <div class="input-form-event">
           <%= f.input :name, label: 'Name' %>
           <%= f.input :email, label: 'Email' %>
           <%= f.input :address, label: 'Address' %>
+    </div>
+  </div>
+</div>
           <div class="button-submit-profile">
             <%= link_to 'Back to my profile', '/users/show', class:"button-back-to-profile" %>
             <%= f.button :submit, value: 'Save modificaitons', class:" button-save-profile" %>
           </div>
         </div>
       <% end %>
-    </div>
-  </div>
-</div>
 

@@ -5,11 +5,12 @@
   <div class="geolocalised">
     <%= simple_form_for @user, url: users_localisation_update_path, html: { method: :patch } do |f| %>
       <%= f.input :address %>
-            <%= link_to "", class: "geo-box" do %>
-            <div class="icon-box"><i class="fas fa-location-arrow"></i></div>Or geolocate me!
-            <% end %>
-        </div>
-        <div class="d-flex justify-content-center">
-          <%= f.button :submit,"Validate", class: "btn btn-flat-geoloc-validate"  %>
-        </div>
+      <div class="geo-box">
+        <button class="icon-box" id="geolocalised"><i class="fas fa-location-arrow"></i>or geolocate me</button>
+      </div>
+      <div class="d-flex justify-content-center">
+        <%= f.button :submit,"Validate", class: "btn btn-flat-geoloc-validate"  %>
+      </div>
     <% end %>
+  </div>
+</div>
