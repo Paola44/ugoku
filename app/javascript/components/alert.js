@@ -4,5 +4,5 @@ if(alert_d != null){
   const removeElem = (elem) => {
     elem.style.display = 'none';
   }
-  setTimeout(function(){ removeElem(alert_d) }, 3000);
+  setTimeout(function(){ removeElem(alert_d) }, 2000);
 }

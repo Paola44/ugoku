@@ -20,10 +20,10 @@
     </div>
   </div>
 </div>
-          <div class="button-submit-profile">
-            <%= link_to 'Back to my profile', '/users/show', class:"button-back-to-profile" %>
-            <%= f.button :submit, value: 'Save modificaitons', class:" button-save-profile" %>
-          </div>
-        </div>
-      <% end %>
+    <div class="button-submit-profile">
+      <%= f.button :submit, value: 'Save modificaitons', class:" button-save-profile" %>
+      <%= link_to 'Back to profile', '/users/show', class:"button-back-to-profile" %>
+    </div>
+  </div>
+<% end %>
 

@@ -1,9 +1,9 @@
-.profile{
+.profile {
   padding-top: 30px;
   background-color: black;
   width: 100%;
 
-  .card-profile{
+  .card-profile {
     overflow: hidden;
     background: white;
     padding-top: 30px;
@@ -12,31 +12,41 @@
     margin: auto;
     border-radius: 5px;
   }
+
   .h1-profile{
     color: white;
     font-size: 40px;
   }
 
-  .profile-pict{
+  .profile-pict {
     display: flex;
     justify-content: center;
   }
-  .profile-picture{
+
+  .profile-picture {
     border-radius: 50%;
   }
+}
 
 .button-update-box {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 25px;
 
   .button-update-profile {
-    margin-bottom: 20px;
-    top: 295px;
-    background: linear-gradient(to right, $green1, $green2);
-    padding: 5px 10px 5px 10px;
+    color: $black;
+    padding: 8px 24px;
+    align-content: center;
+    font-weight: 500;
+    text-align: center;
     border-radius: 50px;
     box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+    background: linear-gradient(to right, $green1, $green2);
+    transition: background 0.3s ease;
   }
 }
 
@@ -46,6 +56,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .personnal-info-profile
   h2 {
     color: black;
@@ -62,8 +73,11 @@
   .personnal-fields{
     margin-left: 40px;
     margin-right: 40px;
+    margin-bottom: 20px;
   }
+
   .field {
+
     .label {
       margin-right: 50px;
       padding-right: 60px;
@@ -71,40 +85,41 @@
       height:30px;
     }
   }
+
   .input-form-event {
-    .form-group {
-      display: flex;
-      margin-bottom: 1rem;
-      margin-left: 40px;
-      font-size: 17px;
-    }
-    .form-control-label {
-      font-weight: bold;
-      width: 100px;
+  .form-group {
+    display: flex;
+    margin-bottom: 1rem;
+    margin-left: 40px;
+    font-size: 17px;
+  }
 
-    }
-      #user_name {
-        border: none;
-        background-image: none;
-        font-size: 17px;
-        padding-top: 0;
-        padding-bottom: 0;
+  .form-control-label {
+    font-weight: bold;
+    width: 100px;
 
-      }
-      #user_email {
-        border: none;
-        background-image: none;
-        font-size: 17px;
-        padding-top: 0;
-        padding-bottom: 0;
+  }
 
-      }
-      #user_address {
-        border: none;
-        background-image: none;
-        font-size: 17px;
-      }
+  #user_name {
+    border: none;
+    background-image: none;
+    font-size: 17px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
+  #user_email {
+    border: none;
+    background-image: none;
+    font-size: 17px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #user_address {
+    border: none;
+    background-image: none;
+    font-size: 17px;
   }
 }
 
@@ -119,27 +134,36 @@
 }
 
 .button-submit-profile {
-      display: flex;
-      position: absoslute;
-      bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 25px;
 
-      justify-content: space-between;
-      margin-top: 20px;
+  .button-back-to-profile {
+    color: $black;
+    padding: 8px 24px;
+    align-content: center;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+    background: linear-gradient(to right, $blue1, $blue2);
+    transition: background 0.3s ease;
+    margin-top: 10px;
+  }
 
-      .button-back-to-profile {
-        background: linear-gradient(to right, $blue1, $blue2);
-        padding: 5px 10px 5px 10px;
-        border-radius: 50px;
-        margin-left: 20px;
-        box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
-      }
-
-      .button-save-profile {
-        background: linear-gradient(to right, $green1, $green2);
-        padding: 5px 10px 5px 10px;
-        border-radius: 50px;
-        margin-right: 20px;
-        box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
-      }
-
-    }
+  .button-save-profile {
+    color: $black;
+    padding: 8px 24px;
+    align-content: center;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+    background: linear-gradient(to right, $green1, $green2);
+    transition: background 0.3s ease;
+  }
+}

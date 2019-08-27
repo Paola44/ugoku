@@ -1,14 +1,19 @@
-.alert {
-  position: fixed;
-  top: 50px;
-  left: 2px;
-  z-index: 1000;
+.flash {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  margin: 8px;
 }
 
-.alert-green{
-  background: #93fe67;
-}
-.alert-orange{
-  background: #ff6060;
+.flash-success {
+  border: 2px solid $green2;
+  opacity: 0.6;
 }
 
+.flash-warning {
+  border: 2px solid $red;
+}
