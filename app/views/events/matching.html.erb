@@ -16,10 +16,10 @@
             <div class="sport-event-card">
               <h3><strong><%= event.sport.capitalize %></strong></h3>
               <div class="sport-info">
-                <p><i class="far fa-calendar-alt">  <%= event.start_at.to_date %></i></p>
-                <p><i class="far fa-clock">  <%= event.start_at.strftime('%k') %>h</i></p>
+                <p><i class="far fa-calendar-alt"></i>  <%= event.start_at.to_date %></p>
+                <p><i class="far fa-clock"></i>  <%= event.start_at.strftime('%k') %>h</p>
               </div>
-              <button class="button-events" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>" type="button" aria-expanded="false" aria-controls="description-collapse-<%= event.id %>">See more</button>
+              <p class="button-events" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>" type="button" aria-expanded="false" aria-controls="description-collapse-<%= event.id %>"><i class="fas fa-chevron-down"></i></p>
             </div>
           </div>
           <div class="add-button">
@@ -33,17 +33,16 @@
 
       <div class="collapse decription-event" id="description-collapse-<%= event.id %>">
         <div class="address-details">
-          <div class="event-address">
-            <h3><strong><%= event.address.capitalize %><span class="font-map js-selector" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.to_coordinates.to_json %>"><i class="fas fa-map-marked-alt"></i></span></strong></h3>
-          </div>
-          <div class="event-map">
-            <!-- ADD MAP BUTTON TO DIPLAY IN A GOOGLE MAP -->
+         <div class="event-address">
+            <p><strong><%= event.address.capitalize %>
+              <button class="font-map js-selector" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.to_coordinates.to_json %>" data-name="<%= event.sport %>"><i class="fas fa-map-marker-alt"></i> On map</button>
+            </strong></p>
           </div>
         </div>
 
         <div class="info-sport-event">
           <div class="details-duration">
-            <p><i class="fas fa-stopwatch">  <%= event.duration %> min.</i></p>
+            <p><i class="fas fa-stopwatch"></i>  <%= event.duration %> min.</p>
           </div>
           <div class="details-level">
             <% if event.level == 1 %>
@@ -60,23 +59,19 @@
               <p><i class="fas fa-dumbbell"></i></p>
               <p><i class="fas fa-dumbbell"></i></p>
             <% end %>
-            <div class="details-button" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>" role="button" aria-expanded="false" aria-controls="description-collapse-<%= event.id %>">
-              <%= image_tag('error.png', class: 'more-details-btn') %>
-            </div>
           </div>
         </div>
         <div class="text-event">
-            <h3>Description</h3>
             <p><%= event.description %></p>
         </div>
-        <div class="capacity-event d-flex justify-content">
-          <p>Cap. <%= event.capacity %></p>
+        <div class="capacity-event d-flex justify-content-end pr-3">
           <div class="d-flex event-avatars">
-            <% event.users.each do |user| %>
+            <% event.users.take(5).each do |user| %>
               <%= image_tag cl_image_path(user.photo), class: "avatar-bordered single-card rounded-circle border border-white", alt: "avatar-bordered" %>
             <% end %>
           </div>
         </div>
+        <div class="details-button" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>" role="button" aria-expanded="false" aria-controls="description-collapse-<%= event.id %>"><i class="fas fa-chevron-up"></i></div>
       </div>
     <% end %>
   </div>
