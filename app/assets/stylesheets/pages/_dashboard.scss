@@ -107,11 +107,13 @@
 .favorites-sports {
   display: flex;
   justify-content: space-evenly;
+  padding-top: 35px;
+  align-items: center;
 }
 
 .container-sports {
   background: $white;
-  height: 155px;
+  height: 145px;
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
