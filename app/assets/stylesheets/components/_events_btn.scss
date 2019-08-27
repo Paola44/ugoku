@@ -68,6 +68,6 @@
 }
 
 .btn-double {
-  display: grid;
-  grid-auto-columns: auto;
+  display: flex;
+  justify-content: space-around;
 }
