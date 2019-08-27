@@ -789,7 +789,7 @@ UserEvent.create!(
 # amelie events
 UserEvent.create!(
   user: amelie,
-  event: running_sunday,
+  event: running_saturday,
   matching: true,
   )
 UserEvent.create!(
@@ -852,7 +852,7 @@ UserEvent.create!(
 # nassim events
 UserEvent.create!(
   user: nassim,
-  event: running_sunday,
+  event: running_saturday,
   matching: true,
   )
 UserEvent.create!(
