@@ -5,7 +5,7 @@
     <h2><%= day.strftime('%A') %></h2>
     <% events.each do |event| %>
       <div class="card-events">
-          <%= image_tag("boxing-gloves.png", class: 'sport-img')%>
+          <%= image_tag "#{event.sport}.png", class: 'sport-img' %>
           <div class="event">
             <div class="sport-event-card">
               <h3><strong><%= event.sport.capitalize %></strong></h3>
@@ -27,10 +27,9 @@
 
       <div class="collapse decription-event" id="description-collapse-<%= event.id %>">
         <div class="address-details">
-          <div class="event-address">
-            <p><strong><%= event.address.capitalize %>
-              <button class="font-map js-selector" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.to_coordinates.to_json %>" data-name="<%= event.sport %>"><i class="fas fa-map-marker-alt"></i> On map</button>
-            </strong></p>
+          <div class="event-address d-flex">
+            <p><strong><%= event.address.capitalize %></strong></p>
+            <button class="font-map js-selector" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.to_coordinates.to_json %>" data-name="<%= event.sport %>"><i class="fas fa-map-marker-alt"></i> On map</button>
           </div>
         </div>
 
@@ -40,18 +39,18 @@
           </div>
           <div class="details-level">
             <% if event.level == 1 %>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
-              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
+              <%= image_tag "#{event.sport}.png", width: 25, height: 25 %>
+              <%= image_tag "#{event.sport}.png", width: 25, height: 25, class:"level-img"%>
+              <%= image_tag "#{event.sport}.png", width: 25, height: 25, class:"level-img" %>
             <% elsif %>
               <% event.level == 2  %>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
+              <%= image_tag "#{event.sport}.png", width: 25, height: 25 %>
+              <%= image_tag "#{event.sport}.png", width: 25, height: 25 %>
+              <%= image_tag "#{event.sport}.png", width: 25, height: 25, class:"level-img" %>
             <% else  %>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell"></i></p>
+              <%= image_tag "#{event.sport}.png", width: 25, height: 25 %>
+              <%= image_tag "#{event.sport}.png", width: 25, height: 25 %>
+              <%= image_tag "#{event.sport}.png", width: 25, height: 25 %>
             <% end %>
           </div>
         </div>

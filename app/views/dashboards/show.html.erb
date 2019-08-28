@@ -20,9 +20,7 @@
           <h3 class='text-white h3-default text-secondary'>Add events</h3>
               <h1><i class="fas fa-arrow-down text-white m-5 text-secondary"></i></h1>
         </div>
-      <% end %>
-<!--
-      <% @user_events.each do |event| %>
+
       <div class="card-events">
           <div class="event">
             <div class="sport-event-card">
@@ -32,37 +30,37 @@
                 <p><i class="far fa-clock"></i>  <%= event.event.start_at.strftime('%k') %>h</p>
               </div>
             </div>
-          <%= image_tag("boxing-gloves.png", class: 'sport-img')%>
+          <%= image_tag "#{event.event.sport}.png", class: 'sport-img' %>
           </div>
       </div>
 
       <div class="collapse decription-event" id="description-collapse-<%= event.id %>">
         <div class="address-details">
           <div class="event-address">
-            <p><strong><%= event.address.capitalize %>
-              <button class="font-map js-selector" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.to_coordinates.to_json %>" data-name="<%= event.sport %>"><i class="fas fa-map-marker-alt"></i> On map</button>
+            <p><strong><%= event.event.address.capitalize %>
+              <button class="font-map js-selector" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.event.to_coordinates.to_json %>" data-name="<%= event.event.sport %>"><i class="fas fa-map-marker-alt"></i> On map</button>
             </strong></p>
           </div>
         </div>
 
         <div class="info-sport-event">
           <div class="details-duration">
-            <p><i class="fas fa-stopwatch"></i>  <%= event.duration %> min.</p>
+            <p><i class="fas fa-stopwatch"></i>  <%= event.event.duration %> min.</p>
           </div>
           <div class="details-level">
             <% if event.event.level == 1 %>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
-              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
+              <%= image_tag "#{event.event.sport}.png", width: 25, height: 25 %>
+              <%= image_tag "#{event.event.sport}.png", width: 25, height: 25, class:"level-img"%>
+              <%= image_tag "#{event.event.sport}.png", width: 25, height: 25, class:"level-img" %>
             <% elsif %>
               <% event.event.level == 2  %>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
+              <%= image_tag "#{event.event.sport}.png", width: 25, height: 25 %>
+              <%= image_tag "#{event.event.sport}.png", width: 25, height: 25 %>
+              <%= image_tag "#{event.event.sport}.png", width: 25, height: 25, class:"level-img" %>
             <% else  %>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell"></i></p>
+              <%= image_tag "#{event.event.sport}.png", width: 25, height: 25 %>
+              <%= image_tag "#{event.event.sport}.png", width: 25, height: 25 %>
+              <%= image_tag "#{event.event.sport}.png", width: 25, height: 25 %>
             <% end %>
           </div>
         </div>
@@ -71,13 +69,13 @@
         </div>
         <div class="capacity-event d-flex justify-content-end pr-3">
           <div class="d-flex event-avatars">
-            <% event.users.take(5).each do |user| %>
+            <% event.event.users.take(5).each do |user| %>
               <%= user_image_tag(user, class: "avatar-bordered single-card rounded-circle border border-white", alt: "avatar-bordered") %>
             <% end %>
           </div>
         </div>
       </div>
-      <% end %> -->
+     <% end %>
 
 
 <div id="myModal" class="modal fade" role="dialog">
@@ -104,20 +102,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
     </div>
     <!-- <i class="fas fa-chevron-right text-white"></i> -->
   </div>
   </div>
 </div>
+
 <div class= "btn-box sports-box-events">
   <%= link_to "Matching events", matching_events_path, class:"btn btn-flat btn-flat-activity2" %>
 </div>
