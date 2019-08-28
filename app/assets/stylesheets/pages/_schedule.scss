@@ -44,11 +44,12 @@
   grid-template-columns: 1fr 1fr;
   width: 90%;
   grid-gap: 1.75rem 3rem;
-
  }
 
+
+
 .schedule-day {
-  color: $white;
+  color: $black;
   padding: 8px 24px;
   text-align: center;
   vertical-align: center;
@@ -60,16 +61,22 @@
   position: relative;
   transition: background 0.3s ease;
 }
+
 .day-choice {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: $white;
 }
 
 .active-schedule {
   border-radius: 5px 5px 0 0;
   background: $white;
-  color: $red;
+  color: $black;
+
+  .day-choice {
+    color: $red;
+  }
 }
 
 .floute_class {
@@ -85,7 +92,7 @@
   align-items: center;
   justify-content: center;
   background: $white;
-  width: 291px;
+  width: 288px;
   border-radius: 0 5px 5px 5px;
   height: 114px;
   position: absolute;
@@ -98,7 +105,7 @@
 }
 
 .even_day_margin {
-  margin-left: -171px;
+  margin-left: -168px;
   border-radius: 5px 0 5px 5px;
 }
 

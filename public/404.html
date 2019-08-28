@@ -20,19 +20,7 @@
         align-items: stretch;
         position: absolute;
         bottom: 125px;
-
       }
-
-      /*.logo404 {
-        background-image: url('app/assets/images/last_logo2.png)');
-        height:30vh;
-        background-size: contain;
-        justify-content: center;
-        background-position: center;
-        background-repeat: no-repeat;
-        margin: 0 30px;
-        padding-top: 50px;
-      }*/
 
       .text {
         display: flex;
@@ -40,6 +28,20 @@
         justify-content: center;
         font-family: Red Hat Display;
         color: #FFFFFF;
+        margin-bottom: 0px,
+      }
+
+      .text2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Red Hat Display;
+        color: #FFFFFF;
+        margin-top: 0px;
+      }
+
+      .logo {
+        margin-bottom: 70px;
       }
 
       .btn-event-box404 {
@@ -51,7 +53,6 @@
         box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
         background: linear-gradient(to right, #F91351, #F93885);
         transition: background 0.3s ease;
-        font-weight: bold;
         border: none;
       }
 
@@ -60,13 +61,11 @@
 
   <body class="rails-default-error-page">
     <div class="content">
-
-      <!-- <div class="logo404"></div> -->
-
-      <img src="../app/assets/images/last_logo2.png">
-
-      <p class="text">OOPS, PAGE WAS NOT FOUND.</p>
+      <img class="logo" src="last_logo2.png" width="320" height="150px">
+      <p class="text">ERROR 404</p>
+      <p class="text2">OOPS, PAGE WAS NOT FOUND.</p>
       <button onclick="location.href='http://www.ugoku.eu'" class="btn-event-box404"type="button">Go back !</button>
     </div>
   </body>
+
 </html>
