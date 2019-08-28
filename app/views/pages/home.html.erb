@@ -9,7 +9,11 @@
   <p class="desciption pl-4 pr-4">Does not matter where you are or what your schedule is! <span class="text_color_green">Ugoku will always find the rigth sportive activity</span> for you !</p>
 </div>
 <div class= "btn-box">
+  <% if current_user.log_in %>
+   <%= link_to "I want this !", dashboard_path, class:"btn btn-flat" %>
+  <% else %>
   <%= link_to "I want this !", new_user_registration_path, class:"btn btn-flat" %>
+  <% end %>
 </div>
 
 <h2 class="secondary_title pb-3 pl-4 pr-4">Why people use <span class="brandcolor">Ugoku</span> ?</h2>
