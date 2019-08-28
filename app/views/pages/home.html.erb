@@ -9,10 +9,10 @@
   <p class="desciption pl-4 pr-4">Does not matter where you are or what your schedule is! <span class="text_color_green">Ugoku will always find the rigth sportive activity</span> for you !</p>
 </div>
 <div class= "btn-box">
-  <% if current_user.log_in %>
+  <% if user_signed_in? %>
    <%= link_to "I want this !", dashboard_path, class:"btn btn-flat" %>
   <% else %>
-  <%= link_to "I want this !", new_user_registration_path, class:"btn btn-flat" %>
+    <%= link_to "I want this !", new_user_registration_path, class:"btn btn-flat" %>
   <% end %>
 </div>
 
@@ -21,7 +21,6 @@
   <div class="home-section2 green-container pb-2">
     <div class="icons">
       <p class="mini_title_green">Sports around you</p>
-      <!-- <i class="fas fa-map-marker-alt location_icon"></i> -->
       <%= image_tag "location.png", alt: 'box glove',height: 60, width: 60 %>
       <p class="green-text">The algorythm will match the sportive events near you </p>
       </div>
@@ -29,7 +28,6 @@
     <div class="home-container pb-4 pt-4">
       <div class="home-section2 red-container pb-2">
         <p class="mini_title_red">Meet new people</p>
-        <!-- <i class="fas fa-users group_icon"></i> -->
         <%= image_tag "group.png", alt: 'box glove',height: 60, width: 60 %>
         <p class="red-text">You will not be alone ! There are a lor of people who loves what you love</p>
       </div>
@@ -37,7 +35,6 @@
     <div class="home-container pb-4">
       <div class="home-section2 blue-container pb-2">
         <p class="mini_title_blue">Stay active </p>
-        <!-- <i class="fas fa-users sport_icon"></i> -->
         <%= image_tag "active.png", alt: 'box glove',height: 60, width: 60 %>
         <p class="blue-text">You can practice all sports you want when you are free to do it!</p>
       </div>
