@@ -3,7 +3,7 @@
   <%= link_to "Search a new activity", events_path, class:"btn btn-flat btn-flat-activity1" %>
 </div>
 <h2 class="h2_eteint">Your program</h2>
-<div class="dashboard-section pt-5 pb-5">
+<div class="dashboard-section">
   <div class="user_activities">
     <!-- <i class="fas fa-chevron-left text-white"></i> -->
     <div class="slider-program">
@@ -14,22 +14,21 @@
             <div class="card-events-dash">
               <div class="event-dash">
                 <div class="sport-event-card-dash">
-                  <h3><strong><%= event.event.sport.capitalize %></strong></h3>
                   <div class="sport-info-dash">
+                    <h3><strong><%= event.event.sport.capitalize %></strong></h3>
                     <p><i class="far fa-calendar-alt"></i>  <%= event.event.start_at.to_date %></p>
                     <p><i class="far fa-clock"></i>  <%= event.event.start_at.strftime('%k') %>h</p>
                   </div>
+                  <%= image_tag "#{event.event.sport}.png", class: 'sport-img-dash' %>
                 </div>
-                <%= image_tag "#{event.event.sport}.png", class: 'sport-img-das' %>
               </div>
             </div>
 
             <div class="decription-event-dash">
               <div class="address-details-dash">
                 <div class="event-address-dash">
-                  <p><strong><%= event.event.address.capitalize %>
-                    <button class="font-map-dash js-selector" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.event.to_coordinates.to_json %>" data-name="<%= event.event.sport %>"><i class="fas fa-map-marker-alt"></i> On map</button>
-                  </strong></p>
+                  <p><strong><%= event.event.address.capitalize %></strong></p>
+                  <button class="font-map-dash js-selector" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.event.to_coordinates.to_json %>" data-name="<%= event.event.sport %>"><i class="fas fa-map-marker-alt"></i> On map</button>
                 </div>
               </div>
 
@@ -39,30 +38,23 @@
                 </div>
                 <div class="details-level-dash">
                   <% if event.event.level == 1 %>
-                    <%= image_tag "#{event.event.sport}.png", width: 25, height: 25 %>
-                    <%= image_tag "#{event.event.sport}.png", width: 25, height: 25, class:"level-img-dash"%>
-                    <%= image_tag "#{event.event.sport}.png", width: 25, height: 25, class:"level-img-dash" %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20 %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20, class:"level-img-dash"%>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20, class:"level-img-dash" %>
                   <% elsif %>
                     <% event.event.level == 2  %>
-                    <%= image_tag "#{event.event.sport}.png", width: 25, height: 25 %>
-                    <%= image_tag "#{event.event.sport}.png", width: 25, height: 25 %>
-                    <%= image_tag "#{event.event.sport}.png", width: 25, height: 25, class:"level-img-dash" %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20 %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20 %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20, class:"level-img-dash" %>
                   <% else  %>
-                    <%= image_tag "#{event.event.sport}.png", width: 25, height: 25 %>
-                    <%= image_tag "#{event.event.sport}.png", width: 25, height: 25 %>
-                    <%= image_tag "#{event.event.sport}.png", width: 25, height: 25 %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20 %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20 %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20 %>
                   <% end %>
                 </div>
               </div>
               <div class="text-event-dash">
                   <p><%= event.event.description %></p>
-              </div>
-              <div class="capacity-event-dash d-flex justify-content-end pr-3">
-                <div class="d-flex event-dash-avatars">
-                  <% event.event.users.take(5).each do |user| %>
-                    <%= user_image_tag(user, class: "avatar-bordered single-card rounded-circle border border-white", alt: "avatar-bordered") %>
-                  <% end %>
-                </div>
               </div>
             </div>
           </div>
@@ -140,7 +132,7 @@
                   <span class="pink-circle"></span>
                   <span><%= availability.day_name.capitalize %></span>
                 </div>
-                <div class="availabities-result">
+                <div class="availabities-result" id='special-nikol'>
                   <% if availability.slot_1%>
                     <p>8h - 10h</p>
                   <% end %>
