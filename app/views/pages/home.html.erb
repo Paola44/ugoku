@@ -45,7 +45,11 @@
   </div>
 </div>
 <div class="btn-box-secondary">
-  <%= link_to "Try ugoku now", new_user_registration_path, class:"btn btn-flat btn-flat-2" %>
+  <% if user_signed_in? %>
+    <%= link_to "Try ugoku now", dashboard_path, class:"btn btn-flat-2" %>
+  <% else %>
+    <%= link_to "Try ugoku now", new_user_registration_path, class:"btn btn-flat btn-flat-2" %>
+  <% end %>
 </div>
 
 <div class="home-section4">
@@ -146,7 +150,11 @@
     </div>
   </div>
   <div class="btn-last-box">
-    <%= link_to "I'am convinced", new_user_registration_path, class:"btn btn-flat btn-flat-2" %>
+    <% if user_signed_in? %>
+      <%= link_to "I'am convinced", dashboard_path, class:"btn btn-flat-2" %>
+    <% else %>
+      <%= link_to "I'am convinced", new_user_registration_path, class:"btn btn-flat btn-flat-2" %>
+    <% end %>
   </div>
 </div>
 
