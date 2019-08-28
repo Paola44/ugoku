@@ -20,9 +20,10 @@
                           id="user_favorite_sports_<%= category %>"
                           <%= "checked" if @user.favorite_sports.include?(category) %>>
                   <label  class="category-choice d-flex align-items-center justify-content-center
-                          <%= 'active' if @user.favorite_sports.include?(category) %>"
+                          <%= "active" if @user.favorite_sports.include?(category) %>"
                           for="user_favorite_sports_<%= category %>"
-                          ><%= category.capitalize %></label>
+                          ><%= image_tag "#{category}.png", width: 50, height: 50 %>
+                          <%= category.capitalize %></label>
                 </div>
               <% end %>
             </div>
