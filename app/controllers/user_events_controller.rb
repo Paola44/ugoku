@@ -5,9 +5,15 @@ class UserEventsController < ApplicationController
     user_event = UserEvent.new(event: @event, user: current_user)
 
     if user_event.save
-      redirect_to params.fetch(:next_action, events_path), notice: "Susbcribed successfully"
+      respond_to do |format|
+        format.html { redirect_to events_path }
+        format.js
+      end
     else
-      redirect_to params.fetch(:next_action, events_path), alert: "Error"
+      respond_to do |format|
+        format.html { render '/events' }
+        format.js
+      end
     end
   end
 

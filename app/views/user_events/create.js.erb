@@ -1,0 +1,7 @@
+const updateStatusEvents = () => {
+  const button = document.querySelector("[data-id='<%= @event.id%>']")
+  button.childNodes[1].remove
+  button.innerHTML = "<img class='add-event-btn' src='/assets/success-cd387a6583a974e947a3bf9d3e2407014cdf55cdbc0a2e2a423c6b580c64e4d5.png'>"
+}
+
+updateStatusEvents()
