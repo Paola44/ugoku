@@ -514,6 +514,7 @@ puts '...Creating events...'
 yoga_monday     = Event.create!(
   sport: 'yoga',
   start_at: '2019-08-26 20:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/yoga.png')),
   duration: 90,
   level: 1,
   capacity: 10,
@@ -525,6 +526,7 @@ yoga_monday     = Event.create!(
 yoga_wednesday  = Event.create!(
   sport: 'yoga',
   start_at: '2019-08-28 20:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/yoga.png')),
   duration: 90,
   level: 1,
   capacity: 10,
@@ -536,6 +538,7 @@ yoga_wednesday  = Event.create!(
 yoga_friday     = Event.create!(
   sport: 'yoga',
   start_at: '2019-08-30 20:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/yoga.png')),
   duration: 90,
   level: 1,
   capacity: 10,
@@ -548,6 +551,7 @@ yoga_friday     = Event.create!(
 crossfit_monday    = Event.create!(
   sport: 'crossfit',
   start_at: '2019-08-26 19:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
   duration: 60,
   level: 2,
   capacity: 50,
@@ -561,6 +565,7 @@ crossfit_monday    = Event.create!(
 crossfit_tuesday   = Event.create!(
   sport: 'crossfit',
   start_at: '2019-08-27 19:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
   duration: 60,
   level: 2,
   capacity: 50,
@@ -574,6 +579,7 @@ crossfit_tuesday   = Event.create!(
 crossfit_wednesday = Event.create!(
   sport: 'crossfit',
   start_at: '2019-08-28 19:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
   duration: 60,
   level: 2,
   capacity: 50,
@@ -587,6 +593,7 @@ crossfit_wednesday = Event.create!(
 crossfit_thursday  = Event.create!(
   sport: 'crossfit',
   start_at: '2019-08-29 19:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
   duration: 60,
   level: 2,
   capacity: 50,
@@ -600,6 +607,7 @@ crossfit_thursday  = Event.create!(
 crossfit_friday   = Event.create!(
   sport: 'crossfit',
   start_at: '2019-08-30 19:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
   duration: 60,
   level: 2,
   capacity: 50,
@@ -613,6 +621,7 @@ crossfit_friday   = Event.create!(
 crossfit_saturday  = Event.create!(
   sport: 'crossfit',
   start_at: '2019-08-31 16:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
   duration: 60,
   level: 2,
   capacity: 20,
@@ -626,6 +635,7 @@ crossfit_saturday  = Event.create!(
 crossfit_sunday    = Event.create!(
   sport: 'crossfit',
   start_at: '2019-09-01 16:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
   duration: 60,
   level: 2,
   capacity: 20,
@@ -640,6 +650,7 @@ crossfit_sunday    = Event.create!(
 boxing_tuesday   = Event.create!(
   sport: 'boxing',
   start_at: '2019-08-27 18:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/boxing.png')),
   duration: 120,
   level: 3,
   capacity: 5,
@@ -651,6 +662,7 @@ boxing_tuesday   = Event.create!(
 boxing_thursday  = Event.create!(
   sport: 'boxing',
   start_at: '2019-08-29 18:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/boxing.png')),
   duration: 120,
   level: 3,
   capacity: 5,
@@ -663,6 +675,7 @@ boxing_thursday  = Event.create!(
 football_friday   = Event.create!(
   sport: 'football',
   start_at: '2019-08-30 18:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/football.png')),
   duration: 60,
   level: 1,
   capacity: 10,
@@ -676,6 +689,7 @@ football_friday   = Event.create!(
 football_saturday = Event.create!(
   sport: 'football',
   start_at: '2019-08-31 18:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/football.png')),
   duration: 60,
   level: 1,
   capacity: 10,
@@ -690,6 +704,7 @@ football_saturday = Event.create!(
 running_saturday  = Event.create!(
   sport: 'running',
   start_at: '2019-08-31 10:30:00',
+  photo: File.open(Rails.root.join('app/assets/images/running.png')),
   duration: 60,
   level: 2,
   capacity: 5,
@@ -703,6 +718,7 @@ running_saturday  = Event.create!(
 running_sunday    = Event.create!(
   sport: 'running',
   start_at: '2019-09-01 10:30:00',
+  photo: File.open(Rails.root.join('app/assets/images/running.png')),
   duration: 60,
   level: 2,
   capacity: 5,

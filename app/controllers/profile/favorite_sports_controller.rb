@@ -3,9 +3,9 @@ module Profile
     def edit
       @user = current_user
       if params[:origin] == 'signup'
-        @url_params = favorite_sports_url(origin: 'signup')
+        @url_params = favorite_sports_path(origin: 'signup')
       else
-        @url_params = favorite_sports_url
+        @url_params = favorite_sports_path
       end
     end
 

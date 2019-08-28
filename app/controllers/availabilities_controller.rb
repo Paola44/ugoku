@@ -6,9 +6,9 @@ class AvailabilitiesController < ApplicationController
       @availabilities[availability.day_name] = availability
     end
     if params[:origin] == 'signup'
-      @availabilities_url = availabilities_url(origin: 'signup')
+      @availabilities_url = availabilities_path(origin: 'signup')
     else
-      @availabilities_url = availabilities_url
+      @availabilities_url = availabilities_path
     end
   end
 
