@@ -1,6 +1,7 @@
 .container-events {
   background-color: black;
   text-align: center;
+  height: 100%;
 
   h1 {
     color: white;
@@ -48,6 +49,12 @@
     font-size: 20px;
     margin-top: -3px;
   }
+}
+
+.matching-events-bottom {
+  background-color: black;
+  text-align: center;
+  height: 68vh;
 }
 
 .sport-event-card {

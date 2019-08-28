@@ -13,11 +13,7 @@ class UsersController < ApplicationController
     loc = params["user"]["address"]
     lat_and_lon?(loc)
 
-    if params[:listing] == 'matching'
-      redirect_to matching_events_path
-    else
-      redirect_to events_path
-    end
+    redirect_to matching_events_path
   end
 
   private
