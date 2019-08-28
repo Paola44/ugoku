@@ -144,3 +144,136 @@
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 
 }
+
+//////////////////// CARD EVENT DASHBOARD //////////////////////
+
+.card-events-dash{
+  background-color: #F91351;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  margin: 0 20px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  height: 120px;
+  display: flex;
+}
+
+.sport-event-card-dash {
+  text-align: left;
+  padding-left: 30px;
+  h3 {
+    font-size: 20px;
+    color: white;
+  }
+}
+
+.sport-info-dash{
+  p {
+    color: white;
+    text-align: left;
+    font-size: 15px;
+    margin: 0px 5px 5px 5px;
+    margin-left: -8px;
+  }
+}
+
+.sport-img-dash {
+    width: 74px;
+    height: 74px;
+    align-items: center;
+    margin: 10px 0 0 15px;
+  }
+
+
+.decription-event-dash {
+  background-color: white;
+  text-align: center;
+  position: static;
+  padding: 15px 18px 0 15px;
+  margin: -47px 20px 30px 20px;
+  border-radius: 0 0 20px 20px;
+  .font-map-dash{
+    background-color: rgba(249, 19, 81, 0.4);
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    color: #F91351;
+    position: relative;
+    margin-top: 18px;
+    cursor: pointer;
+    padding: 0px 10px 0px 10px;
+    width: 90px;
+    margin-left: -30px;
+    height: 30px;
+  }
+
+  .address-details-dash {
+    display: flex;
+    .event-address-dash
+      p {
+        color: black;
+        font-size: 15px;
+        text-align: left;
+        margin-bottom: 0;
+        width: 244px;
+        font-weight: lighter;
+    }
+  }
+  .info-sport-event-dashs {
+    display: flex;
+    justify-content: space-between;
+    p {
+        color: #919191;
+        font-size: 15px;
+        margin-bottom: 10px;
+
+      }
+    .details-level-dash {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 8px;
+        .level-img-dash{
+          opacity: 0.33;
+        }
+    }
+  }
+
+  .text-event-dash {
+    h3 {
+      color: $black;
+      font-size: 17px;
+    }
+    p {
+      color :#787373;
+      text-align: left;
+      font-size: 13px;
+      padding: 0 0 10px 10px;
+    }
+  }
+}
+
+.event-dash-avatars {
+  img {
+    position: relative;
+    margin-left: -20px;
+    left: 10px;
+    width: 40px;
+    height:40px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
