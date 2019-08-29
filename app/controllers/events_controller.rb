@@ -11,17 +11,17 @@ class EventsController < ApplicationController
       availability = current_user.availabilities.find_by(day_name: event.start_at.strftime('%A').downcase)
 
       case event.start_at.strftime("%H%M").to_i
-      when 800..1000
+      when 800..999
         availability.slot_1
-      when 1000..1200
+      when 1000..1199
         availability.slot_2
-      when 1200..1400
+      when 1200..1499
         availability.slot_3
-      when 1400..1600
+      when 1400..1599
         availability.slot_4
-      when 1600..1800
+      when 1600..1799
         availability.slot_5
-      when 1800..2030
+      when 1800..2001
         availability.slot_6
       end
     end
