@@ -14,7 +14,7 @@
         <div class="sport-event-card">
           <h3><strong><%= event.sport.capitalize %></strong></h3>
           <div class="sport-info">
-            <p><i class="far fa-calendar-alt"></i>  <%= event.start_at.to_date %></p>
+            <p><i class="far fa-calendar-alt"></i>  <%= event.start_at.strftime('%d/%m/%Y') %></p>
             <p><i class="far fa-clock"></i>  <%= event.start_at.strftime('%k') %>h</p>
           </div>
           <div class="button-events" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>"  aria-expanded="false" aria-controls="description-collapse-<%= event.id %>"><i class="fas fa-chevron-down"></i></div>
