@@ -295,3 +295,15 @@
     color: white;
   }
 }
+.supprimer_event{
+  display:flex;
+  justify-content: end
+}
+.icon-suppr{
+  cursor: pointer;
+}
+.fix_pos{
+  position: absolute;
+  top: -11px;
+  right: -12px;
+}

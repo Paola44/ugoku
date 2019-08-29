@@ -5,4 +5,10 @@ class DashboardsController < ApplicationController
     day_order = %w(monday tuesday wednesday thursday friday saturday sunday)
     @availabilities = current_user.availabilities.reject { |availability| availability.slots.all?(false) }.sort_by{|day| day_order.index(day.day_name)}
   end
+
+  def destroy
+    @user_event = UserEvent.find(params[:format])
+    @user_event.destroy
+    redirect_to dashboard_path
+  end
 end
