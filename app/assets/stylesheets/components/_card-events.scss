@@ -104,7 +104,8 @@ h2 {
   padding: 15px 18px 0 15px;
   margin: -47px 20px 30px 20px;
   border-radius: 0 0 20px 20px;
-  .font-map{
+
+  .font-map {
     background-color: rgba(249, 19, 81, 0.4);
     font-size: 14px;
     border: none;
@@ -121,32 +122,37 @@ h2 {
 
   .address-details {
     display: flex;
-    .event-address{
+    font-weight: bold;
+
+    .event-address {
       justify-content: space-between;
       width:100%;
       margin-top: 10px;
+
       p {
         color: black;
         font-size: 15px;
         text-align: left;
         margin-bottom: 0;
         width:220px;
-        font-weight: lighter;
+        font-weight: bold;
         line-height: 16px;
       }
     }
   }
+
   .info-sport-event {
     display: flex;
     justify-content: space-between;
     margin-top:10px;
+
     p {
         color: #919191;
         font-size: 15px;
         margin-bottom: 10px;
         margin-top: 8px;
-
       }
+
     .details-level {
       display: flex;
       justify-content: flex-end;
@@ -155,13 +161,15 @@ h2 {
           opacity: 0.33;
         }
     }
+
     .details-button {
       position: absolute;
       right: 10px;
       bottom: 20px;
       z-index: 2;
       cursor: pointer;
-      i{
+
+      i {
         cursor:pointer;
       }
     }
@@ -172,6 +180,7 @@ h2 {
       color: $black;
       font-size: 17px;
     }
+
     p {
       color :#787373;
       text-align: left;
@@ -197,6 +206,7 @@ h2 {
     height:40px;
   }
 }
+
 #map{
   margin: 0 auto;
 }
