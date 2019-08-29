@@ -511,31 +511,7 @@ Availability.find_by!(user: thelma, day_name: 'sunday').update!(slot_1: true, sl
 puts 'Availabilities created !'
 puts '...Creating events...'
 
-yoga_monday     = Event.create!(
-  sport: 'yoga',
-  start_at: '2019-08-26 20:00:00',
-  photo: File.open(Rails.root.join('app/assets/images/yoga.png')),
-  duration: 90,
-  level: 1,
-  capacity: 10,
-  available: true,
-  address: '26 Boulevard de Stalingrad, 44000 Nantes',
-  description: 'Yoga studio and well-being: whatever your desires,
-  your availability, you will find the yoga that suits you!'
-  )
-yoga_wednesday  = Event.create!(
-  sport: 'yoga',
-  start_at: '2019-08-28 20:00:00',
-  photo: File.open(Rails.root.join('app/assets/images/yoga.png')),
-  duration: 90,
-  level: 1,
-  capacity: 10,
-  available: true,
-  address: '26 Boulevard de Stalingrad, 44000 Nantes',
-  description: 'Yoga studio and well-being: whatever your desires,
-  your availability, you will find the yoga that suits you!'
-  )
-yoga_friday     = Event.create!(
+yoga_friday1    = Event.create!(
   sport: 'yoga',
   start_at: '2019-08-30 20:00:00',
   photo: File.open(Rails.root.join('app/assets/images/yoga.png')),
@@ -547,64 +523,44 @@ yoga_friday     = Event.create!(
   description: 'Yoga studio and well-being: whatever your desires,
   your availability, you will find the yoga that suits you!'
   )
+yoga_monday     = Event.create!(
+  sport: 'yoga',
+  start_at: '2019-09-02 20:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/yoga.png')),
+  duration: 90,
+  level: 1,
+  capacity: 10,
+  available: true,
+  address: '26 Boulevard de Stalingrad, 44000 Nantes',
+  description: 'Yoga studio and well-being: whatever your desires,
+  your availability, you will find the yoga that suits you!'
+  )
+yoga_wednesday  = Event.create!(
+  sport: 'yoga',
+  start_at: '2019-09-04 20:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/yoga.png')),
+  duration: 90,
+  level: 1,
+  capacity: 10,
+  available: true,
+  address: '26 Boulevard de Stalingrad, 44000 Nantes',
+  description: 'Yoga studio and well-being: whatever your desires,
+  your availability, you will find the yoga that suits you!'
+  )
+yoga_friday     = Event.create!(
+  sport: 'yoga',
+  start_at: '2019-09-06 20:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/yoga.png')),
+  duration: 90,
+  level: 1,
+  capacity: 10,
+  available: true,
+  address: '26 Boulevard de Stalingrad, 44000 Nantes',
+  description: 'Yoga studio and well-being: whatever your desires,
+  your availability, you will find the yoga that suits you!'
+  )
 
-crossfit_monday    = Event.create!(
-  sport: 'crossfit',
-  start_at: '2019-08-26 19:00:00',
-  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
-  duration: 60,
-  level: 2,
-  capacity: 50,
-  available: true,
-  address: 'Rue Stanislas Baudry, 44000 Nantes',
-  description: 'All appointments are published the night before and
-  should be consulted first before leaving home.
-  In case of cancellation / or moving of place, we do our best to
-  report it 1h before minimum! Stay connected!'
-  )
-crossfit_tuesday   = Event.create!(
-  sport: 'crossfit',
-  start_at: '2019-08-27 19:00:00',
-  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
-  duration: 60,
-  level: 2,
-  capacity: 50,
-  available: true,
-  address: 'Rue Stanislas Baudry, 44000 Nantes',
-  description: 'All appointments are published the night before and
-  should be consulted first before leaving home.
-  In case of cancellation / or moving of place, we do our best to
-  report it 1h before minimum! Stay connected!'
-  )
-crossfit_wednesday = Event.create!(
-  sport: 'crossfit',
-  start_at: '2019-08-28 19:00:00',
-  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
-  duration: 60,
-  level: 2,
-  capacity: 50,
-  available: true,
-  address: 'Rue Stanislas Baudry, 44000 Nantes',
-  description: 'All appointments are published the night before and
-  should be consulted first before leaving home.
-  In case of cancellation / or moving of place, we do our best to
-  report it 1h before minimum! Stay connected!'
-  )
-crossfit_thursday  = Event.create!(
-  sport: 'crossfit',
-  start_at: '2019-08-29 19:00:00',
-  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
-  duration: 60,
-  level: 2,
-  capacity: 50,
-  available: true,
-  address: 'Rue Stanislas Baudry, 44000 Nantes',
-  description: 'All appointments are published the night before and
-  should be consulted first before leaving home.
-  In case of cancellation / or moving of place, we do our best to
-  report it 1h before minimum! Stay connected!'
-  )
-crossfit_friday   = Event.create!(
+crossfit_friday1   = Event.create!(
   sport: 'crossfit',
   start_at: '2019-08-30 19:00:00',
   photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
@@ -618,7 +574,7 @@ crossfit_friday   = Event.create!(
   In case of cancellation / or moving of place, we do our best to
   report it 1h before minimum! Stay connected!'
   )
-crossfit_saturday  = Event.create!(
+crossfit_saturday1  = Event.create!(
   sport: 'crossfit',
   start_at: '2019-08-31 16:00:00',
   photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
@@ -632,9 +588,107 @@ crossfit_saturday  = Event.create!(
   In case of cancellation / or moving of place, we do our best to
   report it 1h before minimum! Stay connected!'
   )
-crossfit_sunday    = Event.create!(
+crossfit_sunday1    = Event.create!(
   sport: 'crossfit',
   start_at: '2019-09-01 16:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
+  duration: 60,
+  level: 2,
+  capacity: 20,
+  available: true,
+  address: 'Rue Stanislas Baudry, 44000 Nantes',
+  description: 'All appointments are published the night before and
+  should be consulted first before leaving home.
+  In case of cancellation / or moving of place, we do our best to
+  report it 1h before minimum! Stay connected!'
+  )
+crossfit_monday    = Event.create!(
+  sport: 'crossfit',
+  start_at: '2019-09-02 19:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
+  duration: 60,
+  level: 2,
+  capacity: 50,
+  available: true,
+  address: 'Rue Stanislas Baudry, 44000 Nantes',
+  description: 'All appointments are published the night before and
+  should be consulted first before leaving home.
+  In case of cancellation / or moving of place, we do our best to
+  report it 1h before minimum! Stay connected!'
+  )
+crossfit_tuesday   = Event.create!(
+  sport: 'crossfit',
+  start_at: '2019-09-03 19:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
+  duration: 60,
+  level: 2,
+  capacity: 50,
+  available: true,
+  address: 'Rue Stanislas Baudry, 44000 Nantes',
+  description: 'All appointments are published the night before and
+  should be consulted first before leaving home.
+  In case of cancellation / or moving of place, we do our best to
+  report it 1h before minimum! Stay connected!'
+  )
+crossfit_wednesday = Event.create!(
+  sport: 'crossfit',
+  start_at: '2019-09-04 19:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
+  duration: 60,
+  level: 2,
+  capacity: 50,
+  available: true,
+  address: 'Rue Stanislas Baudry, 44000 Nantes',
+  description: 'All appointments are published the night before and
+  should be consulted first before leaving home.
+  In case of cancellation / or moving of place, we do our best to
+  report it 1h before minimum! Stay connected!'
+  )
+crossfit_thursday  = Event.create!(
+  sport: 'crossfit',
+  start_at: '2019-09-05 19:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
+  duration: 60,
+  level: 2,
+  capacity: 50,
+  available: true,
+  address: 'Rue Stanislas Baudry, 44000 Nantes',
+  description: 'All appointments are published the night before and
+  should be consulted first before leaving home.
+  In case of cancellation / or moving of place, we do our best to
+  report it 1h before minimum! Stay connected!'
+  )
+crossfit_friday   = Event.create!(
+  sport: 'crossfit',
+  start_at: '2019-09-06 19:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
+  duration: 60,
+  level: 2,
+  capacity: 50,
+  available: true,
+  address: 'Rue Stanislas Baudry, 44000 Nantes',
+  description: 'All appointments are published the night before and
+  should be consulted first before leaving home.
+  In case of cancellation / or moving of place, we do our best to
+  report it 1h before minimum! Stay connected!'
+  )
+crossfit_saturday  = Event.create!(
+  sport: 'crossfit',
+  start_at: '2019-09-07 16:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
+  duration: 60,
+  level: 2,
+  capacity: 20,
+  available: true,
+  address: 'Rue Stanislas Baudry, 44000 Nantes',
+  description: 'All appointments are published the night before and
+  should be consulted first before leaving home.
+  In case of cancellation / or moving of place, we do our best to
+  report it 1h before minimum! Stay connected!'
+  )
+crossfit_sunday    = Event.create!(
+  sport: 'crossfit',
+  start_at: '2019-09-08 16:00:00',
   photo: File.open(Rails.root.join('app/assets/images/crossfit.png')),
   duration: 60,
   level: 2,
@@ -649,7 +703,7 @@ crossfit_sunday    = Event.create!(
 
 boxing_tuesday   = Event.create!(
   sport: 'boxing',
-  start_at: '2019-08-27 18:00:00',
+  start_at: '2019-09-03 18:00:00',
   photo: File.open(Rails.root.join('app/assets/images/boxing.png')),
   duration: 120,
   level: 3,
@@ -661,7 +715,7 @@ boxing_tuesday   = Event.create!(
   )
 boxing_thursday  = Event.create!(
   sport: 'boxing',
-  start_at: '2019-08-29 18:00:00',
+  start_at: '2019-09-05 18:00:00',
   photo: File.open(Rails.root.join('app/assets/images/boxing.png')),
   duration: 120,
   level: 3,
@@ -672,7 +726,7 @@ boxing_thursday  = Event.create!(
   2 times a week Thai boxing, full contact and kick boxing classes for adults.'
   )
 
-football_friday   = Event.create!(
+football_friday1   = Event.create!(
   sport: 'football',
   start_at: '2019-08-30 18:00:00',
   photo: File.open(Rails.root.join('app/assets/images/football.png')),
@@ -686,7 +740,7 @@ football_friday   = Event.create!(
   We offered indoor and outdoor courts equipped to film and review matches.
   At each match, the centers provide balloons and chasubles.'
   )
-football_saturday = Event.create!(
+football_saturday1 = Event.create!(
   sport: 'football',
   start_at: '2019-08-31 18:00:00',
   photo: File.open(Rails.root.join('app/assets/images/football.png')),
@@ -700,8 +754,36 @@ football_saturday = Event.create!(
   We offered indoor and outdoor courts equipped to film and review matches.
   At each match, the centers provide balloons and chasubles.'
   )
+football_friday   = Event.create!(
+  sport: 'football',
+  start_at: '2019-09-06 18:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/football.png')),
+  duration: 60,
+  level: 1,
+  capacity: 10,
+  available: true,
+  address: '2 Boulevard Alexandre Millerand, 44200 Nantes',
+  description: 'The fields are synthetic last generation designed for
+  the practice of football 5.
+  We offered indoor and outdoor courts equipped to film and review matches.
+  At each match, the centers provide balloons and chasubles.'
+  )
+football_saturday = Event.create!(
+  sport: 'football',
+  start_at: '2019-09-07 18:00:00',
+  photo: File.open(Rails.root.join('app/assets/images/football.png')),
+  duration: 60,
+  level: 1,
+  capacity: 10,
+  available: true,
+  address: '2 Boulevard Alexandre Millerand, 44200 Nantes',
+  description: 'The fields are synthetic last generation designed for
+  the practice of football 5.
+  We offered indoor and outdoor courts equipped to film and review matches.
+  At each match, the centers provide balloons and chasubles.'
+  )
 
-running_saturday  = Event.create!(
+running_saturday1  = Event.create!(
   sport: 'running',
   start_at: '2019-08-31 10:30:00',
   photo: File.open(Rails.root.join('app/assets/images/running.png')),
@@ -715,9 +797,37 @@ running_saturday  = Event.create!(
   weight exercises (challenge wrapping, squats, burpees ...)
   and all this, in a good mood!'
   )
-running_sunday    = Event.create!(
+running_sunday1    = Event.create!(
   sport: 'running',
   start_at: '2019-09-01 10:30:00',
+  photo: File.open(Rails.root.join('app/assets/images/running.png')),
+  duration: 60,
+  level: 2,
+  capacity: 5,
+  available: true,
+  address: '2 Place des Garennes, 44100 Nantes',
+  description: 'Regardless of the course chosen, the trip breaks down
+  into 4 1.5 km running phases interspersed with 3 sessions of body
+  weight exercises (challenge wrapping, squats, burpees ...)
+  and all this, in a good mood!'
+  )
+running_saturday  = Event.create!(
+  sport: 'running',
+  start_at: '2019-09-07 10:30:00',
+  photo: File.open(Rails.root.join('app/assets/images/running.png')),
+  duration: 60,
+  level: 2,
+  capacity: 5,
+  available: true,
+  address: '2 Place des Garennes, 44100 Nantes',
+  description: 'Regardless of the course chosen, the trip breaks down
+  into 4 1.5 km running phases interspersed with 3 sessions of body
+  weight exercises (challenge wrapping, squats, burpees ...)
+  and all this, in a good mood!'
+  )
+running_sunday    = Event.create!(
+  sport: 'running',
+  start_at: '2019-09-07 10:30:00',
   photo: File.open(Rails.root.join('app/assets/images/running.png')),
   duration: 60,
   level: 2,
@@ -734,6 +844,11 @@ puts 'Events created!'
 puts '...Creating user events...'
 
 # julien events
+UserEvent.create!(
+  user: julien,
+  event: running_sunday1,
+  matching: true,
+  )
 UserEvent.create!(
   user: julien,
   event: crossfit_monday,
@@ -753,6 +868,11 @@ UserEvent.create!(
 # nikol events
 UserEvent.create!(
   user: nikol,
+  event: yoga_friday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: nikol,
   event: crossfit_monday,
   matching: true,
   )
@@ -768,6 +888,16 @@ UserEvent.create!(
   )
 
 # richard events
+UserEvent.create!(
+  user: richard,
+  event: football_friday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: richard,
+  event: running_saturday1,
+  matching: true,
+  )
 UserEvent.create!(
   user: richard,
   event: crossfit_wednesday,
@@ -788,6 +918,11 @@ UserEvent.create!(
 # axel events
 UserEvent.create!(
   user: axel,
+  event: crossfit_sunday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: axel,
   event: crossfit_monday,
   matching: true,
   )
@@ -805,6 +940,16 @@ UserEvent.create!(
 # amelie events
 UserEvent.create!(
   user: amelie,
+  event: running_saturday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: amelie,
+  event: running_sunday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: amelie,
   event: running_saturday,
   matching: true,
   )
@@ -815,6 +960,11 @@ UserEvent.create!(
   )
 
 # steven events
+UserEvent.create!(
+  user: steven,
+  event: crossfit_friday1,
+  matching: true,
+  )
 UserEvent.create!(
   user: steven,
   event: crossfit_monday,
@@ -851,6 +1001,11 @@ UserEvent.create!(
 # bastien events
 UserEvent.create!(
   user: bastien,
+  event: crossfit_friday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: bastien,
   event: crossfit_wednesday,
   matching: true,
   )
@@ -866,6 +1021,16 @@ UserEvent.create!(
   )
 
 # nassim events
+UserEvent.create!(
+  user: nassim,
+  event: running_saturday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: nassim,
+  event: running_sunday1,
+  matching: true,
+  )
 UserEvent.create!(
   user: nassim,
   event: running_saturday,
@@ -900,6 +1065,7 @@ UserEvent.create!(
   event: crossfit_thursday,
   matching: true,
   )
+
 # mariette events
 UserEvent.create!(
   user: mariette,
@@ -930,6 +1096,11 @@ UserEvent.create!(
   )
 
 # pierret events
+UserEvent.create!(
+  user: pierret,
+  event: football_friday1,
+  matching: true,
+  )
 UserEvent.create!(
   user: pierret,
   event: crossfit_monday,
@@ -978,6 +1149,11 @@ UserEvent.create!(
 # nico events
 UserEvent.create!(
   user: nico,
+  event: football_friday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: nico,
   event: boxing_thursday,
   matching: true,
   )
@@ -988,6 +1164,16 @@ UserEvent.create!(
   )
 
 # cecile events
+UserEvent.create!(
+  user: cecile,
+  event: yoga_friday1,
+  matching: true,
+  )
+  UserEvent.create!(
+  user: cecile,
+  event: running_sunday1,
+  matching: true,
+  )
 UserEvent.create!(
   user: cecile,
   event: yoga_monday,
@@ -1036,6 +1222,16 @@ UserEvent.create!(
 # clement events
 UserEvent.create!(
   user: clement,
+  event: football_saturday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: clement,
+  event: crossfit_sunday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: clement,
   event: football_saturday,
   matching: true,
   )
@@ -1046,6 +1242,11 @@ UserEvent.create!(
   )
 
 # fabrice events
+UserEvent.create!(
+  user: fabrice,
+  event: crossfit_friday1,
+  matching: true,
+  )
 UserEvent.create!(
   user: fabrice,
   event: crossfit_monday,
@@ -1087,6 +1288,11 @@ UserEvent.create!(
 # valentin events
 UserEvent.create!(
   user: valentin,
+  event: running_saturday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: valentin,
   event: crossfit_monday,
   matching: true,
   )
@@ -1104,6 +1310,11 @@ UserEvent.create!(
 # victoire events
 UserEvent.create!(
   user: victoire,
+  event: running_sunday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: victoire,
   event: crossfit_monday,
   matching: true,
   )
@@ -1119,6 +1330,16 @@ UserEvent.create!(
   )
 
 # solene events
+UserEvent.create!(
+  user: solene,
+  event: yoga_friday1,
+  matching: true,
+  )
+  UserEvent.create!(
+  user: solene,
+  event: running_saturday1,
+  matching: true,
+  )
 UserEvent.create!(
   user: solene,
   event: yoga_monday,
@@ -1179,6 +1400,16 @@ UserEvent.create!(
 # carlotta events
 UserEvent.create!(
   user: carlotta,
+  event: crossfit_saturday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: carlotta,
+  event: running_sunday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: carlotta,
   event: crossfit_saturday,
   matching: true,
   )
@@ -1189,6 +1420,11 @@ UserEvent.create!(
   )
 
 # felix events
+UserEvent.create!(
+  user: felix,
+  event: football_friday1,
+  matching: true,
+  )
 UserEvent.create!(
   user: felix,
   event: crossfit_monday,
@@ -1208,6 +1444,11 @@ UserEvent.create!(
 # laura events
 UserEvent.create!(
   user: laura,
+  event: running_sunday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: laura,
   event: crossfit_tuesday,
   matching: true,
   )
@@ -1218,6 +1459,11 @@ UserEvent.create!(
   )
 
 # marianne events
+UserEvent.create!(
+  user: marianne,
+  event: yoga_friday1,
+  matching: true,
+  )
 UserEvent.create!(
   user: marianne,
   event: crossfit_wednesday,
@@ -1278,6 +1524,11 @@ UserEvent.create!(
 # romainn events
 UserEvent.create!(
   user: romainn,
+  event: running_sunday1,
+  matching: true,
+  )
+UserEvent.create!(
+  user: romainn,
   event: yoga_monday,
   matching: true,
   )
@@ -1293,6 +1544,11 @@ UserEvent.create!(
   )
 
 # thelma events
+UserEvent.create!(
+  user: thelma,
+  event: running_sunday1,
+  matching: true,
+  )
 UserEvent.create!(
   user: thelma,
   event: crossfit_monday,
@@ -1313,7 +1569,6 @@ UserEvent.create!(
   event: running_sunday,
   matching: true,
   )
-
 
 puts 'User events created!'
 puts 'Seeding terminated!'

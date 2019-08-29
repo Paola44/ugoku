@@ -11,6 +11,9 @@
           <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), origin: params[:origin]) do |f| %>
           <%= f.error_notification %>
           <div class="form-inputs pt-4 pb-4">
+            <%= f.input :name,
+                        required: true,
+                        input_html: { id: 'input_form' }%>
             <%= f.input :email,
                         required: true,
                         autofocus: true,
@@ -26,9 +29,6 @@
                         required: true,
                         input_html: { autocomplete: "new-password",
                         id: 'input_form' } %>
-            <%= f.input :name,
-                        required: true,
-                        input_html: { id: 'input_form' }%>
           </div>
         </div>
       </div>
