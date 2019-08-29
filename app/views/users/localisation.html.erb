@@ -4,7 +4,7 @@
   </div>
   <div class="geolocalised">
     <%= simple_form_for @user, url: users_localisation_update_path, html: { method: :patch } do |f| %>
-      <%= f.input :address, label: false %>
+      <%= f.input :address, label: false, required: true %>
       <div class="geo-box">
         <div class="icon-box-geo" id="geolocalised">
           <p><i class="fas fa-location-arrow "></i> Geolocate me</p>
