@@ -1,27 +1,29 @@
-<div class="home-container-header">
-  <div class="home-section1">
-    <div class="logo mb-5">
+<div class="image-wrap">
+  <div class="image-font"></div>
+  <div class="home-container-header">
+    <div class="home-section1">
+      <div class="logo mb-5">
+      </div>
     </div>
   </div>
-</div>
-<div class="home-container-text pt-5">
-  <h1 class="main_title pl-4 pr-4">Sports anytime and anywhere</h1>
-  <p class="desciption pl-4 pr-4">Does not matter where you are or what your schedule is! <span class="text_color_green">Ugoku will always find the rigth sportive activity</span> for you !</p>
-</div>
-<div class= "btn-box">
-  <% if current_user.log_in %>
-   <%= link_to "I want this !", dashboard_path, class:"btn btn-flat" %>
-  <% else %>
-  <%= link_to "I want this !", new_user_registration_path, class:"btn btn-flat" %>
-  <% end %>
+  <div class="home-container-text pt-5">
+    <h1 class="main_title pl-4 pr-4">Sports anytime, anywhere</h1>
+    <p class="desciption pl-4 pr-4">It does not matter where you are or what your schedule is. <span class="text_color_green">Ugoku will always find the rigth sportive activity</span> for you !</p>
+  </div>
+  <div class= "btn-box">
+    <% if user_signed_in? %>
+     <%= link_to "I want this !", dashboard_path, class:"btn btn-flat" %>
+    <% else %>
+      <%= link_to "I want this !", new_user_registration_path, class:"btn btn-flat" %>
+    <% end %>
+  </div>
 </div>
 
 <h2 class="secondary_title pb-3 pl-4 pr-4">Why people use <span class="brandcolor">Ugoku</span> ?</h2>
 <div class="home-container pb-4">
   <div class="home-section2 green-container pb-2">
     <div class="icons">
-      <p class="mini_title_green">Sports around you</p>
-      <!-- <i class="fas fa-map-marker-alt location_icon"></i> -->
+      <p class="mini_title_green">Sport around you</p>
       <%= image_tag "location.png", alt: 'box glove',height: 60, width: 60 %>
       <p class="green-text">The algorythm will match the sportive events near you </p>
       </div>
@@ -29,27 +31,29 @@
     <div class="home-container pb-4 pt-4">
       <div class="home-section2 red-container pb-2">
         <p class="mini_title_red">Meet new people</p>
-        <!-- <i class="fas fa-users group_icon"></i> -->
         <%= image_tag "group.png", alt: 'box glove',height: 60, width: 60 %>
-        <p class="red-text">You will not be alone ! There are a lor of people who loves what you love</p>
+        <p class="red-text">You will not be alone! There are a lot of people who loves what you love</p>
       </div>
     </div>
     <div class="home-container pb-4">
       <div class="home-section2 blue-container pb-2">
         <p class="mini_title_blue">Stay active </p>
-        <!-- <i class="fas fa-users sport_icon"></i> -->
         <%= image_tag "active.png", alt: 'box glove',height: 60, width: 60 %>
-        <p class="blue-text">You can practice all sports you want when you are free to do it!</p>
+        <p class="blue-text">You can practice all sports you want when you are free to do it !</p>
       </div>
     </div>
   </div>
 </div>
 <div class="btn-box-secondary">
-  <%= link_to "Try ugoku now", new_user_registration_path, class:"btn btn-flat btn-flat-2" %>
+  <% if user_signed_in? %>
+    <%= link_to "Try ugoku now", dashboard_path, class:"btn btn-flat-3" %>
+  <% else %>
+    <%= link_to "Try ugoku now", new_user_registration_path, class:"btn btn-flat btn-flat-3" %>
+  <% end %>
 </div>
 
 <div class="home-section4">
-  <h2 class="sport-card-home pr-3 pl-3 pb-2">A sport event for you all the time!</h2>
+  <h2 class="sport-card-home pr-3 pl-3 pb-2">Lot's of sporting event for you all the time !</h2>
   <p class="last-text pr-3 pl-3"><span class="text_color_green">Ugoku</span> not only suggest sport events according to your schedule, but also you can select <span class="text_color_green">all event
   you want and when you want</span>.</p>
   <div class="opinions-card-home">
@@ -83,8 +87,8 @@
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
-              <span class="fa fa-star unchecked "></span>
-              <span class="fa fa-star unchecked "></span>
+              <span class="fa fa-star unchecked"></span>
+              <span class="fa fa-star unchecked"></span>
             </div>
           </div>
         </div>
@@ -93,7 +97,7 @@
             <%= image_tag "https://res.cloudinary.com/dueo7qd0s/image/upload/v1566312194/mariette.jpg", class: "avatar-bordered", alt: "avatar-bordered" %>
             <h2 class="user_name pb-3">Mariette</h2>
             <div class="text-container-3">
-              <p class="comments">“Really magic come to discover very good atmosphere.
+              <p class="comments">“Really magic! come to discover very good atmosphere.
               Sport with a spirit of self-transcendence without value judgment.
               To try it is to adopt it !”</p>
             </div>
@@ -106,11 +110,47 @@
             </div>
           </div>
         </div>
+         <div class="carousel-item">
+          <div class="card-section">
+            <%= image_tag "https://res.cloudinary.com/dueo7qd0s/image/upload/v1566312220/antoine.jpg", class: "avatar-bordered", alt: "avatar-bordered" %>
+            <h2 class="user_name pb-3">Antoine</h2>
+            <div class="text-container-3">
+              <p class="comments">“The coach is great, the atmosphere is powerful, the pace is sustained, the body aches are atrocious, but you can only re-ask !”</p>
+            </div>
+            <div class="stars">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star unchecked"></span>
+            </div>
+          </div>
+        </div>
+         <div class="carousel-item">
+          <div class="card-section">
+            <%= image_tag "https://res.cloudinary.com/dueo7qd0s/image/upload/v1566312219/ines.jpg", class: "avatar-bordered", alt: "avatar-bordered" %>
+            <h2 class="user_name pb-3">Ines</h2>
+            <div class="text-container-3">
+              <p class="comments">“Outdoor sports with a great state of mind, what more ? Congratulations to the organizers and teachers, the great job!”</p>
+            </div>
+            <div class="stars">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star unchecked"></span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div class="btn-last-box">
-    <%= link_to "I'am convinced", new_user_registration_path, class:"btn btn-flat btn-flat-2" %>
+    <% if user_signed_in? %>
+      <%= link_to "I'am convinced", dashboard_path, class:"btn btn-flat-2" %>
+    <% else %>
+      <%= link_to "I'am convinced", new_user_registration_path, class:"btn btn-flat btn-flat-2" %>
+    <% end %>
   </div>
 </div>
 

@@ -2,83 +2,71 @@
 <div class= "btn-box sports-box-activity">
   <%= link_to "Search a new activity", events_path, class:"btn btn-flat btn-flat-activity1" %>
 </div>
-<h2 class="h2_eteint">Your program</h2>
-<div class="dashboard-section pt-5 pb-5">
+<h2 class="h2_eteint">Next events</h2>
+<div class="dashboard-section">
   <div class="user_activities">
-    <!-- <i class="fas fa-chevron-left text-white"></i> -->
     <div class="slider-program">
       <% if @user_events.length > 0 %>
         <% @user_events.each do |event| %>
-          <div class="event_matched_by_user slide">
-            <%= image_tag 'boxing-gloves.png', class: "sports-image", alt: 'box glove',height: 30, width: 30 %>
-            <span><%= event.event.start_at.strftime("%-d %b") %></span>
-            <span class='p-1'><%= event.event.start_at.hour %>h</span>
+
+          <div class="container-event-dash">
+            <div class="card-events-dash">
+              <div class="event-dash">
+                <div class="sport-event-card-dash">
+                  <div class="sport-info-dash">
+                    <h3><strong><%= event.event.sport.capitalize %></strong></h3>
+                    <p><i class="far fa-calendar-alt"></i>  <%= event.event.start_at.strftime('%d/%m/%Y') %></p>
+                    <p><i class="far fa-clock"></i>  <%= event.event.start_at.strftime('%k') %>h</p>
+                  </div>
+                  <%= image_tag "#{event.event.sport}.png", class: 'sport-img-dash' %>
+                </div>
+              </div>
+            </div>
+
+            <div class="decription-event-dash">
+              <div class="address-details-dash">
+                <div class="event-address-dash">
+                  <p><strong><%= event.event.address.capitalize %></strong></p>
+                  <button class="font-map-dash js-selector" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.event.to_coordinates.to_json %>" data-name="<%= event.event.sport %>"><i class="fas fa-map-marker-alt"></i>  Map</button>
+                </div>
+              </div>
+
+              <div class="info-sport-event-dash">
+                <div class="details-duration-dash">
+                  <p><i class="fas fa-stopwatch"></i>  <%= event.event.duration %> min.</p>
+                </div>
+                <div class="details-level-dash">
+                  <% if event.event.level == 1 %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20 %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20, class:"level-img-dash"%>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20, class:"level-img-dash" %>
+                  <% elsif %>
+                    <% event.event.level == 2  %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20 %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20 %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20, class:"level-img-dash" %>
+                  <% else  %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20 %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20 %>
+                    <%= image_tag "#{event.event.sport}.png", width: 20, height: 20 %>
+                  <% end %>
+                </div>
+              </div>
+              <div class="text-event-dash">
+                  <p><%= event.event.description %></p>
+              </div>
+            </div>
           </div>
         <% end %>
       <% else %>
         <div class="d-flex flex-column">
           <h3 class='text-white h3-default text-secondary'>Add events</h3>
-              <h1><i class="fas fa-arrow-down text-white m-5 text-secondary"></i></h1>
+          <h1><i class="fas fa-arrow-down text-white m-5 text-secondary"></i></h1>
         </div>
-      <% end %>
-<!--
-      <% @user_events.each do |event| %>
-      <div class="card-events">
-          <div class="event">
-            <div class="sport-event-card">
-              <h3><strong><%= event.event.sport.capitalize %></strong></h3>
-              <div class="sport-info">
-                <p><i class="far fa-calendar-alt"></i>  <%= event.event.start_at.to_date %></p>
-                <p><i class="far fa-clock"></i>  <%= event.event.start_at.strftime('%k') %>h</p>
-              </div>
-            </div>
-          <%= image_tag("boxing-gloves.png", class: 'sport-img')%>
-          </div>
-      </div>
-
-      <div class="collapse decription-event" id="description-collapse-<%= event.id %>">
-        <div class="address-details">
-          <div class="event-address">
-            <p><strong><%= event.address.capitalize %>
-              <button class="font-map js-selector" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.to_coordinates.to_json %>" data-name="<%= event.sport %>"><i class="fas fa-map-marker-alt"></i> On map</button>
-            </strong></p>
-          </div>
-        </div>
-
-        <div class="info-sport-event">
-          <div class="details-duration">
-            <p><i class="fas fa-stopwatch"></i>  <%= event.duration %> min.</p>
-          </div>
-          <div class="details-level">
-            <% if event.event.level == 1 %>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
-              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
-            <% elsif %>
-              <% event.event.level == 2  %>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
-            <% else  %>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell"></i></p>
-            <% end %>
-          </div>
-        </div>
-        <div class="text-event">
-            <p><%= event.event.description %></p>
-        </div>
-        <div class="capacity-event d-flex justify-content-end pr-3">
-          <div class="d-flex event-avatars">
-            <% event.users.take(5).each do |user| %>
-              <%= user_image_tag(user, class: "avatar-bordered single-card rounded-circle border border-white", alt: "avatar-bordered") %>
-            <% end %>
-          </div>
-        </div>
-      </div>
-      <% end %> -->
-
+     <% end %>
+    </div>
+  </div>
+</div>
 
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -87,37 +75,24 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Localisation</h4>
-        <div  class="close-pop-up" data-dismiss="modal">&times;</div>
+        <div class="close-pop-up" data-dismiss="modal">&times;</div>
       </div>
       <div class="modal-body">
-        <div
-          id="map"
-          style="width:100%;
-          height: 80vh;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-        ></div>
+        <div class="container-map">
+          <div
+            id="map"
+            style="width:300px;
+            height: 500px;
+            opacity: 0"
+            data-marker=[47.2179124,-1.5428851]
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+          ></div>
+        </div>
       </div>
     </div>
-
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-    <!-- <i class="fas fa-chevron-right text-white"></i> -->
-  </div>
   </div>
 </div>
+
 <div class= "btn-box sports-box-events">
   <%= link_to "Matching events", matching_events_path, class:"btn btn-flat btn-flat-activity2" %>
 </div>
@@ -148,16 +123,15 @@
   <div class="user_availability pl-4 pr-4">
     <div class="container-availability">
       <div class="user_activities-schedule">
-      <!-- <i class="fas fa-chevron-left fa-left-activity"></i> -->
           <% if @availabilities.length > 0 %>
             <div class="slider">
             <% @availabilities.each do |availability| %>
               <div class="event_fav_availabilities slide">
                 <div class="pastille">
                   <span class="pink-circle"></span>
-                  <span><%= availability.day_name.capitalize %></span>
+                  <span class="day-available"><%= availability.day_name.capitalize %></span>
                 </div>
-                <div class="availabities-result">
+                <div class="availabities-result" id='special-nikol'>
                   <% if availability.slot_1%>
                     <p>8h - 10h</p>
                   <% end %>
@@ -188,7 +162,6 @@
         </div>
       </div>
     </div>
-    <!-- <i class="fas fa-chevron-right fa-right-activity"></i> -->
   </div>
 </div>
 <div class= "btn-box sports-">

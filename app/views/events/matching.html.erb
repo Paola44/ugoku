@@ -1,82 +1,78 @@
 <div class="container-events">
-  <h1>Select one or more matching events </h1>
-  <div class="btn-double">
-  <%= link_to users_localisation_path(listing: 'matching') do %>
-    <button class="btn btn-event-box-adress">Events near you</button>
-  <% end %>
+  <h1>Matching events</h1>
+  <p class="text-center-match">Here are all events corresponding to your availabilities and your favorite sports</p>
+  <div class="btn-dash">
+    <%= link_to "Dashboard", dashboard_path, class:"btn-event-box-dash" %>
+  </div>
   <%= link_to events_path do %>
     <button class="btn btn-event-box-events">See all events</button>
   <% end %>
-  </div>
-    <% @matching_events.each do |event| %>
+  <% @matching_events.each do |event| %>
     <h2><%= event.start_at.strftime('%A') %></h2>
-      <div class="card-events">
-          <%= image_tag("boxing-gloves.png", class: 'sport-img')%>
-          <div class="event">
-            <div class="sport-event-card">
-              <h3><strong><%= event.sport.capitalize %></strong></h3>
-              <div class="sport-info">
-                <p><i class="far fa-calendar-alt"></i>  <%= event.start_at.to_date %></p>
-                <p><i class="far fa-clock"></i>  <%= event.start_at.strftime('%k') %>h</p>
-              </div>
-              <p class="button-events" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>" type="button" aria-expanded="false" aria-controls="description-collapse-<%= event.id %>"><i class="fas fa-chevron-down"></i></p>
-            </div>
+    <div class="card-events">
+      <%= image_tag "#{event.sport}.png", class: 'sport-img' %>
+      <div class="event">
+        <div class="sport-event-card">
+          <h3><strong><%= event.sport.capitalize %></strong></h3>
+          <div class="sport-info">
+            <p><i class="far fa-calendar-alt"></i>  <%= event.start_at.strftime('%d/%m/%Y') %></p>
+            <p><i class="far fa-clock"></i>  <%= event.start_at.strftime('%k') %>h</p>
           </div>
-          <div class="add-button">
-            <% if current_user.user_event_for(event) %>
-              <%= link_to image_tag('success.png', class: 'add-event-btn'), user_event_path(current_user.user_event_for(event), next_action: matching_events_path), method: :delete %>
-            <% else %>
-              <%= link_to image_tag("plus.png", class: 'add-event-btn'), event_user_events_path(event, next_action: matching_events_path), method: :post %>
-            <% end %>
-          </div>
+          <div class="button-events" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>"  aria-expanded="false" aria-controls="description-collapse-<%= event.id %>"><i class="fas fa-chevron-down"></i></div>
+        </div>
+      </div>
+      <div class="add-button">
+        <% if current_user.user_event_for(event) %>
+          <%= link_to image_tag('success.png', class: 'add-event-btn'), user_event_path(current_user.user_event_for(event), next_action: matching_events_path), method: :delete %>
+        <% else %>
+          <%= link_to image_tag("plus.png", class: 'add-event-btn'), event_user_events_path(event, next_action: matching_events_path), method: :post %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="collapse decription-event" id="description-collapse-<%= event.id %>">
+      <div class="address-details">
+        <div class="event-address d-flex">
+          <p><strong><%= event.address.capitalize %></strong></p>
+          <button class="font-map js-selector js-open-map" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.to_coordinates.to_json %>" data-name="<%= event.sport %>"><i class="fas fa-map-marker-alt"></i>   Map</button>
+        </div>
       </div>
 
-      <div class="collapse decription-event" id="description-collapse-<%= event.id %>">
-        <div class="address-details">
-         <div class="event-address">
-            <p><strong><%= event.address.capitalize %>
-              <button class="font-map js-selector" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.to_coordinates.to_json %>" data-name="<%= event.sport %>"><i class="fas fa-map-marker-alt"></i> On map</button>
-            </strong></p>
-          </div>
+      <div class="info-sport-event">
+        <div class="details-duration">
+          <p><i class="fas fa-stopwatch"></i>  <%= event.duration %> min.</p>
         </div>
-
-        <div class="info-sport-event">
-          <div class="details-duration">
-            <p><i class="fas fa-stopwatch"></i>  <%= event.duration %> min.</p>
-          </div>
-          <div class="details-level">
-            <% if event.level == 1 %>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
-              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
-            <% elsif %>
-              <% event.level == 2  %>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell" id="last-child"></i></p>
-            <% else  %>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell"></i></p>
-              <p><i class="fas fa-dumbbell"></i></p>
-            <% end %>
-          </div>
+        <div class="details-level">
+          <% if event.level == 1 %>
+            <%= image_tag "#{event.sport}.png", width: 25, height: 25 %>
+            <%= image_tag "#{event.sport}.png", width: 25, height: 25, class:"level-img"%>
+            <%= image_tag "#{event.sport}.png", width: 25, height: 25, class:"level-img" %>
+          <% elsif %>
+            <% event.level == 2  %>
+            <%= image_tag "#{event.sport}.png", width: 25, height: 25 %>
+            <%= image_tag "#{event.sport}.png", width: 25, height: 25 %>
+            <%= image_tag "#{event.sport}.png", width: 25, height: 25, class:"level-img" %>
+          <% else  %>
+            <%= image_tag "#{event.sport}.png", width: 25, height: 25 %>
+            <%= image_tag "#{event.sport}.png", width: 25, height: 25 %>
+            <%= image_tag "#{event.sport}.png", width: 25, height: 25 %>
+          <% end %>
         </div>
-        <div class="text-event">
-            <p><%= event.description %></p>
-        </div>
-        <div class="capacity-event d-flex justify-content-end pr-3">
-          <div class="d-flex event-avatars">
-            <% event.users.take(5).each do |user| %>
-              <%= image_tag cl_image_path(user.photo), class: "avatar-bordered single-card rounded-circle border border-white", alt: "avatar-bordered" %>
-            <% end %>
-          </div>
-        </div>
-        <div class="details-button" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>" role="button" aria-expanded="false" aria-controls="description-collapse-<%= event.id %>"><i class="fas fa-chevron-up"></i></div>
       </div>
-    <% end %>
-  </div>
+      <div class="text-event">
+          <p><%= event.description %></p>
+      </div>
+      <div class="capacity-event d-flex justify-content-end pr-3">
+        <div class="d-flex event-avatars">
+          <% event.users.take(5).each do |user| %>
+            <%= user_image_tag user, class: "avatar-bordered single-card rounded-circle border border-white", alt: "avatar-bordered" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="details-button" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>" role="button" aria-expanded="false" aria-controls="description-collapse-<%= event.id %>"><i class="fas fa-chevron-up"></i></div>
+    </div>
+  <% end %>
 </div>
-
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -91,7 +87,8 @@
           <div
             id="map"
             style="width:300px;
-            height: 400px;"
+            height: 500px;
+            opacity: 0"
             data-marker=[47.2179124,-1.5428851]
             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
           ></div>

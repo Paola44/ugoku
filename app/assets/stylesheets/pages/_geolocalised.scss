@@ -1,6 +1,6 @@
 .container-geolocalised{
   color: $white;
-  height: 70vh;
+  height: 65vh;
 
   h3 {
     font-size: 40px;
@@ -58,13 +58,13 @@
   align-items: center;
 }
 
-.icon-box {
+.icon-box-geo {
   color: $black;
   background-color: $white;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(to right, $green1, $green2);
+  background: linear-gradient(to right, $blue1, $blue2);
   border-radius: 50px;
   cursor: pointer;
   box-shadow: 0 0 5px white;

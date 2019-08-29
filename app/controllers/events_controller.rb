@@ -5,9 +5,7 @@ class EventsController < ApplicationController
   end
 
   def matching
-    # @matching_events = current_user.user_events.where('matching')
-
-    events = Event.all.select { |event| current_user.favorite_sports.include?(event.sport) }
+    events = Event.all.order('start_at ASC').select { |event| current_user.favorite_sports.include?(event.sport) }
 
     @matching_events = events.select do |event|
       availability = current_user.availabilities.find_by(day_name: event.start_at.strftime('%A').downcase)

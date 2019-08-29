@@ -1,7 +1,7 @@
 <%= simple_form_for @user, url: @url_params, method: :patch do |f| %>
 <h2 class='text-center'>Fill your profile</h2>
 
-<legend class="text-center-signup">Choose your favorite sports</legend>
+<p class="text-center-signup">Choose your favorite sports</p>
 <div class="signup-container-header pl-4 pr-4">
   <div class="signup-section1">
     <div class="signup-container-text">
@@ -20,9 +20,10 @@
                           id="user_favorite_sports_<%= category %>"
                           <%= "checked" if @user.favorite_sports.include?(category) %>>
                   <label  class="category-choice d-flex align-items-center justify-content-center
-                          <%= 'active' if @user.favorite_sports.include?(category) %>"
+                          <%= "active" if @user.favorite_sports.include?(category) %>"
                           for="user_favorite_sports_<%= category %>"
-                          ><%= category.capitalize %></label>
+                          ><%= image_tag "#{category}.png", width: 50, height: 50 %>
+                          <%= category.capitalize %></label>
                 </div>
               <% end %>
             </div>
