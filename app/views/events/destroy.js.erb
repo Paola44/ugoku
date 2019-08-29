@@ -1,6 +1,5 @@
 var button = document.querySelector("[data-id='<%= @event.id%>']")
 if(button != null){
-  console.log(button)
   button.childNodes[1].remove
   button.innerHTML = "<img class='add-event-btn' src='/assets/plus-cb3bd5cb2cae30a940b307659e7cb6e357e3bd52081f89c7bc31d73d555341d7.png'>"
 }
