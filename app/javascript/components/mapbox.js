@@ -1,6 +1,5 @@
 import mapboxgl from 'mapbox-gl';
 
-
 const fontMaps = document.querySelectorAll('.js-selector')
 
 const mapElement = document.getElementById('map');
@@ -17,6 +16,7 @@ if (mapElement) {
   fontMaps.forEach((fontMap) => {
     fontMap.addEventListener('click', (event) => {
       mapElement.dataset.marker = fontMap.dataset.position
+
       const marker              = JSON.parse(mapElement.dataset.marker);
       const coordinates         = JSON.parse(fontMap.dataset.position)
 
@@ -26,7 +26,7 @@ if (mapElement) {
 
       map.jumpTo({
         center: [marker[1], marker[0]],
-        zoom: 15
+        zoom: 16
       })
       setTimeout(() => {
         map.resize()
