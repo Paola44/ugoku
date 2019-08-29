@@ -75,22 +75,22 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Localisation</h4>
-        <div  class="close-pop-up" data-dismiss="modal">&times;</div>
+        <div class="close-pop-up" data-dismiss="modal">&times;</div>
       </div>
       <div class="modal-body">
-        <div
-          id="map"
-          style="width:100%;
-          height: 400px;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-        ></div>
+        <div class="container-map">
+          <div
+            id="map"
+            style="width:300px;
+            height: 500px;
+            opacity: 0"
+            data-marker=[47.2179124,-1.5428851]
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+          ></div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-    <!-- <i class="fas fa-chevron-right text-white"></i> -->
-  </div>
+
   </div>
 </div>
 

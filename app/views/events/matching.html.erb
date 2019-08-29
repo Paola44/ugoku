@@ -33,7 +33,7 @@
       <div class="address-details">
         <div class="event-address d-flex">
           <p><strong><%= event.address.capitalize %></strong></p>
-          <button class="font-map js-selector" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.to_coordinates.to_json %>" data-name="<%= event.sport %>"><i class="fas fa-map-marker-alt"></i> On map</button>
+          <button class="font-map js-selector js-open-map" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.to_coordinates.to_json %>" data-name="<%= event.sport %>"><i class="fas fa-map-marker-alt"></i> On map</button>
         </div>
       </div>
 
@@ -86,7 +86,8 @@
           <div
             id="map"
             style="width:300px;
-            height: 400px;"
+            height: 500px;
+            opacity: 0"
             data-marker=[47.2179124,-1.5428851]
             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
           ></div>
