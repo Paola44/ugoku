@@ -3,7 +3,7 @@
   <div class="btn-dash">
     <%= link_to "Dashboard", dashboard_path, class:"btn-event-box-dash" %>
   </div>
-  <%= link_to "Events near you", users_localisation_path, class:"btn btn-address-box" %>
+  <%= link_to "Change your address", users_localisation_path, class:"btn btn-address-box" %>
   <% @grouped_days_events.each do |day, events| %>
     <h2><%= day.strftime('%A') %></h2>
     <% events.each do |event| %>
