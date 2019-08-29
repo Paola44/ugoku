@@ -10,7 +10,7 @@ class EventsController < ApplicationController
     @matching_events = events.select do |event|
       availability = current_user.availabilities.find_by(day_name: event.start_at.strftime('%A').downcase)
 
-      case event.start_at.strftime("%k").to_i
+      case event.start_at.strftime("%T%L").to_i
       when 8..10
         availability.slot_1
       when 10..12
