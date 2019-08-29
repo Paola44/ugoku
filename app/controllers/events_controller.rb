@@ -25,6 +25,8 @@ class EventsController < ApplicationController
         availability.slot_6
       end
     end
+
+    @grouped_days_matching_events = @matching_events.group_by { |event| event.start_at.to_date }
     markers
   end
 

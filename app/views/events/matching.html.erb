@@ -7,8 +7,9 @@
   <%= link_to events_path do %>
     <button class="btn btn-event-box-events">See all events</button>
   <% end %>
-  <% @matching_events.each do |event| %>
-    <h2><%= event.start_at.strftime('%A') %></h2>
+  <% @grouped_days_matching_events.each do |day, events| %>
+    <h2><%= day.strftime('%A') %></h2>
+    <% events.each do |event| %>
     <div class="card-events">
       <%= image_tag "#{event.sport}.png", class: 'sport-img' %>
       <div class="event">
@@ -60,7 +61,7 @@
         </div>
       </div>
       <div class="text-event">
-          <p><%= event.description %></p>
+        <p><%= event.description %></p>
       </div>
       <div class="capacity-event d-flex justify-content-end pr-3">
         <div class="d-flex event-avatars">
@@ -71,6 +72,7 @@
       </div>
       <div class="details-button" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>" role="button" aria-expanded="false" aria-controls="description-collapse-<%= event.id %>"><i class="fas fa-chevron-up"></i></div>
     </div>
+    <% end %>
   <% end %>
 </div>
 <div id="myModal" class="modal fade" role="dialog">
