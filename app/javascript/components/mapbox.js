@@ -34,9 +34,4 @@ if (mapElement) {
       }, 200)
     })
   })
-
-  // $('#myModal').on('shown.bs.modal', function(event) {
-  //   console.log('yep')
-  //   map.resize()
-  // })
 }

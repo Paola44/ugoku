@@ -18,8 +18,18 @@ class UserEventsController < ApplicationController
   end
 
   def destroy
+    @event = UserEvent.find(params[:id]).event
     @user_event = UserEvent.find(params[:id])
-    @user_event.destroy
-    redirect_to params.fetch(:next_action, events_path), notice: "Successfully unsubscribed."
+    if @user_event.destroy
+      respond_to do |format|
+        format.html { redirect_to events_path }
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.html { render '/events' }
+        format.js
+      end
+    end
   end
 end

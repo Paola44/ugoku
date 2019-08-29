@@ -14,14 +14,14 @@
               <h3><strong><%= event.sport.capitalize %></strong></h3>
               <div class="sport-info">
                 <p><i class="far fa-calendar-alt"></i>  <%= event.start_at.strftime('%d/%m/%Y') %></p>
-                <p><i class="far fa-clock"></i>  <%= event.start_at.strftime('%k h %M')%></p>
+                <p><i class="far fa-clock"></i>  <%= event.start_at.strftime('%Hh%M')%></p>
               </div>
               <p class="button-events" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>" aria-expanded="false" aria-controls="description-collapse-<%= event.id %>"><i class="fas fa-chevron-down"></i></p>
             </div>
           </div>
           <div class="add-button" data-id="<%= event.id %>">
             <% if current_user.user_event_for(event) %>
-              <%= link_to image_tag('success.png', class: 'add-event-btn'), user_event_path(current_user.user_event_for(event), next_action: events_path), method: :delete %>
+              <%= link_to image_tag('success.png', class: 'add-event-btn'), user_event_path(current_user.user_event_for(event), next_action: events_path), method: :delete, remote: true %>
             <% else %>
               <%= link_to image_tag("plus.png", class: 'add-event-btn'), event_user_events_path(event, next_action: events_path), method: :post, remote: true %>
             <% end %>
