@@ -513,7 +513,7 @@ puts '...Creating events...'
 
 yoga_friday1    = Event.create!(
   sport: 'yoga',
-  start_at: '2019-08-30 20:00:00',
+  start_at: '2019-08-30 19:00:00',
   photo: File.open(Rails.root.join('app/assets/images/yoga.png')),
   duration: 90,
   level: 1,
@@ -525,7 +525,7 @@ yoga_friday1    = Event.create!(
   )
 yoga_monday     = Event.create!(
   sport: 'yoga',
-  start_at: '2019-09-02 20:00:00',
+  start_at: '2019-09-02 19:00:00',
   photo: File.open(Rails.root.join('app/assets/images/yoga.png')),
   duration: 90,
   level: 1,
@@ -537,7 +537,7 @@ yoga_monday     = Event.create!(
   )
 yoga_wednesday  = Event.create!(
   sport: 'yoga',
-  start_at: '2019-09-04 20:00:00',
+  start_at: '2019-09-04 19:00:00',
   photo: File.open(Rails.root.join('app/assets/images/yoga.png')),
   duration: 90,
   level: 1,
@@ -549,7 +549,7 @@ yoga_wednesday  = Event.create!(
   )
 yoga_friday     = Event.create!(
   sport: 'yoga',
-  start_at: '2019-09-06 20:00:00',
+  start_at: '2019-09-06 19:00:00',
   photo: File.open(Rails.root.join('app/assets/images/yoga.png')),
   duration: 90,
   level: 1,
@@ -827,7 +827,7 @@ running_saturday  = Event.create!(
   )
 running_sunday    = Event.create!(
   sport: 'running',
-  start_at: '2019-09-07 10:30:00',
+  start_at: '2019-09-08 10:30:00',
   photo: File.open(Rails.root.join('app/assets/images/running.png')),
   duration: 60,
   level: 2,
