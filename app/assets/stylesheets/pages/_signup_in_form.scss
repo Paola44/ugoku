@@ -28,17 +28,26 @@
   font-size: 40px;
   font-weight: 400;
   color: $white;
+  display: flex;
   text-align: center;
+  justify-content: center;
   padding-bottom: 10px;
   padding-top: 50px;;
 }
+
+.text-desctiption {
+  color: $white;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
 .text-center-signup {
   font-size: 17px;
   color: $white;
   display: flex;
   justify-content: center;
 }
-
 
 .sport-sign-up {
   // padding-bottom: 31px;
