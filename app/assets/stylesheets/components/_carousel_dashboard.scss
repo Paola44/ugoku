@@ -20,14 +20,12 @@
   .slide {
     width: 110px;
     flex-shrink: 0;
-    height: 100%;
-    height: 75%;
+    height: fit-content;
     background: linear-gradient(to top, $red, $pink);
     margin-lef: 10px;
     margin-right: 15px;
     border-radius: 10px;
-    padding-top: 7px;
-    padding-bottom: 10px;
+    padding-top: 10px;
   }
 }
 
