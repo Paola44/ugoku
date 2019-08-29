@@ -14,7 +14,7 @@
             <p><i class="far fa-calendar-alt"></i>  <%= event.start_at.to_date %></p>
             <p><i class="far fa-clock"></i>  <%= event.start_at.strftime('%k') %>h</p>
           </div>
-          <p class="button-events" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>" type="button" aria-expanded="false" aria-controls="description-collapse-<%= event.id %>"><i class="fas fa-chevron-down"></i></p>
+          <div class="button-events" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>"  aria-expanded="false" aria-controls="description-collapse-<%= event.id %>"><i class="fas fa-chevron-down"></i></div>
         </div>
       </div>
       <div class="add-button">
