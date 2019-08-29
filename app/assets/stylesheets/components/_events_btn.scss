@@ -33,7 +33,7 @@
   text-align: center;
   border-radius: 50px;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
-  background: linear-gradient(to right, $red, $pink);
+  background: linear-gradient(to right, $green1, $green2);
   transition: background 0.3s ease;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -50,6 +50,23 @@
   background: linear-gradient(to right, $green1, $green2);
   transition: background 0.3s ease;
   margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.btn-dash {
+  margin-top: 20px;
+}
+
+.btn-event-box-dash {
+  color: $black;
+  padding: 8px 24px;
+  align-content: space-around;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  background: linear-gradient(to right, $blue1, $blue2);
+  transition: background 0.3s ease;
   margin-top: 20px;
 }
 
