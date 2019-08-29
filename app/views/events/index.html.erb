@@ -13,7 +13,7 @@
             <div class="sport-event-card">
               <h3><strong><%= event.sport.capitalize %></strong></h3>
               <div class="sport-info">
-                <p><i class="far fa-calendar-alt"></i>  <%= event.start_at.to_date %></p>
+                <p><i class="far fa-calendar-alt"></i>  <%= event.start_at.strftime('%d/%m/%Y') %></p>
                 <p><i class="far fa-clock"></i>  <%= event.start_at.strftime('%k') %>h</p>
               </div>
               <p class="button-events" data-toggle="collapse" data-target="#description-collapse-<%= event.id %>" aria-expanded="false" aria-controls="description-collapse-<%= event.id %>"><i class="fas fa-chevron-down"></i></p>
@@ -31,8 +31,10 @@
       <div class="collapse decription-event" id="description-collapse-<%= event.id %>">
         <div class="address-details">
           <div class="event-address d-flex">
-            <p><strong><%= event.address.capitalize %></strong></p>
-            <button class="font-map js-selector" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.to_coordinates.to_json %>" data-name="<%= event.sport %>"><i class="fas fa-map-marker-alt"></i> On map</button>
+              <p><%= event.address.capitalize %></p>
+            <div class="d-flex flex-end">
+              <button class="font-map js-selector" id="<%=event.id%>" data-toggle="modal" data-target="#myModal" data-position="<%= event.to_coordinates.to_json %>" data-name="<%= event.sport %>"><i class="fas fa-map-marker-alt"></i> On map</button>
+            </div>
           </div>
         </div>
 
