@@ -50,6 +50,7 @@ h2 {
     padding: 0 30px 0 25px;
     font-size: 20px;
     margin-top: -3px;
+    cursor: pointer;
   }
 }
 
@@ -202,13 +203,14 @@ h2 {
 .mapboxgl-canvas{
   width: 400px !important;
   height: 400px !important;
-  border-radius: 0px;
+  border-radius: 0;
 }
-.container-map{
-  width: 320px;
-  height: 400px;
-}
+
 #map{
   box-shadow: 0 0 10px white;
   height:500px;
+}
+
+.modal-body{
+
 }
