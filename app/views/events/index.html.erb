@@ -21,7 +21,7 @@
           </div>
           <div class="add-button" data-id="<%= event.id %>">
             <% if current_user.user_event_for(event) %>
-              <%= link_to image_tag('success.png', class: 'add-event-btn'), user_event_path(current_user.user_event_for(event), next_action: events_path), method: :delete %>
+              <%= link_to image_tag('success.png', class: 'add-event-btn'), user_event_path(current_user.user_event_for(event), next_action: events_path), method: :delete, remote: true %>
             <% else %>
               <%= link_to image_tag("plus.png", class: 'add-event-btn'), event_user_events_path(event, next_action: events_path), method: :post, remote: true %>
             <% end %>
