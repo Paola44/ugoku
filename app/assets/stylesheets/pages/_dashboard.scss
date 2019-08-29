@@ -211,7 +211,7 @@
 
   .font-map-dash{
     background-color: rgba(249, 19, 81, 0.4);
-    font-size: 12px;
+    font-size: 13px;
     border: none;
     border-radius: 20px;
     color: #F91351;
@@ -226,9 +226,12 @@
 
   .address-details-dash {
     display: flex;
+
     .event-address-dash {
       display: flex;
       justify-content: space-between;
+      font-weight: bold;
+
          p {
         color: black;
         font-size: 12px;
