@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resource :availabilities, only: [:edit, :update]
   resource :sports,         only: [:edit, :update]
 
-  resource :dashboard, only: [:show]
+  resource :dashboard, only: [:show, :destroy]
 
   resources :events, only: [:index] do
     collection do

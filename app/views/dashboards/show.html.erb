@@ -9,7 +9,7 @@
       <% if @user_events.length > 0 %>
         <% @user_events.each do |event| %>
 
-          <div class="container-event-dash">
+          <div class="container-event-dash" data-containerid="<%= event.id %>">
             <div class="card-events-dash">
               <div class="event-dash">
                 <div class="sport-event-card-dash">
@@ -19,6 +19,13 @@
                     <p><i class="far fa-clock"></i>  <%= event.event.start_at.strftime('%k') %>h</p>
                   </div>
                   <%= image_tag "#{event.event.sport}.png", class: 'sport-img-dash' %>
+                </div>
+              </div>
+              <div class='supprimer_event'>
+                <div data-id="<%= event.id %>" class='fix_pos'>
+                  <%= link_to dashboard_path(event), method: :delete, data: { confirm: 'Are you sure?' } do  %>
+                    <%= image_tag "error.png", alt: "supprimer", width:35, height:35, class:'icon-suppr' %>
+                  <% end %>
                 </div>
               </div>
             </div>
@@ -55,6 +62,7 @@
               <div class="text-event-dash">
                   <p><%= event.event.description %></p>
               </div>
+
             </div>
           </div>
         <% end %>
